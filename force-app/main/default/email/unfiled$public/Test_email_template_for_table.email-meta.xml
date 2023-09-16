@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Test Template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Test email template for table</name>
+    <style>none</style>
+    <subject>Data presentation using table</subject>
+    <textOnly>Dear Team,
+
+Test template is initiated. Case Number: {!Case.CaseNumber}
+Case Reason: {!Case.Reason}
+Contact Name: {!Case.Contact}
+Initiated Date &amp; Time: {!Case.CreatedDate}
+
+
+
+TeamAction
+Area Variation Review the case and take the required action
+System Admin Review the reason and Click OK
+
+
+Note: This is a system generated email, do not reply to this.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

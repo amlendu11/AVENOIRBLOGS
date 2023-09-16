@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Center_of_Excellence_Enhancement_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Center of Excellence</label>
+    <queue>Center_of_Excellence</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

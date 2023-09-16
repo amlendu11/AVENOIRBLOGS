@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi Team,&nbsp;<br />
+<br />
+I am sending an Enhancement Request:{{{Enhancement_Request__c.Name}}} for a&nbsp;{{{Enhancement_Request__c.Type__c}}} for your approval. The request is&nbsp;{{{Enhancement_Request__c.Priority__c}}} priority.&nbsp;&nbsp;Our team would like to deliver the solution by {{{Enhancement_Request__c.Proposed_Implementation_Date__c}}}. Once you approve our request, we will get started on the work immediately.&nbsp;<br />
+<br />
+Thanks,&nbsp;<br />
+{{{Sender.Name}}}
+</body></html>

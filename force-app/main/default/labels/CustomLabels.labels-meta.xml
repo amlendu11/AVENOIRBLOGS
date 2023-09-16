@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>EMAIL_REPLY_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EMAIL_REPLY_ADDRESS</shortDescription>
+        <value>team.avenoir@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>EMAIL_SENDER_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EMAIL_SENDER_NAME</shortDescription>
+        <value>Avenoir Innovations Pvt Ltd.</value>
+    </labels>
+    <labels>
+        <fullName>ATTACH_FILES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ATTACH_FILES</shortDescription>
+        <value>Attach files</value>
+    </labels>
+    <labels>
+        <fullName>CC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CC</shortDescription>
+        <value>Cc</value>
+    </labels>
+    <labels>
+        <fullName>CLOSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLOSE</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ERROR</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_EMAIL_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>INVALID_EMAIL_MESSAGE</shortDescription>
+        <value>Some of the emails are invalid</value>
+    </labels>
+    <labels>
+        <fullName>RECEIPENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RECEIPENT</shortDescription>
+        <value>Please add a receipent</value>
+    </labels>
+    <labels>
+        <fullName>RESET</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RESET</shortDescription>
+        <value>Reset</value>
+    </labels>
+    <labels>
+        <fullName>SEND</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SEND</shortDescription>
+        <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>SOURCE_LANGUAGE_CODE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SOURCE_LANGUAGE_CODE</shortDescription>
+        <value>Source Language Code</value>
+    </labels>
+    <labels>
+        <fullName>SUBJECT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SUBJECT</shortDescription>
+        <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>TARGET_LANGUAGE_CODE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TARGET_LANGUAGE_CODE</shortDescription>
+        <value>Target Language Code</value>
+    </labels>
+    <labels>
+        <fullName>TO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TO</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>TRANSLATE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TRANSLATE</shortDescription>
+        <value>Translate</value>
+    </labels>
+    <labels>
+        <fullName>UPLOAD_FILES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UPLOAD_FILES</shortDescription>
+        <value>Upload Files</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Insert Account</shortDescription>
+        <value>Insert Account</value>
+    </labels>
+    <labels>
+        <fullName>NAME_IS_BLANK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NAME_IS_BLANK</shortDescription>
+        <value>Name cannot be Blank</value>
+    </labels>
+    <labels>
+        <fullName>PHONE_IS_BLANK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Phone Is Blank</shortDescription>
+        <value>Phone cannot be blank</value>
+    </labels>
+    <labels>
+        <fullName>Id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Id</shortDescription>
+        <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>No_Contacts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Contacts</shortDescription>
+        <value>No Contacts</value>
+    </labels>
+</CustomLabels>

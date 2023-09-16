@@ -1,0 +1,6 @@
+<span style="color: rgb(8, 144, 240);">Dear Team,</span><br><br><span style="color: rgb(8, 144, 240);">Test template is initiated.</span>
+<pstyle="color: rgb(8, 144, 240);">Case Number:&nbsp;<strong>{!Case.CaseNumber}</strong>
+<br>Case Reason:&nbsp;<strong>{!Case.Reason}</strong>
+<br>Contact Name:&nbsp;<strong>{!Case.Contact}</strong>
+<br>Initiated Date & Time:&nbsp;<strong>{!Case.CreatedDate}</strong></p>
+<br><br><table class="ql-table-blob" style="width:100%; border: 1px solid black;"><tbody><tr><th style="border: 1px solid black;">Team</th><th style="border: 1px solid black;">Action</th></tr><tr></tr><tr><td style="border: 1px solid black;">Area Variation</td><td style="border: 1px solid black;">Review the case and take the required action</td></tr><tr><td style="border: 1px solid black;">System Admin</td><td style="border: 1px solid black;">Review the reason and Click OK</td></tr></tbody></table><br>Note: This is a system generated email, do not reply to this.

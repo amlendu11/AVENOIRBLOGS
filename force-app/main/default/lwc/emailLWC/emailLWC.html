@@ -1,0 +1,103 @@
+<template>
+    <article class="slds-card">
+        <!-- Alert -->
+        <div if:true={noEmailError} class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+            <span class="slds-assistive-text">{label.ERROR}</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                    <use xlink:href={SVG_ERROR_LINK}></use>
+                </svg>
+            </span>
+            <h2>{label.RECEIPENT}</h2>
+            <div class="slds-notify__close">
+                <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xlink:href={SVG_CLOSE_LINK}></use>
+                    </svg>
+                    <span class="slds-assistive-text">{label.CLOSE}</span>
+                </button>
+            </div>
+        </div>
+        <div if:true={invalidEmails} class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+            <span class="slds-assistive-text">{label.ERROR}</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                    <use xlink:href={SVG_ERROR_LINK}></use>
+                </svg>
+            </span>
+            <h2>{label.INVALID_EMAIL_MESSAGE}</h2>
+            <div class="slds-notify__close">
+                <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+                    <span class="slds-assistive-text">{label.CLOSE}</span>
+                </button>
+            </div>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-form form slds-var-p-top_small">
+                <div class="slds-form-element slds-form-element_horizontal slds-form-element_1-col">
+                    <label class="slds-form-element__label" for="to">{label.TO}</label>
+                    <div class="slds-form-element__control" style="padding-left:55px;">
+                        <c-email-input onselection={handleToAddressChange}></c-email-input>
+                    </div>
+                </div>
+                <div class="slds-form-element slds-form-element_horizontal slds-form-element_1-col">
+                    <label class="slds-form-element__label" for="cc">{label.CC}</label>
+                    <div class="slds-form-element__control" style="padding-left:55px;">
+                        <c-email-input onselection={handleCcAddressChange}></c-email-input>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="sourceLangCode">{label.SOURCE_LANGUAGE_CODE}</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" name={label.SOURCE_LANGUAGE_CODE} id="sourceLangCode" value={sourceLangCode} class="slds-input" onchange={handleSourceChange} />
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="targetLangCode">{label.TARGET_LANGUAGE_CODE}</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" name={label.TARGET_LANGUAGE_CODE} id="targetLangCode" value={targetLangCode} class="slds-input" onchange={handleTargetChange}/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="subject"></label>
+                    <div class="slds-form-element__control">
+                        <input type="text" name={label.SUBJECT} id="subject" value={subject} placeholder={label.SUBJECT} class="slds-input" onchange={handleSubjectChange} />
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-var-p-top_small">
+                        <lightning-input-rich-text value={body} onchange={handleBodyChange}></lightning-input-rich-text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-var-p-around_medium">
+            <template for:each={files} for:item="file" for:index="index">
+                <lightning-pill key={file.contentVersionId} label={file.name} onremove={handleRemove} data-id={file.contentVersionId} data-index={index}>
+                    <lightning-icon icon-name="doctype:attachment" size="xx-small" alternative-text={label.ATTACH_FILES}></lightning-icon>
+                </lightning-pill>
+            </template>
+        </div>
+        <div class="slds-grid slds-grid_align-end slds-var-p-around_x-small">
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small slds-is-relative">
+                <section if:true={wantToUploadFile} aria-describedby="dialog-body-id-108" aria-labelledby="dialog-heading-id-3" class="slds-popover slds-popover_walkthrough slds-nubbin_bottom slds-is-absolute popover" role="dialog">
+                    <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon-inverse" title="Close dialog"></button>
+                    <header class="slds-popover__header slds-p-vertical_medium"></header>
+                    <div class="slds-popover__body" id="dialog-body-id-108">
+                        <lightning-file-upload label={label.ATTACH_FILES} name={label.ATTACH_FILES} accept={acceptedFormats} record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple></lightning-file-upload>
+                    </div>
+                </section>
+                <lightning-button-icon icon-name="utility:attach" onclick={toggleFileUpload} alternative-text={label.ATTACH_FILES} title={label.ATTACH_FILES}></lightning-button-icon>
+            </div>
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small">
+                <lightning-button label={label.RESET} title={label.RESET} onclick={handleReset}></lightning-button>
+            </div>
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small">
+                <lightning-button label={label.TRANSLATE} title={label.TRANSLATE} onclick={handleTranslation}></lightning-button>
+            </div>
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small">
+                <lightning-button variant="brand" label={label.SEND} title={label.SEND} onclick={handleSendEmail}></lightning-button>
+            </div>
+        </div>
+    </article>
+</template>

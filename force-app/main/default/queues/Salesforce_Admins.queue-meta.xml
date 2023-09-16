@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Salesforce Admins</name>
+    <queueMembers>
+        <roles>
+            <role>SF_Admin</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Enhancement_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

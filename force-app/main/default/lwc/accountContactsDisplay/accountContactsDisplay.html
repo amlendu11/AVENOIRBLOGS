@@ -1,0 +1,64 @@
+<template>
+    <lightning-card class="card">
+        <div class="container"> 
+            <table border="solid">
+                <thead>
+                    <th>{Id}</th>
+                    <th>{Name}</th>
+                </thead>
+                <tbody>
+                    <template for:each={accounts} for:item="acc">
+                        <tr key={acc.account.Id}>
+                            <td>{acc.account.Id}</td>
+                            <td>
+                                <div onclick={openModal}><a id={acc.account.Id} value={acc.account.Id}>{acc.account.Name}</a></div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+                <template if:true={isModalOpen}>
+                    <!-- Modal/Popup Box LWC starts here -->
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <!-- Modal/Popup Box LWC header here -->
+                            <header class="slds-modal__header">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                    title="Close" onclick={closeModal}>
+                                    <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                                        size="small"></lightning-icon>
+                                    <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{accountName}</h2>
+                            </header>
+                            <!-- Modal/Popup Box LWC body starts here -->
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <template if:true={checkTrue}>
+                                    <ul style=" list-style-type: circle;padding-left:7%">
+                                    <table class="modalTable">
+                                        <tbody style="text-align:center">
+                                        <template for:each={contactListShown} for:item="con">
+                                            <tr key={con.key}>
+                                                <td> <b>{con.Value}</b></td>
+                                                <td class="viewBtn">
+                                                    <lightning-button value={con.key} label="View Contact" onclick={navigateToViewContactPage}></lightning-button>
+                                                </td>
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                    </table>
+                                    </ul>
+
+                                </template>
+                                <template if:false={checkTrue}>
+                                    <p>{NoContacts}</p>
+                                </template>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </template>
+            </table>
+        </div>
+    </lightning-card>
+</template>

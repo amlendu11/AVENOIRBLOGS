@@ -1,0 +1,34 @@
+<apex:page controller="AccountCustomController" id="controller">
+    <apex:form id="formid" > 
+        <apex:pageblock id="pageBlock">
+            <apex:pageBlockSection id="input">
+                <apex:inputText value="{!newAccountToInsert.Name}" id="name" />
+                <apex:inputText value="{!newAccountToInsert.Phone}" id="phone"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:outputPanel onclick="callJavaScriptFunction();" styleClass="btn">
+                    {!$Label.ACCOUNT_INSERT_BUTTON}
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+        </apex:pageblock>
+        <script type="text/javascript">
+        function callJavaScriptFunction(){
+            let name = document.getElementById('controller:formid:pageBlock:input:name').value;
+            let phone = document.getElementById('controller:formid:pageBlock:input:phone').value;
+            if(name == "") {
+                alert('{!$Label.NAME_IS_BLANK}');
+            }
+            else if(phone == "") {
+                alert('{!$Label.PHONE_IS_BLANK}');
+            }
+            else {
+                callContollerMethod(name, phone);
+            }
+        }
+        </script>
+        <apex:actionFunction name="callContollerMethod" action="{!calledFromVFPage}" rerender="">
+            <apex:param name="name" value="" />
+            <apex:param name="phone" value="" />
+        </apex:actionFunction>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Enhancement Request email template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>New Enhancement Request</name>
+    <relatedEntityType>Enhancement_Request__c</relatedEntityType>
+    <style>none</style>
+    <subject>New Enhancement Request</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

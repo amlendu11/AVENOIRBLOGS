@@ -1,0 +1,23 @@
+body{
+    color: #000;
+    padding-left: 200px;
+}
+th {
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+table{
+    width: 50%;
+}
+.modalTable{
+    width: 100%;
+}
+.viewBtn{
+    padding-bottom:10px;
+}
