@@ -1,4 +1,4 @@
-#AVENOIR CODEBASE REPOSITORY GUIDELINES
+AVENOIR CODEBASE REPOSITORY GUIDELINES
 
 This document aims to provide guidelines for maintaining as well as accessing the blog repository of Avenoir Technologies Pvt Ltd.
 
@@ -16,7 +16,7 @@ The ticket mentions the environment (scratch org credentials). After the develop
 
 The code contains proper description blocks, ticket naming conventions, and branch naming conventions so as to easily get through the respective content and its Author details.
 
-#BLOG
+BLOG
 
 File naming convention -
 
