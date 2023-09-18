@@ -8,7 +8,7 @@ export default class DynamicFieldMappingButton extends LightningElement {
     handleButtonClick() {
         mapFields({ contactId: this.recordId })
             .then(result => {
-                if (result.isSuccess) {
+                if (result[0].isSuccess) {
                     const event = new ShowToastEvent({
                         title: 'Success',
                         message: result[0].message,
