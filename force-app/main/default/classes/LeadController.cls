@@ -18,14 +18,9 @@ public class LeadController {
       return LeadProcessor.getLeadWrappedRecords();
    }
     
-   @AuraEnabled(cacheable=true)
-   public static List<Lead> getLeadData(String recordId) {
-      return LeadDomain.getLeadRecords(recordId);
-   }
-    
    @AuraEnabled
    public static void saveDraftValues(Object data) {
-      List<Lead> listOfLeads = (List<Lead>) JSON.deserialize(JSON.serialize(data),List<Lead>.class);
+      List<Lead> listOfLeads = (List<Lead>) JSON.deserialize(JSON.serialize(data), List<Lead>.class);
       update listOfLeads;
    }
 }
