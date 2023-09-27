@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Lead_Escalation_Delay_4_Days</name>
+        <label>Lead Escalation Delay- 4 Days</label>
+        <locationX>314</locationX>
+        <locationY>468</locationY>
+        <actionName>Lead.Lead_Escalation_Delay_4_Days</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Lead_Escalation_Delay_6_Days</name>
+        <label>Lead Escalation Delay- 6 Days</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <actionName>Lead.Lead_Escalation_Delay_6_Days</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Check_the_status_is_working_for_more_than_4_days</name>
+        <label>Check the status is working for more than 4 days</label>
+        <locationX>314</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Not more than 4 or 6 days</defaultConnectorLabel>
+        <rules>
+            <name>Lead_is_in_working_status_for_more_than_6_days</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Status_Field_History.CreatedDate</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>Interval6days</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Escalation_Delay_6_Days</targetReference>
+            </connector>
+            <label>Lead is in working status for more than 6 days</label>
+        </rules>
+        <rules>
+            <name>Lead_is_in_working_status_for_more_than_4_days</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Status_Field_History.CreatedDate</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>Interval4Days</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Escalation_Delay_4_Days</targetReference>
+            </connector>
+            <label>Lead is in working status for more than 4 days</label>
+        </rules>
+    </decisions>
+    <description>This flow is used when lead status is working for more than 4 Days. It will send an email to inform lead manager to look into the issue</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Interval4Days</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Flow.CurrentDateTime} -4</expression>
+    </formulas>
+    <formulas>
+        <name>Interval6days</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Flow.CurrentDateTime} -6</expression>
+    </formulas>
+    <interviewLabel>Escalation Email for working leads more than 4 days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Escalation Email for working leads more than 4 days</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Status_Field_History</name>
+        <label>Status Field  History</label>
+        <locationX>314</locationX>
+        <locationY>252</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_the_status_is_working_for_more_than_4_days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Field</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Status</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>LeadId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>LeadHistory</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Status_Field_History</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Working - Contacted</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-09-25</startDate>
+            <startTime>13:45:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
