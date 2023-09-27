@@ -1,8 +1,7 @@
-
 .THIS #sfdc_username_container{
     padding-top: 2px;
     padding-bottom: 8px;
-    background-color:white;
+    background-color: white;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 5px;
@@ -11,44 +10,16 @@
     align-items: center !important;
 }
 
-.THIS #sfdc_user{
-    float:left;
-    width:23px;
-    height:25px;
-    padding-top:1px;
-    padding-left:2px;
-    margin:0px;
-
-}
-
-.THIS #sfdc_lock{
-    float:left;
-    width:23px;
-    height:25px;
-    padding-top:1px;
-    padding-left:2px;
-    margin:0px;
-}
-
 .THIS  #error {
     text-align: center;
-    color:red;
+    color: red;
     font-size: 14px;
-}
-
-.THIS  .login-icon {
-    position: absolute;
-    top: 50%;
-    left: 8px;
-    transform: translateY(-50%);
-    color: #ccc;
-    font-size: 22px;
 }
 
 .THIS #sfdc_password_container{
     padding-top: 2px;
     padding-bottom: 8px;
-    background-color:white;
+    background-color: white;
     border: 0px solid white !important;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -81,17 +52,9 @@
 }
 
 .THIS  button:hover {
-    background-color:#28d177 !important;
-    border-color:#285e8e;
-    cursor:pointer;
-}
-
-.THIS button .label {
-    color: #fff;
-}
-
-.THIS div.sfdc button.sfdc_button {
-    background-color: #2CBC6F;;
+    background-color: #28d177 !important;
+    border-color: #285e8e;
+    cursor: pointer;
 }
 
 .THIS  input {
@@ -111,10 +74,6 @@
 .THIS span a:hover {
     color: white;
     text-decoration: none;
-}
-
-.THIS label.uiLabel-hidden {
-    display:none;
 }
 
 .THIS div.sfdc {
@@ -142,11 +101,6 @@
     text-align: right !important;
 }
 
-.THIS .login-icon {
-    float: left !important;
-    margin-right: 5px !important;
-}
-
 .THIS .user-icon {
     padding: 5px !important;
     margin-right: 1px !important;
@@ -154,19 +108,6 @@
 
 .THIS .username-password-wrapper {
     margin-top: 4px;
-}
-
-.THIS .username-password-wrapper .input {
-    margin-top: 4px;
-    padding-right: 20px;
-    padding-left: 2px;
-    margin-right: -20px !important;
-}
-
-.THIS .custom-login-container .custom-login-template-title {
-    font-size: 24px !important;
-    font-weight: bold !important;
-    margin-bottom: 10px !important;
 }
 
 .THIS .main {
