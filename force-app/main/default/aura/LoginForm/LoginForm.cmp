@@ -1,4 +1,4 @@
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" controller="LightningLoginFormController" access="Global">
+<aura:component implements="forceCommunity:availableForAllPageTypes" controller="LightningLoginFormController" access="Global">
 
     <aura:attribute name="showError" type="Boolean" required="true" description="" default="false" access="private"/>
     <aura:attribute name="errorMessage" type="String" required="false" description="" access="private"/>
@@ -45,7 +45,7 @@
                     <ui:button aura:id="submitButton" label="{!v.loginButtonLabel}" press="{!c.handleLogin}" class="sfdc_button"/>
                 </div>
                 <div id="sfdc_forgot" class="sfdc-forgot-container">
-                    <span class="left-link"><a href="">{!v.forgotPasswordLabel}</a></span>
+                    <span class="left-link"><a href="/s/login/ForgotPassword">{!v.forgotPasswordLabel}</a></span>
                     <span class="right-link"><a href="https://test.salesforce.com/">Are You An Employee?</a></span>
                 </div>
             </aura:renderIf>
