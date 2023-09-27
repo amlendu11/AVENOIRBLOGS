@@ -1,15 +1,12 @@
 import { LightningElement, wire, track } from 'lwc';
 import { refreshApex } from '@salesforce/apex';
-import { loadStyle } from 'lightning/platformResourceLoader';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getAllLeads from '@salesforce/apex/LeadController.getAllLeads';
-import LEAD_OBJECT from '@salesforce/schema/Lead';
 import NAME_FIELD from '@salesforce/schema/Lead.Name';
 import PHONE_FIELD from '@salesforce/schema/Lead.Phone';
 import EMAIL_FIELD from '@salesforce/schema/Lead.Email';
-import STATUS_FIELD from '@salesforce/schema/Lead.Status';
-import { getPicklistValues, getObjectInfo } from 'lightning/uiObjectInfoApi';
+import getLeadStatusPicklistValues from '@salesforce/apex/LeadController.getLeadStatusPicklistValues';
 
 const COLS = [
   {
@@ -62,7 +59,7 @@ export default class listPage extends LightningElement {
   @track error;
   @track isLoading = true;
   @track dropdownVisible = false;
-  @track pickListOptions;
+  @track pickListOptions =[];
   wiredLeadsResult;
 
   statusOptions = [
@@ -73,19 +70,17 @@ export default class listPage extends LightningElement {
     { label: 'Not Qualified-Closed', value: 'Not Qualified-Closed' },
   ];
 
-  @wire(getObjectInfo, { objectApiName: LEAD_OBJECT })
-  objectInfo;
-
-  @wire(getPicklistValues, {
-    recordTypeId: "$objectInfo.data.defaultRecordTypeId",
-    fieldApiName: STATUS_FIELD
-  })
-  wirePickList({ error, data }) {
-    if (data) {
-      this.pickListOptions = data.values;
-    } else if (error) {
-      console.log(error);
-    }
+  connectedCallback() {
+    getLeadStatusPicklistValues()
+        .then(result => {
+            this.pickListOptions = result.map(item => ({
+                label: item.label,
+                value: item.value
+            }));
+        })
+        .catch(error => {
+            console.error('Error fetching picklist values:', error);
+        });
   }
 
   updateDraftValues(updateItem) {
@@ -148,44 +143,38 @@ export default class listPage extends LightningElement {
     }
   }
 
+  createAndDispatchToast(title, message, variant) {
+      const toastEvent = new ShowToastEvent({
+          title: title,
+          message: message,
+          variant: variant,
+      });
+      this.dispatchEvent(toastEvent);
+  }
 
   async handleInlineEditSave(event) {
     const draftValues = event.detail.draftValues;
     if (draftValues.length === 0) {
-      return;
+        return;
     }
     const records = draftValues.map((draftValue) => {
-      const fields = { ...draftValue };
-      return { fields };
+        const fields = { ...draftValue };
+        return { fields };
     });
-
     this.draftValues = [];
-
     try {
-      const recordUpdatePromises = records.map((record) =>
-        updateRecord(record)
-      );
-      await Promise.all(recordUpdatePromises);
-      this.dispatchEvent(
-        new ShowToastEvent({
-          title: 'Success',
-          message: 'Leads updated',
-          variant: 'success',
-        })
-      );
-      refreshApex(this.wiredLeadsResult);
+        const recordUpdatePromises = records.map((record) =>
+            updateRecord(record)
+        );
+        await Promise.all(recordUpdatePromises);
+        this.createAndDispatchToast('Success', 'Leads updated', 'success');
+        refreshApex(this.wiredLeadsResult);
     } catch (error) {
-      let errorMessage = 'Error updating or reloading Leads';
-      if (error.body && error.body.message) {
-        errorMessage = error.body.message;
-      }
-      this.dispatchEvent(
-        new ShowToastEvent({
-          title: 'Error',
-          message: errorMessage,
-          variant: 'error',
-        })
-      );
+        let errorMessage = 'Error updating or reloading Leads';
+        if (error.body && error.body.message) {
+            errorMessage = error.body.message;
+        }
+        this.createAndDispatchToast('Error', errorMessage, 'error');
     }
-  }
+}
 }

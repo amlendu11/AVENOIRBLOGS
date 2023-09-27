@@ -23,4 +23,26 @@ public class LeadController {
       List<Lead> listOfLeads = (List<Lead>) JSON.deserialize(JSON.serialize(data), List<Lead>.class);
       update listOfLeads;
    }
+   
+   public class PicklistValueWrapper {
+      @AuraEnabled
+      public String label { get; set; }
+      @AuraEnabled
+      public String value { get; set; }
+      
+      public PicklistValueWrapper(String label, String value) {
+         this.label = label;
+         this.value = value;
+      }
+   }
+    
+   @AuraEnabled(cacheable=true)
+   public static List<PicklistValueWrapper> getLeadStatusPicklistValues() {
+      List<PicklistValueWrapper> picklistValues = new List<PicklistValueWrapper>(); 
+      List<Schema.PicklistEntry> entries = Lead.Status.getDescribe().getPicklistValues();
+      for (Schema.PicklistEntry entry : entries) {
+         picklistValues.add(new PicklistValueWrapper(entry.getLabel(), entry.getValue()));
+      } 
+      return picklistValues;
+   }
 }
