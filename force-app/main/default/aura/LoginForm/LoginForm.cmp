@@ -37,7 +37,7 @@
                     <ui:button aura:id="submitButton" label="Log in" press="{!c.handleLogin}" class="sfdc_button"/>
                 </div>
                 <div id="sfdc_forgot" class="sfdc-forgot-container">
-                    <span class="left-link"><a href="">Forgot your password?</a></span>
+                    <span class="left-link"><a href="">Forgot Your Password?</a></span>
                     <span class="right-link"><a href="https://test.salesforce.com/">Are You An Employee?</a></span>
                 </div>
             </aura:renderIf>
