@@ -1,3 +1,15 @@
+/************************************************************************ 
+(c) Copyright 2023 Avenoir Technologies Pvt. Ltd. All rights reserved.* 
+Created by: Santosh Kumar
+Ticket Number: AVEBLOG68
+------------------------------------------------------------------------* 
+Blog: How to debug standard lightning components.
+------------------------------------------------------------------------* 
+Version History:* 
+VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES   
+1.0        Santosh Kumar        25/09/23     Initial Development   
+***********************************************************************/
+
 import { LightningElement,wire } from 'lwc';
 import { getRecord } from "lightning/uiRecordApi"
 
