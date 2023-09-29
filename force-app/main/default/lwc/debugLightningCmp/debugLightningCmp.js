@@ -21,7 +21,6 @@ export default class DebugLightningCmp extends LightningElement {
     contactData;
     error;
 
-
     @wire(getRecord, { recordId: "$recordId", fields: FIELDS })
     wiredRecord({ error, data }) {
         if(data) {
@@ -33,8 +32,7 @@ export default class DebugLightningCmp extends LightningElement {
         }
     }
 
-    //Edit form 
-    
+    //Edit form   
     handleSubmit(event) {
         event.preventDefault();      
         const fields = event.detail.fields;
