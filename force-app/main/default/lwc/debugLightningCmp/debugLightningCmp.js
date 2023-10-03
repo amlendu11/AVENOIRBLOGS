@@ -10,14 +10,14 @@ VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
 1.0        Santosh Kumar        25/09/23     Initial Development   
 ***********************************************************************/
 
-import { LightningElement,wire } from 'lwc';
+import { LightningElement,wire,api } from 'lwc';
 import { getRecord } from "lightning/uiRecordApi"
 
 const FIELDS = ["Contact.Name", "Contact.Phone","contact.Email"];
 
 export default class DebugLightningCmp extends LightningElement {
 
-    recordId = "003H4000001jJqiIAE";
+    @api recordId;
     contactData;
     error;
 
