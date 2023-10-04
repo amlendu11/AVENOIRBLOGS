@@ -1,26 +1,26 @@
 ({
     handleLogin: function (component, event, helpler) {
-        var username = component.find("username").get("v.value");
-        var password = component.find("password").get("v.value");
-        var action = component.get("c.login");
-        var startUrl = component.get("v.startUrl");
+        let username = component.find("username").get("v.value");
+        let password = component.find("password").get("v.value");
+        let action = component.get("c.login");
+        let startUrl = component.get("v.startUrl");
         startUrl = decodeURIComponent(startUrl);
         action.setParams({ username: username, password: password, startUrl: startUrl });
         action.setCallback(this, function (response) {
-            var state = response.getState();
+            let state = response.getState();
             if (state === "SUCCESS") {
-                var rtnValue = response.getReturnValue();
+                let rtnValue = response.getReturnValue();
                 component.set("v.errorMessage", response.getReturnValue());
                 component.set("v.showError", true);
                 if (rtnValue === "success") {
                     console.log("Login successful!");
                 }
             } else if (state === "ERROR") {
-                var errors = response.getError();
+                let errors = response.getError();
                 if (errors) {
                     console.error(errors);
                 }
-                component.set("v.errorMessage", "An unexpected error occurred. Please try again later.");
+                component.set("v.errorMessage", $A.get("$Label.c.SITE_LOGIN_ERROR_MESSAGE"));
                 component.set("v.showError", true);
             }
         });
@@ -28,7 +28,7 @@
     },
 
     getIsUsernamePasswordEnabled : function (component, event, helpler) {
-        var action = component.get("c.getIsUsernamePasswordEnabled");
+        let action = component.get("c.getIsUsernamePasswordEnabled");
         action.setCallback(this, function(a){
                 component.set('v.isUsernamePasswordEnabled',true);
         });

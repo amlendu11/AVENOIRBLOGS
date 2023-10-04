@@ -37,11 +37,10 @@
                     <ui:button aura:id="submitButton" label="Log in" press="{!c.handleLogin}" class="sfdc_button"/>
                 </div>
                 <div id="sfdc_forgot" class="sfdc-forgot-container">
-                    <span class="left-link"><a href="">Forgot Your Password?</a></span>
-                    <span class="right-link"><a href="https://test.salesforce.com/">Are You An Employee?</a></span>
+                    <span class="left-link"><a href="">{!$Label.c.FORGOT_PASSWORD_BUTTON}</a></span>
+                    <span class="right-link"><a href="https://test.salesforce.com/">{!$Label.c.ARE_YOU_AN_EMPLOYEE_BUTTON}</a></span>
                 </div>
             </aura:renderIf>
         </div>
     </div>
-
 </aura:component>
