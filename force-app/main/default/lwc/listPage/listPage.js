@@ -7,6 +7,12 @@ import NAME_FIELD from '@salesforce/schema/Lead.Name';
 import PHONE_FIELD from '@salesforce/schema/Lead.Phone';
 import EMAIL_FIELD from '@salesforce/schema/Lead.Email';
 import getLeadStatusPicklistValues from '@salesforce/apex/LeadController.getLeadStatusPicklistValues';
+import CUSTOM_SUCCESS_TITLE_LABEL from '@salesforce/label/c.Custom_Success_Title_Label';
+import CUSTOM_SUCCESS_MESSAGE_LABEL from '@salesforce/label/c.Custom_Success_Message_Label';
+import CUSTOM_SUCCESS_VARIANT_LABEL from '@salesforce/label/c.Custom_Success_Variant_Label';
+import CUSTOM_ERROR_TITLE_LABEL from '@salesforce/label/c.Custom_Error_Title_Label';
+import CUSTOM_ERROR_MESSAGE_LABEL from '@salesforce/label/c.Custom_Error_Message_Label';
+import CUSTOM_ERROR_VARIANT_LABEL from '@salesforce/label/c.Custom_Error_Variant_Label';
 
 const COLS = [
   {
@@ -61,6 +67,9 @@ export default class listPage extends LightningElement {
   @track dropdownVisible = false;
   @track pickListOptions =[];
   wiredLeadsResult;
+  @track customErrorTitle = CUSTOM_ERROR_TITLE_LABEL;
+  @track customErrorMessage = CUSTOM_ERROR_MESSAGE_LABEL;
+  @track customErrorVariant = CUSTOM_ERROR_VARIANT_LABEL;
 
   statusOptions = [
     { label: 'New', value: 'New' },
@@ -79,7 +88,7 @@ export default class listPage extends LightningElement {
             }));
         })
         .catch(error => {
-            console.error('Error fetching picklist values:', error);
+            this.createAndDispatchToast(this.customErrorTitle, this.customErrorMessage, this.customErrorVariant);
         });
   }
 
@@ -104,8 +113,8 @@ export default class listPage extends LightningElement {
 
   handleCellChange(event) {
     let draftValues = event.detail.draftValues;
-    draftValues.forEach(ele => {
-      this.updateDraftValues(ele);
+    draftValues.forEach(element => {
+      this.updateDraftValues(element);
     });
   }
 
@@ -153,28 +162,24 @@ export default class listPage extends LightningElement {
   }
 
   async handleInlineEditSave(event) {
-    const draftValues = event.detail.draftValues;
-    if (draftValues.length === 0) {
-        return;
-    }
-    const records = draftValues.map((draftValue) => {
-        const fields = { ...draftValue };
-        return { fields };
-    });
-    this.draftValues = [];
-    try {
-        const recordUpdatePromises = records.map((record) =>
-            updateRecord(record)
-        );
-        await Promise.all(recordUpdatePromises);
-        this.createAndDispatchToast('Success', 'Leads updated', 'success');
-        refreshApex(this.wiredLeadsResult);
-    } catch (error) {
-        let errorMessage = 'Error updating or reloading Leads';
-        if (error.body && error.body.message) {
-            errorMessage = error.body.message;
+        const draftValues = event.detail.draftValues;
+        if (draftValues.length === 0) {
+            return;
         }
-        this.createAndDispatchToast('Error', errorMessage, 'error');
+        this.draftValues = [];
+        const records = draftValues.map(draftValue => ({ fields: { ...draftValue } }));
+        try {
+            const recordUpdatePromises = records.map((record) =>
+                updateRecord(record)
+            );
+            await Promise.all(recordUpdatePromises);
+            const title = CUSTOM_SUCCESS_TITLE_LABEL;
+            const message = CUSTOM_SUCCESS_MESSAGE_LABEL;
+            const variant = CUSTOM_SUCCESS_VARIANT_LABEL;
+            this.createAndDispatchToast(title, message, variant);
+            refreshApex(this.wiredLeadsResult);
+        } catch (error) {
+            this.createAndDispatchToast(this.customErrorTitle, this.customErrorMessage, this.customErrorVariant);
+        }
     }
-}
 }
