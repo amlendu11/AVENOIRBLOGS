@@ -169,13 +169,6 @@
         <value>Are You An Employee?</value>
     </labels>
     <labels>
-        <fullName>SITE_LOGIN_ERROR_MESSAGE</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>SITE LOGIN ERROR MESSAGE</shortDescription>
-        <value>An unexpected error occurred. Please try again later.</value>
-    </labels>
-    <labels>
         <fullName>SANDBOX_LOGIN_URL</fullName>
         <language>en_US</language>
         <protected>true</protected>
