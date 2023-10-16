@@ -1,44 +1,33 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes" controller="LightningLoginFormController" access="Global">
 
-    <aura:attribute name="showError" type="Boolean" required="true" default="false" access="private"/>
-    <aura:attribute name="errorMessage" type="String" required="false" access="private"/>
     <aura:attribute name="isUsernamePasswordEnabled" type="Boolean" access="private"/>
     <aura:handler name="init" value="{!this}" action="{!c.initialize}"/>
 
     <div class="custom-login-container">
         <div class="main">
             <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
-                <span>
-                    <div>
-                        <aura:renderIf isTrue="{!v.showError}">
-                            <div id="error">
-                                <ui:outputRichText value="{!v.errorMessage}"/>
-                            </div>
-                        </aura:renderIf>
-                    </div>
-                </span>
                 <div id="sfdc_username_container" class="sfdc">
                     <span class="user-icon">
-                        <lightning:icon iconName="utility:user" size="x-small" alternativeText="User Icon"/>
+                        <lightning:icon iconName="utility:user" size="x-small"/>
                     </span>
                     <div class="username-password-wrapper">
-                        <ui:inputText value="" aura:id="username" placeholder="Username" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc" label="Username" labelClass="assistiveText" />
+                        <ui:inputText aura:id="username" placeholder="{!$Label.c.LOGIN_USERNAME_PLACEHOLDER}" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc" labelClass="assistiveText" />
                     </div>
                 </div>
                 <div id="sfdc_password_container" class="sfdc">
                     <span class="user-icon">
-                        <lightning:icon iconName="utility:lock" size="x-small" alternativeText="Lock Icon" />
+                        <lightning:icon iconName="utility:lock" size="x-small"/>
                     </span>
                     <div class="username-password-wrapper">
-                        <ui:inputSecret value="" aura:id="password" placeholder="Password" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" label="Password" labelClass="assistiveText" />
+                        <ui:inputSecret aura:id="password" placeholder="{!$Label.c.LOGIN_PASSWORD_PLACEHOLDER}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" labelClass="assistiveText" />
                     </div>
                 </div>
                 <div class="sfdc-login-container">
-                    <ui:button aura:id="submitButton" label="Log in" press="{!c.handleLogin}" class="sfdc_button"/>
+                    <ui:button aura:id="submitButton" label="{!$Label.c.LOGIN_BUTTON_LABEL}" press="{!c.handleLogin}" class="sfdc_button"/>
                 </div>
                 <div id="sfdc_forgot" class="sfdc-forgot-container">
-                    <span class="left-link"><a href="/s/ForgotPassword">{!$Label.c.FORGOT_PASSWORD_BUTTON}</a></span>
-                    <span class="right-link"><a href="https://test.salesforce.com/">{!$Label.c.ARE_YOU_AN_EMPLOYEE_BUTTON}</a></span>
+                    <span class="left-link"><a href="{!$Label.c.LOGIN_FORGOT_PASSWORD_URL}">{!$Label.c.FORGOT_PASSWORD_BUTTON}</a></span>
+                    <span class="right-link"><a href="{!$Label.c.LOGIN_SANDBOX_URL}">{!$Label.c.ARE_YOU_AN_EMPLOYEE_BUTTON}</a></span>
                 </div>
             </aura:renderIf>
         </div>

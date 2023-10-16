@@ -10,18 +10,14 @@
             let state = response.getState();
             if (state === "SUCCESS") {
                 let rtnValue = response.getReturnValue();
-                component.set("v.errorMessage", response.getReturnValue());
-                component.set("v.showError", true);
-                if (rtnValue === "success") {
-                    console.log("Login successful!");
+                if (rtnValue != null) {
+                    alert(rtnValue);
                 }
             } else if (state === "ERROR") {
                 let errors = response.getError();
                 if (errors) {
-                    console.error(errors);
+                    alert(errors);
                 }
-                component.set("v.errorMessage", $A.get("$Label.c.SITE_LOGIN_ERROR_MESSAGE"));
-                component.set("v.showError", true);
             }
         });
         $A.enqueueAction(action);
@@ -30,8 +26,8 @@
     getIsUsernamePasswordEnabled : function (component, event, helpler) {
         let action = component.get("c.getIsUsernamePasswordEnabled");
         action.setCallback(this, function(a){
-                component.set('v.isUsernamePasswordEnabled',true);
+                component.set('v.isUsernamePasswordEnabled', true);
         });
         $A.enqueueAction(action);
-    },
+    }
 })

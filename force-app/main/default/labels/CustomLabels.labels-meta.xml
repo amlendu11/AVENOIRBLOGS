@@ -182,4 +182,39 @@
         <shortDescription>SANDBOX LOGIN URL</shortDescription>
         <value>https://test.salesforce.com/</value>
     </labels>
+    <labels>
+        <fullName>LOGIN_BUTTON_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN BUTTON LABEL</shortDescription>
+        <value>Log In</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_FORGOT_PASSWORD_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN FORGOT PASSWORD URL</shortDescription>
+        <value>/s/ForgotPassword</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_PASSWORD_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN PASSWORD PLACEHOLDER</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_SANDBOX_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN SANDBOX URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_USERNAME_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
+        <value>Username</value>
+    </labels>
 </CustomLabels>

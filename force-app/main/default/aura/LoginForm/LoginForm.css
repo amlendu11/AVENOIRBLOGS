@@ -10,12 +10,6 @@
     align-items: center !important;
 }
 
-.THIS  #error {
-    text-align: center;
-    color: red;
-    font-size: 14px;
-}
-
 .THIS #sfdc_password_container{
     padding-top: 2px;
     padding-bottom: 8px;
