@@ -57,6 +57,13 @@
         <value>Leads updated</value>
     </labels>
     <labels>
+        <fullName>Custom_Success_Message_Label_for_Opportunity</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom label for success toast message</shortDescription>
+        <value>Opportunities updated</value>
+    </labels>
+    <labels>
         <fullName>Custom_Success_Title_Label</fullName>
         <language>en_US</language>
         <protected>false</protected>
