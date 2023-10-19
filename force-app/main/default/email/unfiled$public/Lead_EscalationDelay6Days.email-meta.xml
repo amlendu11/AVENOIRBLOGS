@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used when lead status is working for more than 6 Days</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Demo_letterhead</letterhead>
+    <name>Lead EscalationDelay6Days</name>
+    <style>freeForm</style>
+    <subject>Escalation Reminder: Lead Not Escalated in 6 Days</subject>
+    <textOnly>Dear Lead Manager,
+
+As of now, there is a lead in our system that has not been escalated for over 6 Days. This is a critical lead, and the delay in escalation could potentially impact our sales pipeline and customer engagement.
+
+Lead Details:{!Lead.Link}
+
+I kindly request that you review the situation and ensure that the necessary escalation steps are taken promptly to ensure that we do not miss out on this opportunity. Our team has already attempted to contact the lead, but without escalation, we risk losing their interest.
+
+Please let me know if you need any additional information or support from my end to resolve this matter swiftly. Your immediate attention to this issue would be greatly appreciated.
+
+Regards,
+Team 1</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
