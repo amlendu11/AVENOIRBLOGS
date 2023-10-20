@@ -9,17 +9,25 @@ import CUSTOM_SUCCESS_VARIANT_LABEL from '@salesforce/label/c.Custom_Success_Var
 import CUSTOM_ERROR_TITLE_LABEL from '@salesforce/label/c.Custom_Error_Title_Label';
 import CUSTOM_ERROR_MESSAGE_LABEL from '@salesforce/label/c.Custom_Error_Message_Label';
 import CUSTOM_ERROR_VARIANT_LABEL from '@salesforce/label/c.Custom_Error_Variant_Label';
+import OPPORTUNITY_NAME from "@salesforce/schema/Opportunity.Name";
+import ACCOUNT_NAME from "@salesforce/schema/Opportunity.AccountId";
+import OPPORTUNITY_AMOUNT from "@salesforce/schema/Opportunity.Amount";
+import OPPORTUNITY_CLOSE_DATE from "@salesforce/schema/Opportunity.CloseDate";
+import OPPORTUNITY_NAME_LABEL from '@salesforce/label/c.Opportunity_Name_Label';
+import ACCOUNT_NAME_LABEL from '@salesforce/label/c.Account_Name_Label';
+import AMOUNT_LABEL from '@salesforce/label/c.Amount_Label';
+import CLOSE_DATE_LABEL from '@salesforce/label/c.Close_Date_Label';
 
 const COLS = [
     {
-        label: 'Opportunity Name',
-        fieldName: 'Name',
+        label: OPPORTUNITY_NAME_LABEL,
+        fieldName: OPPORTUNITY_NAME.fieldApiName,
         type: 'text',
         editable: false,
     },
     {
-        label: 'Account Name',
-        fieldName: 'AccountId',
+        label: ACCOUNT_NAME_LABEL,
+        fieldName: ACCOUNT_NAME.fieldAPiName,
         type: 'lookupColumn',
         typeAttributes: {
             object: 'Opportunity',
@@ -33,16 +41,16 @@ const COLS = [
         editable: false,
     },
     {
-        label: 'Amount',
-        fieldName: 'Amount',
+        label: AMOUNT_LABEL,
+        fieldName: OPPORTUNITY_AMOUNT.fieldApiName,
         type: 'currency',
-        editable: true
+        editable: true,
     },
     {
-        label: 'Close Date',
-        fieldName: 'CloseDate',
+        label: CLOSE_DATE_LABEL,
+        fieldName: OPPORTUNITY_CLOSE_DATE.fieldApiName,
         type: 'date',
-        editable: true
+        editable: true,
     }
 ];
 
@@ -119,7 +127,7 @@ export default class DemoPage extends LightningElement {
     }       
 
     createAndDispatchToast(title, message, variant) {
-        const toastEvent = new ShowToastEvent({
+        let toastEvent = new ShowToastEvent({
             title: title,
             message: message,
             variant: variant,
@@ -139,13 +147,10 @@ export default class DemoPage extends LightningElement {
                 updateRecord(record)
             );
             await Promise.all(recordUpdatePromises);
-            const title = CUSTOM_SUCCESS_TITLE_LABEL;
-            const message = CUSTOM_SUCCESS_MESSAGE_LABEL;
-            const variant = CUSTOM_SUCCESS_VARIANT_LABEL;
-            this.createAndDispatchToast(title, message, variant);
+            this.createAndDispatchToast(CUSTOM_SUCCESS_TITLE_LABEL, CUSTOM_SUCCESS_MESSAGE_LABEL, CUSTOM_SUCCESS_VARIANT_LABEL);
             refreshApex(this.wiredOpportunitiesResult);
         } catch (error) {
-            this.createAndDispatchToast(this.customErrorTitle, this.customErrorMessage, this.customErrorVariant);
+            this.createAndDispatchToast(CUSTOM_ERROR_TITLE_LABEL, CUSTOM_ERROR_MESSAGE_LABEL, CUSTOM_ERROR_VARIANT_LABEL);
         }
     }
 }

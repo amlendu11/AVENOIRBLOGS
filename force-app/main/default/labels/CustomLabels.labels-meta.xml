@@ -15,6 +15,20 @@
         <value>Attach files</value>
     </labels>
     <labels>
+        <fullName>Account_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for  account name column in datatable</shortDescription>
+        <value>Account Name</value>
+    </labels>
+    <labels>
+        <fullName>Amount_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for amount name column in datatable</shortDescription>
+        <value>Amount</value>
+    </labels>
+    <labels>
         <fullName>CC</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -27,6 +41,13 @@
         <protected>true</protected>
         <shortDescription>CLOSE</shortDescription>
         <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>Close_Date_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for close date column in datatable</shortDescription>
+        <value>Close Date</value>
     </labels>
     <labels>
         <fullName>Custom_Error_Message_Label</fullName>
@@ -132,6 +153,13 @@
         <protected>true</protected>
         <shortDescription>No Contacts</shortDescription>
         <value>No Contacts</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for column in datatable</shortDescription>
+        <value>Opportunity Name</value>
     </labels>
     <labels>
         <fullName>PHONE_IS_BLANK</fullName>
