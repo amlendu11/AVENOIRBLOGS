@@ -1,0 +1,11 @@
+<template>
+    <div data-id="container" style="height: 500px; margin-top: 15px; overflow-y: auto">
+        <c-custom-datatable class="myTable" key-field="Id" data={visibleRecords} columns={columns} onsave={handleInlineEditSave} onvalueselect={handleSelection} draft-values={draftValues} oncellchange={handleCellChange} onlookupchanged={lookupChanged} ></c-custom-datatable>
+    </div>
+    <div if:true={isLoading} class="slds-m-around_medium">
+        Loading...
+    </div>
+    <div if:true={error} class="slds-m-around_medium">
+        Error: {error}
+    </div>
+</template>
