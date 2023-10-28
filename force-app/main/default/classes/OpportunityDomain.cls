@@ -5,15 +5,27 @@
 ------------------------------------------------------------------------
 * Blog: CUSTOM LOOKUP FIELD EDITING IN LWC DATA TABLE .
 ------------------------------------------------------------------------
-* Purpose/ Methods: This is controller class to get object data.
+* Purpose/ Methods: This is domain class to query object data.
 ------------------------------------------------------------------------ 
 * Version History: 
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES   
    1.0        Pooja Ahuja        13/10/2023    Initial Development   
 ***********************************************************************/
-public with sharing class OpportunityController {
-    @AuraEnabled(cacheable = true)
-    public static List<OpportunityWrapper> getAllOpportunity() {
-        return OpportunityProcessor.getOpportunityWrappedRecords();
+global without sharing class OpportunityDomain {
+    public static List<Opportunity> getOpportunityRecords() {
+        return [
+            SELECT 
+                Id,
+                Name, 
+                Amount, 
+                Account.Name, 
+                CloseDate, 
+                Owner.Name,
+                OwnerId, 
+                CreatedDate, 
+                LastModifiedDate     
+            FROM 
+                Opportunity
+        ];
     }
 }
