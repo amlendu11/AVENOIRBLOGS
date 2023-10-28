@@ -27,7 +27,7 @@ const COLS = [
     },
     {
         label: ACCOUNT_NAME_LABEL,
-        fieldName: ACCOUNT_NAME.fieldAPiName,
+        fieldName: 'AccountId',
         type: 'lookupColumn',
         typeAttributes: {
             object: 'Opportunity',
@@ -81,6 +81,19 @@ export default class DemoPage extends LightningElement {
         } else {
             this.draftValues = [...copyDraftValues, updateItem];
         }
+    }
+
+    updateDataValues(updateItem) {
+        let copyData = JSON.parse(JSON.stringify(this.data));
+ 
+        copyData.forEach(item => {
+            if (item.Id === updateItem.Id) {
+                for (let field in updateItem) {
+                    item[field] = updateItem[field];
+                }
+            }
+        });
+        this.data = [...copyData];
     }
 
     handleCellChange(event) {
