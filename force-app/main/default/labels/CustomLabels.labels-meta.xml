@@ -8,6 +8,13 @@
         <value>Insert Account</value>
     </labels>
     <labels>
+        <fullName>ARE_YOU_AN_EMPLOYEE_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ARE YOU AN EMPLOYEE BUTTON</shortDescription>
+        <value>Are You An Employee?</value>
+    </labels>
+    <labels>
         <fullName>ATTACH_FILES</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -120,6 +127,13 @@
         <value>Error</value>
     </labels>
     <labels>
+        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FORGOT PASSWORD BUTTON</shortDescription>
+        <value>Forgot Your Password?</value>
+    </labels>
+    <labels>
         <fullName>INVALID_EMAIL_MESSAGE</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -132,6 +146,41 @@
         <protected>true</protected>
         <shortDescription>Id</shortDescription>
         <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_BUTTON_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN BUTTON LABEL</shortDescription>
+        <value>Log In</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_FORGOT_PASSWORD_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN FORGOT PASSWORD URL</shortDescription>
+        <value>/s/ForgotPassword</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_PASSWORD_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN PASSWORD PLACEHOLDER</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_SANDBOX_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN SANDBOX URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_USERNAME_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
+        <value>Username</value>
     </labels>
     <labels>
         <fullName>NAME_IS_BLANK</fullName>
@@ -183,6 +232,13 @@
         <value>Reset</value>
     </labels>
     <labels>
+        <fullName>SANDBOX_LOGIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SANDBOX LOGIN URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
         <fullName>SEND</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -232,101 +288,10 @@
         <value>Upload Files</value>
     </labels>
     <labels>
-        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
+        <fullName>VIEW_ALL</fullName>
         <language>en_US</language>
         <protected>true</protected>
-        <shortDescription>Insert Account</shortDescription>
-        <value>Insert Account</value>
-    </labels>
-    <labels>
-        <fullName>NAME_IS_BLANK</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>NAME_IS_BLANK</shortDescription>
-        <value>Name cannot be Blank</value>
-    </labels>
-    <labels>
-        <fullName>PHONE_IS_BLANK</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Phone Is Blank</shortDescription>
-        <value>Phone cannot be blank</value>
-    </labels>
-    <labels>
-        <fullName>Id</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Id</shortDescription>
-        <value>Id</value>
-    </labels>
-    <labels>
-        <fullName>Name</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Name</shortDescription>
-        <value>Name</value>
-    </labels>
-    <labels>
-        <fullName>No_Contacts</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>No Contacts</shortDescription>
-        <value>No Contacts</value>
-    </labels>
-    <labels>
-        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>FORGOT PASSWORD BUTTON</shortDescription>
-        <value>Forgot Your Password?</value>
-    </labels>
-    <labels>
-        <fullName>ARE_YOU_AN_EMPLOYEE_BUTTON</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>ARE YOU AN EMPLOYEE BUTTON</shortDescription>
-        <value>Are You An Employee?</value>
-    </labels>
-    <labels>
-        <fullName>SANDBOX_LOGIN_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>SANDBOX LOGIN URL</shortDescription>
-        <value>https://test.salesforce.com/</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_BUTTON_LABEL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN BUTTON LABEL</shortDescription>
-        <value>Log In</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_FORGOT_PASSWORD_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN FORGOT PASSWORD URL</shortDescription>
-        <value>/s/ForgotPassword</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_PASSWORD_PLACEHOLDER</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN PASSWORD PLACEHOLDER</shortDescription>
-        <value>Password</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_SANDBOX_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN SANDBOX URL</shortDescription>
-        <value>https://test.salesforce.com/</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_USERNAME_PLACEHOLDER</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
-        <value>Username</value>
+        <shortDescription>VIEW_ALL</shortDescription>
+        <value>View All</value>
     </labels>
 </CustomLabels>
