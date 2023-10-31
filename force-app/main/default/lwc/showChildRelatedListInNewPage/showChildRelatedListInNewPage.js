@@ -22,7 +22,7 @@ export default class ShowChildRelatedListInNewPage extends LightningElement{
                 this.labels = (Object.entries(this.relatedlists[0]).map(([key,value])=>({ key, value })));
             }
             this.isChildApiFound = true;
-        }else {
+        } else {
             this.dispatchEvent(
                 new ShowToastEvent({
                     title : ERROR,
