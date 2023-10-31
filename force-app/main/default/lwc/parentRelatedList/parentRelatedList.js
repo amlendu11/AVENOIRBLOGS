@@ -39,9 +39,9 @@ export default class parentRelatedList extends NavigationMixin(LightningElement)
             //Array to display in frontend recor page
             this.displayinSamePage = this.childApiAndLists.CampaignMember.map(item => item.Campaign);
             let campaignsToFrontEnd =[];
-            for(let y = 0; y < this.relatedlistsize; y++) {
-                if(this.displayinSamePage[y]){
-                    campaignsToFrontEnd.push(this.displayinSamePage[y])
+            for(let index = 0; index < this.relatedlistsize; index++) {
+                if(this.displayinSamePage[index]){
+                    campaignsToFrontEnd.push(this.displayinSamePage[index])
                 };
             }
             this.displayinSamePage = campaignsToFrontEnd;
