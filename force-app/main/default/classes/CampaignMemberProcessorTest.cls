@@ -22,7 +22,13 @@ public class CampaignMemberProcessorTest {
     @isTest
     static void testGetCampaignMembers() {
         // Perform any additional setup if needed
-        List<Lead> testLeads = [SELECT Id FROM Lead LIMIT 1];
+        List<Lead> testLeads = [
+            SELECT
+                Id
+            FROM
+                Lead 
+            LIMIT 1
+        ];
         List<CampaignMember> result = CampaignMemberProcessor.getCampaignMembers(testLeads[0].Id);
         System.assertEquals(1, result.size());
     }
@@ -30,8 +36,20 @@ public class CampaignMemberProcessorTest {
     @isTest
     static void testChildRecordDetailsQueryHelper() {
         // The records created in the @TestSetup method are accessible here
-        List<Lead> leads = [SELECT Id, LastName FROM Lead];
-        List<CampaignMember> campaignMembers = [SELECT Id, CampaignId FROM CampaignMember];
+        List<Lead> leads = [
+            SELECT
+                Id,
+                LastName
+            FROM
+                Lead
+        ];
+        List<CampaignMember> campaignMembers = [
+            SELECT
+                Id,
+                CampaignId
+            FROM
+                CampaignMember
+        ];
 
         // Access records using the collections you queried
         Lead testLead = leads[0];
