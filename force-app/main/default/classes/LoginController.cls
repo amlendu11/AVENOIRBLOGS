@@ -23,8 +23,7 @@ global class LoginController {
     @AuraEnabled
     public static String login(String username, String password) {
         try{
-            String startUrl = '';
-            ApexPages.PageReference lgn = Site.login(username, password, startUrl);
+            ApexPages.PageReference lgn = Site.login(username, password, '');
             if(lgn != null) {
                 return lgn.getUrl();
             }

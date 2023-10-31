@@ -41,7 +41,7 @@ export default class CustomLoginFormLWC extends LightningElement {
         if (data) {
             this.isUsernamePasswordEnabled = data;
         } else if (error) {
-            console.alert(error);
+            alert(error);
         }
     }
 
@@ -74,12 +74,21 @@ export default class CustomLoginFormLWC extends LightningElement {
             event.preventDefault();
             login({ username: this.username, password: this.password })
                 .then((result) => {
-                    console.log('result ',result);
-                    window.location.href = result;
+                    if (this.isValidURL(result)) {
+                        window.location.href = result;
+                    }
+                    else {
+                        alert(result);
+                    }
                 })
                 .catch((error) => {
-                    console.alert(error);
+                    alert(error);
             });
         }
+    }
+
+    isValidURL(url) {
+        const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
+        return urlPattern.test(url);
     }
 }
