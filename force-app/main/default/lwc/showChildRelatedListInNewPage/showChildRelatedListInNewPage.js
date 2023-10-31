@@ -14,7 +14,7 @@ export default class ShowChildRelatedListInNewPage extends LightningElement{
     connectedCallback() {
         if(this.relatedlists){
             //lead- campaign member logic
-            if(this.objNaming == 'CampaignMember'){
+            if(this.objNaming == 'CampaignMember') {
                 this.relatedlists = this.relatedlists.CampaignMember.map(item => item.Campaign);
                 this.childSize = this.relatedlists.length;
                 this.isCampaign = true;
