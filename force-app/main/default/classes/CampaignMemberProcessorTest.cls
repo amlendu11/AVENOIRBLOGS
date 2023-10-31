@@ -75,7 +75,7 @@ public class CampaignMemberProcessorTest {
                 testLead.Id,
                 'Lead'
             );
-        }catch(exception e) {
+        } catch(exception e) {
             System.assert(e instanceof AuraHandledException);
             System.assertEquals('Script-thrown exception', e.getMessage());
         }
