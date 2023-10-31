@@ -29,6 +29,6 @@ public class CampaignMemberDomain {
             WHERE 
                 leadId =: leadId
             LIMIT 999
-            ];
+        ];
     }
 }
