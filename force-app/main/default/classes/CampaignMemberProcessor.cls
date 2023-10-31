@@ -40,11 +40,11 @@ public with sharing class CampaignMemberProcessor {
             //Query the records to display in lead related list
             if(childApiName == 'CampaignMember' && parentObjectName == 'Lead') {
                 result = getCampaignMembers(parentObjectId);
-            }else {
+            } else {
                 result = null;
                 throw new AuraHandledException(System.Label.VIEW_ALL);
             }
-        }catch(Exception e) {
+        } catch(Exception e) {
             throw new AuraHandledException(e.getMessage());
         }
         return result;
