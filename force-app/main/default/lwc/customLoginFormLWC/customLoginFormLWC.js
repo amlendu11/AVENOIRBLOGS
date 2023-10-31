@@ -36,28 +36,6 @@ export default class CustomLoginFormLWC extends LightningElement {
         TWITTER_URL
     };
 
-    handleUsernameChange(event) {
-        this.username = event.target.value;
-    }
-    
-    openInstagram() {
-        window.location.href = label.INSTAGRAM_URL;
-    }
-    openGoogle() {
-        window.location.href = label.GOOGLE_URL;
-    }
-    openTwitter() {
-        window.location.href = label.TWITTER_URL;
-    }
-
-    openLinkedin() {
-        window.location.href = label.LINKEDIN_URL;
-    }
-
-    handlePasswordChange(event) {
-        this.password = event.target.value;
-    }
-
     @wire(getIsUsernamePasswordEnabled)
     wiredIsUsernamePasswordEnabled({ error, data }) {
         if (data) {
@@ -65,6 +43,30 @@ export default class CustomLoginFormLWC extends LightningElement {
         } else if (error) {
             console.alert(error);
         }
+    }
+
+    handlePasswordChange(event) {
+        this.password = event.target.value;
+    }
+
+    handleUsernameChange(event) {
+        this.username = event.target.value;
+    }
+
+    openInstagram() {
+        window.location.href = this.label.INSTAGRAM_URL;
+    }
+
+    openGoogle() {
+        window.location.href = this.label.GOOGLE_URL;
+    }
+
+    openTwitter() {
+        window.location.href = this.label.TWITTER_URL;
+    }
+
+    openLinkedin() {
+        window.location.href = this.label.LINKEDIN_URL;
     }
 
     handleClick(event){
