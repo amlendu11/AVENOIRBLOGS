@@ -30,8 +30,19 @@ public with sharing class ChildObjectsControllerTest {
     static void testGetChildRecordDetails() {
         // The records created in the @TestSetup method are accessible here
         List<Lead> leads = [SELECT Id, LastName FROM Lead];
-        List<Campaign> testCampaign = [SELECT Id FROM Campaign];
-        List<CampaignMember> campaignMembers = [SELECT Id, CampaignId FROM CampaignMember];
+        List<Campaign> testCampaign = [
+            SELECT
+                Id
+            FROM
+                Campaign
+        ];
+        List<CampaignMember> campaignMembers = [
+            SELECT
+                Id,
+                CampaignId
+            FROM
+                CampaignMember
+        ];
 
         // Access records using the collections you queried
         Lead testLead = leads[0];
