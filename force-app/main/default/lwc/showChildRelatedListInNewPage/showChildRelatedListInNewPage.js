@@ -1,4 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import ERROR from "@salesforce/label/c.ERROR";
 
 export default class ShowChildRelatedListInNewPage extends LightningElement{
@@ -22,7 +23,13 @@ export default class ShowChildRelatedListInNewPage extends LightningElement{
             }
             this.isChildApiFound = true;
         }else{
-            alert(ERROR);
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title : ERROR,
+                    message : ERROR,
+                    variant : 'Error'
+                })
+            );
         }
     }
 
