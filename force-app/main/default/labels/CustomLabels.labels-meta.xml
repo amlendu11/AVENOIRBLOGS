@@ -232,48 +232,6 @@
         <value>Upload Files</value>
     </labels>
     <labels>
-        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Insert Account</shortDescription>
-        <value>Insert Account</value>
-    </labels>
-    <labels>
-        <fullName>NAME_IS_BLANK</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>NAME_IS_BLANK</shortDescription>
-        <value>Name cannot be Blank</value>
-    </labels>
-    <labels>
-        <fullName>PHONE_IS_BLANK</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Phone Is Blank</shortDescription>
-        <value>Phone cannot be blank</value>
-    </labels>
-    <labels>
-        <fullName>Id</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Id</shortDescription>
-        <value>Id</value>
-    </labels>
-    <labels>
-        <fullName>Name</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Name</shortDescription>
-        <value>Name</value>
-    </labels>
-    <labels>
-        <fullName>No_Contacts</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>No Contacts</shortDescription>
-        <value>No Contacts</value>
-    </labels>
-    <labels>
         <fullName>FORGOT_PASSWORD_BUTTON</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -328,5 +286,40 @@
         <protected>true</protected>
         <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
         <value>Username</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_GOOGLE_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR GOOGLE URL</shortDescription>
+        <value>https://www.avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_INSTAGRAM_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR INSTAGRAM URL</shortDescription>
+        <value>https://www.instagram.com/avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_LINKEDIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR LINKEDIN URL</shortDescription>
+        <value>https://www.linkedin.com/company/theavenoir/mycompany/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_TWITTER_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR TWITTER URL</shortDescription>
+        <value>https://twitter.com/TeamAvenoir</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_HERE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN HERE</shortDescription>
+        <value>Login Here</value>
     </labels>
 </CustomLabels>

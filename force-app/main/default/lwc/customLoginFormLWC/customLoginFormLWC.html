@@ -1,0 +1,35 @@
+<template>
+    <form>
+        <div>
+            <h3>{label.LOGINHERE}</h3>
+        </div>
+        <div>
+            <label>{label.USERNAME}</label>
+            <input type="text" placeholder={label.USERNAME} onchange={handleUsernameChange} required>
+        </div>
+        <div>
+            <label>{label.PASSWORD}</label>
+            <input type="password" placeholder={label.PASSWORD} onchange={handlePasswordChange} required>
+        </div>
+        <div>
+            <button type="submit" onclick={handleClick}>{label.LOGIN}</button>
+        </div>
+        <div class="icon-container">
+            <span>
+                <img src={icon.GOOGLEICON} onclick={openGoogle} class="icon">
+            </span>
+            <span >
+                <img src={icon.TWITTERICON}  onclick={openTwitter} class="icon">
+            </span>
+            <span>
+                <img src={icon.LINKEDINICON} onclick={openLinkedin} class="icon">
+            </span>
+            <span >
+                <img src={icon.INSTAGRAMICON} onclick={openInstagram} class="icon">
+            </span>
+        </div>
+    </form>
+</template>
+
+
+
