@@ -22,16 +22,14 @@ global class LoginController {
     */
     @AuraEnabled
     public static String login(String username, String password) {
-        try{
+        String result = null;
+        try {
             ApexPages.PageReference lgn = Site.login(username, password, '');
-            if(lgn != null) {
-                return lgn.getUrl();
-            }
-            return null;
+            result = (lgn != null) ? lgn.getUrl() : null;
+        } catch (Exception ex) {
+            result = ex.getMessage();
         }
-        catch (Exception ex) {
-            return ex.getMessage();
-        }
+        return result;
     }
 
     /**
