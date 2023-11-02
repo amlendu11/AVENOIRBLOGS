@@ -329,4 +329,11 @@
         <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
         <value>Username</value>
     </labels>
+    <labels>
+        <fullName>VIEW_ALL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VIEW_ALL</shortDescription>
+        <value>View All</value>
+    </labels>
 </CustomLabels>
