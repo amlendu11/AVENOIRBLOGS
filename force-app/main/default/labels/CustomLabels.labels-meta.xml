@@ -330,6 +330,41 @@
         <value>Username</value>
     </labels>
     <labels>
+        <fullName>AVENOIR_GOOGLE_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR GOOGLE URL</shortDescription>
+        <value>https://www.avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_INSTAGRAM_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR INSTAGRAM URL</shortDescription>
+        <value>https://www.instagram.com/avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_LINKEDIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR LINKEDIN URL</shortDescription>
+        <value>https://www.linkedin.com/company/theavenoir/mycompany/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_TWITTER_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR TWITTER URL</shortDescription>
+        <value>https://twitter.com/TeamAvenoir</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_HERE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN HERE</shortDescription>
+        <value>Login Here</value>
+    </labels>
+    <labels>
         <fullName>VIEW_ALL</fullName>
         <language>en_US</language>
         <protected>true</protected>
