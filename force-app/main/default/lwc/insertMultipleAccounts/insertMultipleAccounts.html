@@ -1,0 +1,62 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:timesheet" alternative-text="Event"
+            size="small"></lightning-icon>
+            &nbsp; {label.PAGE_TITLE}
+        </h3>
+        <template for:each={itemList} for:item="item" for:index="index">
+            <lightning-record-edit-form key={item.id} object-api-name="Account">
+                <lightning-messages> </lightning-messages>
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12" large-device-size="2" padding="around-small">
+                        <lightning-input-field field-name={label.ACCOUNT_NAME} variant="label-stacked"
+                        required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="2" padding="around-small">
+                        <lightning-input-field field-name={label.ACCOUNT_PHONE} variant="label-stacked"
+                        required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="2" padding="around-small">
+                        <lightning-input-field field-name={label.ACCOUNT_TYPE} variant="label-stacked"
+                        required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="2" padding="around-small">
+                        <lightning-input-field field-name={label.ACCOUNT_INDUSTRY} variant="label-stacked"
+                        required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="2" padding="around-small">
+                        <lightning-input-field field-name={label.ACCOUNT_NUMBER} variant="label-stacked"
+                        required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="2" padding="around-small">
+                        <div class="slds-p-top_medium">
+                            <lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                                alternative-text="Add Row" size="small" title={label.ADD_ROW}
+                                onclick={addRow}>
+                            </lightning-icon>
+                            <lightning-icon icon-name="action:delete" access-key={item.id} id={index}
+                            alternative-text="Delete Row" size="small" title={label.DELETE_ROW}
+                            onclick={removeRow}>
+                            </lightning-icon>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+            </lightning-record-edit-form>
+        </template>
+        </br>
+        <lightning-layout>
+            <div class="slds-align_absolute-center">
+                <lightning-button variant="success" onclick={handleSubmit} name={label.SUBMIT_REQUEST}
+                label="Submit">
+                </lightning-button>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>
