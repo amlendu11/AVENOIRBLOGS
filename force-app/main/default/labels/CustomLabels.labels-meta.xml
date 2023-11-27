@@ -371,4 +371,102 @@
         <shortDescription>VIEW_ALL</shortDescription>
         <value>View All</value>
     </labels>
+    <labels>
+        <fullName>Account_Type</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>Add_Row</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Row</shortDescription>
+        <value>Add Row</value>
+    </labels>
+    <labels>
+        <fullName>Delete_Row</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Delete Row</shortDescription>
+        <value>Delete Row</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>Please enter all the required fields</value>
+    </labels>
+    <labels>
+        <fullName>Error_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Title</shortDescription>
+        <value>Error creating record</value>
+    </labels>
+    <labels>
+        <fullName>Show_Account_Account_Number</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show Account Account Number</shortDescription>
+        <value>AccountNumber</value>
+    </labels>
+    <labels>
+        <fullName>Show_Account_Id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show Account Id</shortDescription>
+        <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>Show_Account_Industry</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show Account Industry</shortDescription>
+        <value>Industry</value>
+    </labels>
+    <labels>
+        <fullName>Show_Account_Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show Account Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>Show_Account_Phone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show Account Phone</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>Submit_Request</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Request</shortDescription>
+        <value>submit</value>
+    </labels>
+    <labels>
+        <fullName>Success_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success Message</shortDescription>
+        <value>Accounts successfully created</value>
+    </labels>
+    <labels>
+        <fullName>Success_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success Title</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>Title_of_the_page</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title of the page</shortDescription>
+        <value>Insert Multiple Accounts</value>
+    </labels>
 </CustomLabels>
