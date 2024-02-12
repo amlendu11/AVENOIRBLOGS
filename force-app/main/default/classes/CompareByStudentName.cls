@@ -11,7 +11,6 @@
 * ****************************************************************************/
 public with sharing class CompareByStudentName implements Comparator<StudentRecord> {
 
-    //Here in this method, consider Name1 is the "instance" and Name2 is the "objectToCompareTo".
     public Integer compare(StudentRecord Name1, StudentRecord Name2) 
     {
         Integer returnValue;
