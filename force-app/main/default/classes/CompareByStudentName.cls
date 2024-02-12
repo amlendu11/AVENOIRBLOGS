@@ -3,7 +3,7 @@
 * Ticket Number: AVEBLOG79
 --------------------------------------------------------------------------------
 * Purpose/Methods: compare the StudentRecord by Name.
-* Utility Test Class: StudentRecordTest.cls
+* Utility Test Class: CompareByStudentNameTest.cls
 --------------------------------------------------------------------------------
 * Version History:
 * VERSION     DEVELOPER NAME      DATE       DETAIL FEATURES
