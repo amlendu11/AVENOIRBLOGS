@@ -7,12 +7,18 @@
 --------------------------------------------------------------------------------
 * Version History:
 * VERSION     DEVELOPER NAME      DATE       DETAIL FEATURES
-* 1.0         Satish Yadav      5/02/2024   Initial Development
+* 1.0         Satish Yadav      05/02/2024   Initial Development
 * ****************************************************************************/
 public with sharing class CompareByStudentName implements Comparator<StudentRecord> {
 
-    public Integer compare(StudentRecord Name1, StudentRecord Name2) 
-    {
+    /**
+    * Constructor Purpose: Compares two StudentRecord instances based on the student's 
+      name to determine their order. 
+    * @param StudentRecord : Name1
+    * @param StudentRecord : Name2
+    */
+
+    public Integer compare(StudentRecord Name1, StudentRecord Name2) {
         Integer returnValue;
         if(String.isBlank(Name1.studentName) && String.isBlank(Name2.studentName)) 
         {
