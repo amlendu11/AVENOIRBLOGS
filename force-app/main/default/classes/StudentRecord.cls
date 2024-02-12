@@ -21,7 +21,7 @@ public with sharing class StudentRecord {
     * @param String :Phone
     */
     public StudentRecord(String studentName, String Phone) {
-    this.studentName = studentName;
-    this.Phone = Phone;
+        this.studentName = studentName;
+        this.Phone = Phone;
     }
 }
