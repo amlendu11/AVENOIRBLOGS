@@ -20,23 +20,16 @@ public with sharing class CompareByStudentName implements Comparator<StudentReco
 
     public Integer compare(StudentRecord Name1, StudentRecord Name2) {
         Integer returnValue;
-        if(String.isBlank(Name1.studentName) && String.isBlank(Name2.studentName)) 
-        {
+        if(String.isBlank(Name1.studentName) && String.isBlank(Name2.studentName)) {
             returnValue = 0;
-        }
-        else
-        {
-            if(String.isBlank(Name1.studentName)) 
-            { 
+        } else {
+            if(String.isBlank(Name1.studentName)) { 
                 returnValue = -1; 
             } 
-            else if(String.isBlank(Name2.studentName)) 
-            {
+            else if(String.isBlank(Name2.studentName)) {
                 returnValue = 1;
             }
-            else
-            {
-                //Since both values are not null or blank, using compareTo method itself
+            else {
                 returnValue = Name1.studentName.compareTo(Name2.studentName);
             }
         }
