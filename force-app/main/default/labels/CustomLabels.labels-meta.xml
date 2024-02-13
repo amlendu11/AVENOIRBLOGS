@@ -371,4 +371,32 @@
         <shortDescription>VIEW_ALL</shortDescription>
         <value>View All</value>
     </labels>
+    <labels>
+        <fullName>TITLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title</shortDescription>
+        <value>Feedback Form</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_FEEDBACK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your Feedback</shortDescription>
+        <value>Your Feedback</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>feedback</shortDescription>
+        <value>feedback</value>
+    </labels>
+    <labels>
+        <fullName>SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
 </CustomLabels>
