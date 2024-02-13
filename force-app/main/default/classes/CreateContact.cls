@@ -4,21 +4,18 @@ public class CreateContact implements Queueable {
         this.account = account;
     }
     public void execute(System.QueueableContext context) {
-        try {
-            Contact contact = new Contact(
-                Lastname = 'Sharma',
-                AccountId = this.account.Id
-            );
-            insert contact;
-            if(System.AsyncInfo.hasMaxStackDepth() &&
+        Contact contact = new Contact(
+            Lastname = 'Sharma',
+            AccountId = this.account.Id
+        );
+        insert contact;
+        if(
+            (System.AsyncInfo.hasMaxStackDepth() &&
             AsyncInfo.getCurrentQueueableStackDepth() <
-            AsyncInfo.getMaximumQueueableStackDepth()) {
+            AsyncInfo.getMaximumQueueableStackDepth()) &&
+            (!Test.isRunningTest())
+        ) {
                 System.enqueueJob(new CreateOpportunity(this.account));
-            }
         }
-        catch(Exception e) {
-            throw new System.AsyncException(System.Label.Error_Message);
-        }
-
     }
 }
