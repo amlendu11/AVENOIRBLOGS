@@ -5,17 +5,19 @@ public class CreateAccount implements Queueable {
         System.enqueueJob(new CreateAccount(), asyncOptions);
     }
     public void execute(System.QueueableContext context) {
-        Account account = new Account(
-        	Name = 'Avenoir Technologies Pvt. Ltd.'
-        );
-        insert account;
-        if(System.AsyncInfo.hasMaxStackDepth() &&
-           AsyncInfo.getCurrentQueueableStackDepth() <
-           AsyncInfo.getMaximumQueueableStackDepth()) {
-               System.enqueueJob(new CreateContact(account));
-           }
-        else {
-            System.debug('Max Depth has reached');
+        try {
+            Account account = new Account(
+        		Name = 'Avenoir Technologies Pvt. Ltd.'
+            );
+            insert account;
+            if(System.AsyncInfo.hasMaxStackDepth() &&
+            AsyncInfo.getCurrentQueueableStackDepth() <
+            AsyncInfo.getMaximumQueueableStackDepth()) {
+                System.enqueueJob(new CreateContact(account));
+            }
+        }
+        catch(Exception e) {
+            throw new System.AsyncException(System.Label.Error_Message);
         }
     }
 }
