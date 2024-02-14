@@ -64,6 +64,13 @@
         <value>Amount</value>
     </labels>
     <labels>
+        <fullName>BothNamesBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BothNamesBlank</shortDescription>
+        <value>Two blank student names should be considered equal</value>
+    </labels>
+    <labels>
         <fullName>CC</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -83,6 +90,13 @@
         <protected>true</protected>
         <shortDescription>label for close date column in datatable</shortDescription>
         <value>Close Date</value>
+    </labels>
+    <labels>
+        <fullName>Compare_AlphabeticalOrder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Compare_AlphabeticalOrder</shortDescription>
+        <value>Alice should come before Bob alphabetically</value>
     </labels>
     <labels>
         <fullName>Custom_Error_Message_Label</fullName>
@@ -174,6 +188,13 @@
         <protected>true</protected>
         <shortDescription>FORGOT PASSWORD BUTTON</shortDescription>
         <value>Forgot Your Password?</value>
+    </labels>
+    <labels>
+        <fullName>FirstNameBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FirstNameBlank</shortDescription>
+        <value>A blank student name should be considered less than any non-blank name</value>
     </labels>
     <labels>
         <fullName>INVALID_EMAIL_MESSAGE</fullName>
@@ -307,6 +328,13 @@
         <protected>true</protected>
         <shortDescription>SUBJECT</shortDescription>
         <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>SecondStudentNameBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SecondStudentNameBlank</shortDescription>
+        <value>&apos;A non-blank student name should be considered greater than a blank name&apos;</value>
     </labels>
     <labels>
         <fullName>TARGET_LANGUAGE_CODE</fullName>

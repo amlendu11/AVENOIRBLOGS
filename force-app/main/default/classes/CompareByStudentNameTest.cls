@@ -28,7 +28,7 @@ private class CompareByStudentNameTest {
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
-        System.assert(result < 0, 'Alice should come before Bob alphabetically');
+        System.assert(result < 0, System.Label.Compare_AlphabeticalOrder);
     }
 
     /**
@@ -46,9 +46,7 @@ private class CompareByStudentNameTest {
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
-        System.assertEquals(-1, result,
-            'A blank student name should be considered less than any non-blank name'
-        );
+        System.assertEquals(-1, result, System.Label.FirstNameBlank);
     }
 
     /**
@@ -66,9 +64,7 @@ private class CompareByStudentNameTest {
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
-        System.assertEquals(1, result,
-            'A non-blank student name should be considered greater than a blank name'
-        );
+        System.assertEquals(1, result, System.Label.SecondStudentNameBlank);
     }
 
     /**
@@ -84,8 +80,6 @@ private class CompareByStudentNameTest {
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
-        System.assertEquals(0, result,
-            'Two blank student names should be considered equal'
-        );
+        System.assertEquals(0, result, System.Label.BothNamesBlank);
     }
 }
