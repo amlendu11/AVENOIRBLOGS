@@ -17,9 +17,14 @@ private class CompareByStudentNameTest {
      * @param : Na
     */
 
-    @isTest static void testCompareBothNamesPresent() {
-        StudentRecord student1 = new StudentRecord('Alice', '123456789');
-        StudentRecord student2 = new StudentRecord('Bob', '987654321');
+    @isTest
+    static void testCompareBothNamesPresent() {
+        StudentRecord student1 = new StudentRecord(System.Label.TestStudentName1, 
+            System.Label.TestStudentPhone1
+        );
+        StudentRecord student2 = new StudentRecord(System.Label.TestStudentName2,
+            System.Label.TestStudentPhone2
+        );
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
@@ -32,9 +37,12 @@ private class CompareByStudentNameTest {
      * @param : Na
     */
 
-    @isTest static void testCompareFirstStudentNameBlank() {
-        StudentRecord student1 = new StudentRecord(null, '123456789');
-        StudentRecord student2 = new StudentRecord('Bob', '987654321');
+    @isTest
+    static void testCompareFirstStudentNameBlank() {
+        StudentRecord student1 = new StudentRecord(null, System.Label.TestStudentPhone1);
+        StudentRecord student2 = new StudentRecord(System.Label.TestStudentName2,
+            System.Label.TestStudentPhone2
+        );
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
@@ -44,14 +52,17 @@ private class CompareByStudentNameTest {
     }
 
     /**
-     * Purpose : Tests the comparison of two StudentRecord instances with one name blank. 
+     * Purpose : Tests the comparison of two StudentRecord instances with one phone blank. 
      * @Annotation : @isTest
      * @param : Na
     */
 
-    @isTest static void testCompareSecondStudentNameBlank() {
-        StudentRecord student1 = new StudentRecord('Alice', '123456789');
-        StudentRecord student2 = new StudentRecord(null, '987654321');
+    @isTest
+    static void testCompareSecondStudentNameBlank() {
+        StudentRecord student1 = new StudentRecord(System.Label.TestStudentName1,
+            System.Label.TestStudentPhone1
+        );
+        StudentRecord student2 = new StudentRecord(null, System.Label.TestStudentPhone2);
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert
@@ -60,9 +71,16 @@ private class CompareByStudentNameTest {
         );
     }
 
-    @isTest static void testCompareBothNamesBlank() {
-        StudentRecord student1 = new StudentRecord(null, '123456789');
-        StudentRecord student2 = new StudentRecord(null, '987654321');
+    /**
+    * Purpose : Tests the comparison of two StudentRecord instances with both name blank. 
+    * @Annotation : @isTest
+    * @param : Na
+    */
+
+    @isTest
+    static void testCompareBothNamesBlank() {
+        StudentRecord student1 = new StudentRecord(null, System.Label.TestStudentPhone1);
+        StudentRecord student2 = new StudentRecord(null, System.Label.TestStudentPhone2);
         CompareByStudentName comparator = new CompareByStudentName();
         Integer result = comparator.compare(student1, student2);
         // Assert

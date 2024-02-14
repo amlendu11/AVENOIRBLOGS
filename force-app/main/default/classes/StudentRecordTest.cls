@@ -19,12 +19,16 @@ public class StudentRecordTest {
     */
     
     @isTest static void testStudentRecordConstructor() {
-        String expectedStudentName = 'John Doe';
-        String expectedPhone = '1234567890';
+        String expectedStudentName = System.Label.ExpectedStudentName;
+        String expectedPhone = System.Label.ExpectedPhoneNumber;
         StudentRecord testStudent = new StudentRecord(expectedStudentName, expectedPhone);
         // Assert: Verify that the fields are correctly assigned
-        System.assertEquals(expectedStudentName, testStudent.studentName, 'The student name should match the expected value.');
-        System.assertEquals(expectedPhone, testStudent.Phone, 'The phone number should match the expected value.');
+        System.assertEquals(expectedStudentName, testStudent.studentName, 
+            'The student name should match the expected value.'
+        );
+        System.assertEquals(expectedPhone, testStudent.Phone,
+            'The phone number should match the expected value.'
+        );
     }
 }
 

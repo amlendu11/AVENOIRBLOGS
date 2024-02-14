@@ -14,24 +14,24 @@ public with sharing class CompareByStudentName implements Comparator<StudentReco
     /**
     * Constructor Purpose: Compares two StudentRecord instances based on the student's 
       name to determine their order. 
-    * @param StudentRecord : Name1
-    * @param StudentRecord : Name2
+    * @param StudentRecord : name1
+    * @param StudentRecord : name2
     */
 
-    public Integer compare(StudentRecord Name1, StudentRecord Name2) {
+    public Integer compare(StudentRecord name1, StudentRecord name2) {
         Integer returnValue;
-        if(String.isBlank(Name1.studentName) && String.isBlank(Name2.studentName)) {
+        if(String.isBlank(name1.studentName) && String.isBlank(name2.studentName)) {
             returnValue = 0;
         } 
         else {
-            if(String.isBlank(Name1.studentName)) { 
+            if(String.isBlank(name1.studentName)) { 
                 returnValue = -1; 
             } 
-            else if(String.isBlank(Name2.studentName)) {
+            else if(String.isBlank(name2.studentName)) {
                 returnValue = 1;
             }
             else {
-                returnValue = Name1.studentName.compareTo(Name2.studentName);
+                returnValue = name1.studentName.compareTo(name2.studentName);
             }
         }
         return returnValue;
