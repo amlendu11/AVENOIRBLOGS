@@ -22,7 +22,8 @@ public with sharing class CompareByStudentName implements Comparator<StudentReco
         Integer returnValue;
         if(String.isBlank(Name1.studentName) && String.isBlank(Name2.studentName)) {
             returnValue = 0;
-        } else {
+        } 
+        else {
             if(String.isBlank(Name1.studentName)) { 
                 returnValue = -1; 
             } 
