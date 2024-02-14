@@ -10,18 +10,18 @@
 * 1.0         Satish Yadav      05/02/2024   Initial Development
 * ****************************************************************************/
 public with sharing class StudentRecord {
-    public Id Id;
+    public Id id;
     public String studentName;
-    public String Phone;
+    public String phone;
      
     /**
     * Constructor Purpose: Initializes a new instance of the StudentRecord class with a given 
       student name and phone number.
     * @param String : studentName
-    * @param String :Phone
+    * @param String :phone
     */
-    public StudentRecord(String studentName, String Phone) {
+    public StudentRecord(String studentName, String phone) {
         this.studentName = studentName;
-        this.Phone = Phone;
+        this.phone = phone;
     }
 }
