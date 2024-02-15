@@ -393,6 +393,27 @@
         <value>feedback</value>
     </labels>
     <labels>
+        <fullName>FEEDBACK_SUBMISSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>feedback_submission</shortDescription>
+        <value>feedback_submission</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Feedback submitted successfully</shortDescription>
+        <value>Feedback submitted successfully</value>
+    </labels>
+    <labels>
+        <fullName>SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
         <fullName>SUBMIT</fullName>
         <language>en_US</language>
         <protected>true</protected>
