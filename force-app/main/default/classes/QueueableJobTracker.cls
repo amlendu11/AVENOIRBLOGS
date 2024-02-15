@@ -17,7 +17,8 @@ public class QueueableJobTracker {
      * return : boolean value
     */
     public static Boolean checkQueuedJob(String jobName) {
-        List<AsyncApexJob> jobs = AsyncApexJobDomain.fetchAsyncApexJobDetails('Queueable', 'Queued', 'Processing', jobName);
+        List<String> status = new List<String>{'Queued', 'Processing'};
+        List<AsyncApexJob> jobs = AsyncApexJobDomain.fetchAsyncApexJobDetails('Queueable', status, jobName);
         return jobs.isEmpty();
     }
 
@@ -28,8 +29,7 @@ public class QueueableJobTracker {
      * return : NA
     */
     public void enqueueUniqueJob(Integer value) {
-        String jobName = 'QueueableJob';
-        if (checkQueuedJob(jobName)) {
+        if (checkQueuedJob('QueueableJob')) {
             System.enqueueJob(new EnqueueUniqueQueueableJob(value));
         }
     }

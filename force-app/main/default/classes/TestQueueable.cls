@@ -21,7 +21,7 @@ public class TestQueueable {
     public static void testQueueable() {
         QueueableJobTracker queueJob = new QueueableJobTracker();
         Test.startTest();
-        for(Integer i=0;i<3;i++) {
+        for (Integer i = 0; i < 3; i++) {
             queueJob.enqueueUniqueJob(i);
         }
         Test.stopTest();

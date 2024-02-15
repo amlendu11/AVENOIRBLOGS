@@ -16,7 +16,7 @@ public with sharing class AsyncApexJobDomain {
      * Annotation : NA
      * return : Async apex job list
     */
-    public static List<AsyncApexJob> fetchAsyncApexJobDetails(String jobType, String queuedStatus, String processingStatus, String jobName) {
+    public static List<AsyncApexJob> fetchAsyncApexJobDetails(String jobType, List<String> status, String jobName) {
         return [
                 SELECT
                     Id
@@ -25,7 +25,7 @@ public with sharing class AsyncApexJobDomain {
                 WHERE
                     JobType = :jobType
                 AND
-                    Status IN (:queuedStatus, :processingStatus)
+                    Status IN :status
                 AND
                     ApexClass.Name = :jobName
         ];
