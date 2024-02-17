@@ -10,7 +10,6 @@
 * 1.0         Satish Yadav      05/02/2024   Initial Development
 * ****************************************************************************/
 public with sharing class StudentRecord {
-    public Id id;
     public String studentName;
     public String phone;
      
