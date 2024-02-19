@@ -23,11 +23,8 @@ public class CreateContact implements Queueable {
     * @return - NA
     **/
     public void execute(System.QueueableContext context) {
-        Contact contact = new Contact(
-            Lastname = 'Sharma',
-            AccountId = this.account.Id
-        );
-        insert contact;
+        Contact contact = ContactDomain.createAndInsertContact(this.account);
+
         if(
             (System.AsyncInfo.hasMaxStackDepth() &&
             AsyncInfo.getCurrentQueueableStackDepth() <

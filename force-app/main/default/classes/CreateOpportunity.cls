@@ -23,12 +23,6 @@ public class CreateOpportunity implements Queueable {
     * @return - NA
     **/
     public void execute(System.QueueableContext context) {
-        Opportunity opportunity = new Opportunity(
-            Name = 'Test Opportunity',
-            StageName = 'Qualification',
-            CloseDate = System.today(),
-            AccountId = this.account.Id
-        );
-        insert opportunity;
+        Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(this.account);
     }
 }

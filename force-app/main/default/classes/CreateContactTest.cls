@@ -23,21 +23,14 @@ public class CreateContactTest {
     public static void createContactTest() {
         AsyncOptions asyncOptions = new AsyncOptions();
         asyncOptions.MaximumQueueableStackDepth = 2;
-        Account account = new Account(
-        	Name = 'Test Account'
+        Account account = AccountDomain.insertAccount(
+            'Test',
+            '9987463210'
         );
-        insert account;
         Test.startTest();
         	System.enqueueJob(new CreateContact(account), asyncOptions);
         Test.stopTest();
-        Integer size = [
-        	SELECT
-            	Id
-            FROM
-            	Contact
-            WHERE
-            	AccountId = :account.Id
-       	].size();
+        Integer size = ContactDomain.getContactRecords(account).size();
         Assert.areEqual(1 , size);
     }
 }

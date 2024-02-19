@@ -3,28 +3,30 @@
 * Created by: Anchal Agrawal
 * Ticket Number: AVEBLOG82
 --------------------------------------------------------------------
-*  Description : class to test CreateAccount.cls
+* Description: test class for AccountDomain.cls
 --------------------------------------------------------------------
 * Utility Test Class: NA
 --------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
-   1.0       Anchal Agrawal       07/02/2024   Initial Development
+*   1.0      Anchal Agrawal       01/01/2024   Initial Development
 ***********************************************************************/
 @isTest
-public class createAccountTest {
+public with sharing class ContactDomainTest  {
 
     /**
-    * purpose : test callQueueable method of CreateAccount.cls
-    * @param - NA
-    * @return - NA
+    * purpose : method aims to test ContactDomain.cls
+    * @param : NA
+    * @return : NA
     **/
-	@isTest
-    public static void callQueueableTest() {
+    @isTest
+    public static void createAndInsertContactTest() {
+        String Name = 'Test';
+        String Phone = '1234567890';
+        Account account = AccountDomain.insertAccount(Name, Phone);
         Test.startTest();
-        	CreateAccount.callQueueable(1);
+        Contact contact = ContactDomain.createAndInsertContact(account);
         Test.stopTest();
-        Integer size = AccountDomain.getAccountRecords().size();
-        Assert.areEqual(1 , size);
+        Assert.areEqual(account.Id, contact.AccountId);
     }
 }

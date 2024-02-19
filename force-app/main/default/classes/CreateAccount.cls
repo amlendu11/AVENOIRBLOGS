@@ -31,10 +31,10 @@ public class CreateAccount implements Queueable {
     * @return - NA
     **/
     public void execute(System.QueueableContext context) {
-        Account account = new Account(
-            Name = 'Avenoir Technologies Pvt. Ltd.'
+        Account account = AccountDomain.insertAccount(
+            'Avenoir Technologies Pvt. Ltd.',
+            '9987463210'
         );
-        insert account;
         if(
             (System.AsyncInfo.hasMaxStackDepth() &&
             AsyncInfo.getCurrentQueueableStackDepth() <
