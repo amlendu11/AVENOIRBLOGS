@@ -21,9 +21,7 @@ public with sharing class OpportunityDomainTest {
     **/
     @isTest
     public static void getOpportunityRecordsTest() {
-        String Name = 'Test';
-        String Phone = '1234567890';
-        Account account = AccountDomain.insertAccount(Name, Phone);
+        Account account = AccountDomain.insertAccount('Test', '1234567890');
         Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
         Test.startTest();
         List<Opportunity> opportunities = OpportunityDomain.getOpportunityRecords();
@@ -38,9 +36,7 @@ public with sharing class OpportunityDomainTest {
     **/
     @isTest
     public static void createAndInsertOpportunityTest() {
-        String Name = 'Test';
-        String Phone = '1234567890';
-        Account account = AccountDomain.insertAccount(Name, Phone);
+        Account account = AccountDomain.insertAccount('Test', '1234567890');
         Test.startTest();
         Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
         Test.stopTest();
@@ -54,9 +50,7 @@ public with sharing class OpportunityDomainTest {
     **/
     @isTest
     public static void getOpportunityRecordsByAccountTest() {
-        String Name = 'Test';
-        String Phone = '1234567890';
-        Account account = AccountDomain.insertAccount(Name, Phone);
+        Account account = AccountDomain.insertAccount('Test', '1234567890');
         Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
         Test.startTest();
         List<Opportunity> opportunities = OpportunityDomain.getOpportunityRecords(account);

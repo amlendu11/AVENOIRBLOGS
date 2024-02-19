@@ -21,10 +21,8 @@ public with sharing class AccountDomainTest {
     **/
     @isTest
     public static void insertAccountTest() {
-        String Name = 'Test';
-        String Phone = '1234567890';
         Test.startTest();
-        Account account = AccountDomain.insertAccount(Name, Phone);
+        Account account = AccountDomain.insertAccount('Test', '1234567890');
         Test.stopTest();
         Assert.areEqual('Test', account.Name);
     }
@@ -36,9 +34,7 @@ public with sharing class AccountDomainTest {
     **/
     @isTest
     public static void getAccountRecordsTest() {
-        String Name = 'Test';
-        String Phone = '1234567890';
-        Account account = AccountDomain.insertAccount(Name, Phone);
+        Account account = AccountDomain.insertAccount('Test', '1234567890');
         Test.startTest();
         List<Account> accounts = AccountDomain.getAccountRecords();
         Test.stopTest();

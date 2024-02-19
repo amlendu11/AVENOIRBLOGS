@@ -21,9 +21,7 @@ public with sharing class ContactDomainTest  {
     **/
     @isTest
     public static void createAndInsertContactTest() {
-        String Name = 'Test';
-        String Phone = '1234567890';
-        Account account = AccountDomain.insertAccount(Name, Phone);
+        Account account = AccountDomain.insertAccount('Test', '1234567890');
         Test.startTest();
         Contact contact = ContactDomain.createAndInsertContact(account);
         Test.stopTest();
