@@ -24,7 +24,7 @@ public with sharing class OpportunityDomainTest {
         Account account = AccountDomain.insertAccount('Test', '1234567890');
         Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
         Test.startTest();
-        List<Opportunity> opportunities = OpportunityDomain.getOpportunityRecords();
+            List<Opportunity> opportunities = OpportunityDomain.getOpportunityRecords();
         Test.stopTest();
         Assert.areNotEqual(null, opportunities[0].Id);
     }
@@ -38,7 +38,7 @@ public with sharing class OpportunityDomainTest {
     public static void createAndInsertOpportunityTest() {
         Account account = AccountDomain.insertAccount('Test', '1234567890');
         Test.startTest();
-        Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
+            Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
         Test.stopTest();
         Assert.areEqual(account.Id, opportunity.AccountId);
     }
@@ -53,7 +53,7 @@ public with sharing class OpportunityDomainTest {
         Account account = AccountDomain.insertAccount('Test', '1234567890');
         Opportunity opportunity = OpportunityDomain.createAndInsertOpportunity(account);
         Test.startTest();
-        List<Opportunity> opportunities = OpportunityDomain.getOpportunityRecords(account);
+            List<Opportunity> opportunities = OpportunityDomain.getOpportunityRecords(account);
         Test.stopTest();
         Assert.areEqual(account.Id, opportunities[0].AccountId);
     }

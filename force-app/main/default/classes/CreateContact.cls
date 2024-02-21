@@ -24,7 +24,6 @@ public class CreateContact implements Queueable {
     **/
     public void execute(System.QueueableContext context) {
         Contact contact = ContactDomain.createAndInsertContact(this.account);
-
         if(
             (System.AsyncInfo.hasMaxStackDepth() &&
             AsyncInfo.getCurrentQueueableStackDepth() <
