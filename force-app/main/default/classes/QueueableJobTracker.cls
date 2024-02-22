@@ -6,19 +6,22 @@ Purpose : class for identifying the unique jobs.
 --------------------------------------------------------------------------------
 Version History:
 VERSION    DEVELOPER NAME        DATE          DETAIL FEATURES
- 1.0        Navneet Soni       13/02/2024    Initial Development
+ 1.0       Navneet Soni       13/02/2024       Initial Development
 *******************************************************************************/
 
 public class QueueableJobTracker {
+
     /**
      * purpose : This method aims to check the job is unique or not 
      * @param : job name
      * Annotation : NA
      * return : boolean value
     */
+
     public static Boolean checkQueuedJob(String jobName) {
-        List<String> status = new List<String>{'Queued', 'Processing'};
-        List<AsyncApexJob> jobs = AsyncApexJobDomain.fetchAsyncApexJobDetails('Queueable', status, jobName);
+        List<AsyncApexJob> jobs = AsyncApexJobDomain.fetchAsyncApexJobDetails('Queueable', 
+            new List<String>{'Queued', 'Processing'}, jobName
+        );
         return jobs.isEmpty();
     }
 
@@ -28,6 +31,7 @@ public class QueueableJobTracker {
      * Annotation : NA
      * return : NA
     */
+
     public void enqueueUniqueJob(Integer value) {
         if (checkQueuedJob('QueueableJob')) {
             System.enqueueJob(new EnqueueUniqueQueueableJob(value));
