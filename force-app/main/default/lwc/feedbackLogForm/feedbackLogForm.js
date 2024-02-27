@@ -1,4 +1,4 @@
-import {LightningElement} from 'lwc';
+import {LightningElement, track} from 'lwc';
 import {log} from 'lightning/logger';
 import userId from '@salesforce/user/Id'; 
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
@@ -7,6 +7,7 @@ import YOUR_FEEDBACK from '@salesforce/label/c.YOUR_FEEDBACK';
 import FEEDBACK_NAME from '@salesforce/label/c.FEEDBACK_NAME';
 import SUBMIT from '@salesforce/label/c.SUBMIT';
 import FEEDBACK_SUBMISSION from '@salesforce/label/c.FEEDBACK_SUBMISSION';
+import FEEDBACK_SUCCESS from '@salesforce/label/c.FEEDBACK_SUCCESS';
 import SUCCESS from '@salesforce/label/c.SUCCESS';
 
 export default class FeedbackForm extends LightningElement {
@@ -19,19 +20,24 @@ export default class FeedbackForm extends LightningElement {
         SUCCESS,
         SUBMIT
     };
+    @track feedback = '';
+
+    handleChange(event) {
+        this.feedback = event.target.value;
+    }
+
     handleSubmit() {
-        let feedback = this.template.querySelector('lightning-input').value;
         let logData = {
-            type: this.FEEDBACK_SUBMISSION,
+            type: this.label.FEEDBACK_SUBMISSION,
             userId: userId,
             timestamp: new Date().toISOString(),
-            feedback: feedback
+            feedback: this.feedback
         };
         log(logData);
         this.dispatchEvent(
             new ShowToastEvent({
-                title: this.SUCCESS,
-                message: this.FEEDBACK_SUCCESS,
+                title: this.label.SUCCESS,
+                message: this.label.FEEDBACK_SUCCESS,
                 variant: 'success'
             })
         );
