@@ -9,10 +9,11 @@
 ------------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
-   1.0       Shiv Kumar Chaudhary 4/19/2023   Initial Development
+   1.0       Shiv Kumar Chaudhary 19/4/2023   Initial Development
+   2.0       Anchal Agrawal       16/02/2024  Added getAccountRecords
 ***********************************************************************/
 public class AccountDomain {
-    
+
     /**
     * This method aims to insert Account
     * @param name
@@ -23,5 +24,21 @@ public class AccountDomain {
         Account accounts = new Account(name = name, phone = phone);
         insert accounts;
         return accounts;
+    }
+
+    /**
+    * This method aims to get Account record
+    * @param NA
+    * @return List<Account>
+    */
+    public static List<Account> getAccountRecords() {
+        return [
+        	SELECT
+            	Id,
+                Name,
+                Phone
+            FROM
+            	Account
+       	];
     }
 }
