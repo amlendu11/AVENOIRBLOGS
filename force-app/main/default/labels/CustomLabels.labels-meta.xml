@@ -303,6 +303,7 @@
     </labels>
     <labels>
         <fullName>SANDBOX_LOGIN_URL</fullName>
+        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>SANDBOX LOGIN URL</shortDescription>
@@ -398,5 +399,12 @@
         <protected>true</protected>
         <shortDescription>VIEW_ALL</shortDescription>
         <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>Maximum stack depth has been reached</value>
     </labels>
 </CustomLabels>
