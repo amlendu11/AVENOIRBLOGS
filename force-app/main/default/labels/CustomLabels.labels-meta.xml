@@ -303,7 +303,6 @@
     </labels>
     <labels>
         <fullName>SANDBOX_LOGIN_URL</fullName>
-        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>SANDBOX LOGIN URL</shortDescription>
@@ -335,7 +334,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>SecondStudentNameBlank</shortDescription>
-        <value>&apos;A non-blank student name should be considered greater than a blank name&apos;</value>
+        <value>A non-blank student name should be considered greater than a blank name</value>
     </labels>
     <labels>
         <fullName>TARGET_LANGUAGE_CODE</fullName>
