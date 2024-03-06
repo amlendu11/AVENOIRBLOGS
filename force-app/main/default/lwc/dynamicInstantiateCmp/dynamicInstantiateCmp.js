@@ -9,7 +9,6 @@ Version History:*
 VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
 1.0        Santosh Kumar      06/03/2024     Initial Development
 ***********************************************************************/
-
 import { LightningElement } from 'lwc';
 
 export default class DynamicInstantiateCmp extends LightningElement {
