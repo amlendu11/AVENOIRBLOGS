@@ -1,0 +1,9 @@
+<template>
+    <div class="slds-readonly-path">
+        <lightning-progress-indicator current-step={currentState} type="path" variant="brand">
+            <template for:each={steps} for:item="step">
+                <lightning-progress-step label={step.label} value={step.value} key={step.label} onclick={pathHandler}></lightning-progress-step><!---->
+            </template>
+        </lightning-progress-indicator>
+    </div>
+</template>
