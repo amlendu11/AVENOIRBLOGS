@@ -11,6 +11,7 @@
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
    1.0       Shiv Kumar Chaudhary 19/4/2023   Initial Development
    2.0       Anchal Agrawal       16/02/2024  Added getAccountRecords
+   3.0       Shiv Kumar Chaudhary 11/03/2024  Added insertAccounts
 ***********************************************************************/
 public class AccountDomain {
 
@@ -40,5 +41,18 @@ public class AccountDomain {
             FROM
             	Account
        	];
+    }
+
+    /**
+    * This method aims to insert Account record
+    * @param List<Account>
+    * @return N/A
+    */
+    public static void insertAccounts(List<Account> accounts) {
+        try {
+            insert accounts;
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }
