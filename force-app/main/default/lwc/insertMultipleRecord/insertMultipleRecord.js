@@ -89,10 +89,6 @@ export default class InsertMultipleRecord extends NavigationMixin(LightningEleme
                 )
                 return;
             }
-            else {
-                delete this.accountsToCreate[index].showAddButton;
-                delete this.accountsToCreate[index].showDeleteButton;
-            }
         }
         this.insertRecords();
     }
