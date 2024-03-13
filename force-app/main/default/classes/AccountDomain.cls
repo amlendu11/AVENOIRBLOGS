@@ -51,7 +51,8 @@ public class AccountDomain {
     public static void insertAccounts(List<Account> accounts) {
         try {
             insert accounts;
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             throw e;
         }
     }

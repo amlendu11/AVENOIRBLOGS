@@ -16,7 +16,8 @@ public with sharing class InsertMultipleRecordController {
               List<InsertMultipleAccountWrapper>.class
          );
          AccountProcessor.processMultipleAccountToInsert(accountsToInsert);
-      } catch (Exception e) {
+      }
+      catch (Exception e) {
          throw new AuraHandledException(e.getMessage());
       }
    } 

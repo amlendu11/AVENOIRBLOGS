@@ -23,6 +23,8 @@ export default class InsertMultipleRecord extends NavigationMixin(LightningEleme
         ACCOUNTS_INSERTED: ACCOUNTS_INSERTED,
         CREATE_ACCOUNTS: CREATE_ACCOUNTS
     }
+    recordCount = 0;
+    saveButtonLabel;
 
     connectedCallback() {
         this.addRow();
@@ -30,14 +32,28 @@ export default class InsertMultipleRecord extends NavigationMixin(LightningEleme
 
     addRow(event) {
         this.accountsToCreate.push(this.initialNewRecord());
+        this.saveButtonLabel = `Save Records (${this.accountsToCreate.length})`;
     }
 
     handleAddRow(event) {
         let index = parseInt(event.target.dataset.index);
+        if (
+            this.accountsToCreate[index].accountName == "" ||
+            !this.accountsToCreate[index].accountName
+        ) {
+            let rowNo = index + 1;
+            this.showToastEvent(
+                this.label.ERROR,
+                `${this.label.ACCOUNT_NAME_REQUIRED} ${rowNo}`,
+                this.label.ERROR
+            )
+            return;   
+        }
         this.accountsToCreate[index].showAddButton = false;
         this.accountsToCreate[index].showDeleteButton = true;
         this.addRow(event);
         this.accountsToCreate[index + 1].showDeleteButton = true;
+
     }
 
     handleDeleteRow(event) {
@@ -51,6 +67,7 @@ export default class InsertMultipleRecord extends NavigationMixin(LightningEleme
         if (this.accountsToCreate.length == 1) {
             this.accountsToCreate[0].showDeleteButton = false;
         }
+        this.saveButtonLabel = `Save Records (${this.accountsToCreate.length})`;
     }
 
     handleChange(event) {
