@@ -15,18 +15,6 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>senderType</name>
-            <value>
-                <stringValue>OrgWideEmailAddress</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>senderAddress</name>
-            <value>
-                <stringValue>anchal4014@gmail.com</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
             <name>emailSubject</name>
             <value>
                 <stringValue>Case Status has been changed</stringValue>
