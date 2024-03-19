@@ -101,7 +101,7 @@
     <textTemplates>
         <name>Body</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>Dear {!$Record.Contact.Name},
+        <text>Dear {!$Record.Contact.FirstName},
 Your case status has been changed to working.</text>
     </textTemplates>
 </Flow>
