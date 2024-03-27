@@ -8,11 +8,46 @@
         <value>Insert Account</value>
     </labels>
     <labels>
+        <fullName>ARE_YOU_AN_EMPLOYEE_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ARE YOU AN EMPLOYEE BUTTON</shortDescription>
+        <value>Are You An Employee?</value>
+    </labels>
+    <labels>
         <fullName>ATTACH_FILES</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>ATTACH_FILES</shortDescription>
         <value>Attach files</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_GOOGLE_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR GOOGLE URL</shortDescription>
+        <value>https://www.avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_INSTAGRAM_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR INSTAGRAM URL</shortDescription>
+        <value>https://www.instagram.com/avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_LINKEDIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR LINKEDIN URL</shortDescription>
+        <value>https://www.linkedin.com/company/theavenoir/mycompany/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_TWITTER_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR TWITTER URL</shortDescription>
+        <value>https://twitter.com/TeamAvenoir</value>
     </labels>
     <labels>
         <fullName>Account_Name_Label</fullName>
@@ -27,6 +62,13 @@
         <protected>true</protected>
         <shortDescription>label for amount name column in datatable</shortDescription>
         <value>Amount</value>
+    </labels>
+    <labels>
+        <fullName>BothNamesBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BothNamesBlank</shortDescription>
+        <value>Two blank student names should be considered equal</value>
     </labels>
     <labels>
         <fullName>CC</fullName>
@@ -48,6 +90,13 @@
         <protected>true</protected>
         <shortDescription>label for close date column in datatable</shortDescription>
         <value>Close Date</value>
+    </labels>
+    <labels>
+        <fullName>Compare_AlphabeticalOrder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Compare_AlphabeticalOrder</shortDescription>
+        <value>Alice should come before Bob alphabetically</value>
     </labels>
     <labels>
         <fullName>Custom_Error_Message_Label</fullName>
@@ -120,6 +169,34 @@
         <value>Error</value>
     </labels>
     <labels>
+        <fullName>ExpectedPhoneNumber</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ExpectedPhoneNumber</shortDescription>
+        <value>1234567</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedStudentName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>StudentName</shortDescription>
+        <value>John Doe</value>
+    </labels>
+    <labels>
+        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FORGOT PASSWORD BUTTON</shortDescription>
+        <value>Forgot Your Password?</value>
+    </labels>
+    <labels>
+        <fullName>FirstNameBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FirstNameBlank</shortDescription>
+        <value>A blank student name should be considered less than any non-blank name</value>
+    </labels>
+    <labels>
         <fullName>INVALID_EMAIL_MESSAGE</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -132,6 +209,48 @@
         <protected>true</protected>
         <shortDescription>Id</shortDescription>
         <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_BUTTON_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN BUTTON LABEL</shortDescription>
+        <value>Log In</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_FORGOT_PASSWORD_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN FORGOT PASSWORD URL</shortDescription>
+        <value>/s/ForgotPassword</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_HERE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN HERE</shortDescription>
+        <value>Login Here</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_PASSWORD_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN PASSWORD PLACEHOLDER</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_SANDBOX_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN SANDBOX URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_USERNAME_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
+        <value>Username</value>
     </labels>
     <labels>
         <fullName>NAME_IS_BLANK</fullName>
@@ -183,6 +302,13 @@
         <value>Reset</value>
     </labels>
     <labels>
+        <fullName>SANDBOX_LOGIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SANDBOX LOGIN URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
         <fullName>SEND</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -202,6 +328,13 @@
         <protected>true</protected>
         <shortDescription>SUBJECT</shortDescription>
         <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>SecondStudentNameBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SecondStudentNameBlank</shortDescription>
+        <value>A non-blank student name should be considered greater than a blank name</value>
     </labels>
     <labels>
         <fullName>TARGET_LANGUAGE_CODE</fullName>
@@ -225,6 +358,34 @@
         <value>Translate</value>
     </labels>
     <labels>
+        <fullName>TestStudentName1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentName1</shortDescription>
+        <value>Joe</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentName2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentName2</shortDescription>
+        <value>Satish</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentPhone1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentPhone1</shortDescription>
+        <value>1234567890</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentPhone2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentPhone2</shortDescription>
+        <value>0987654321</value>
+    </labels>
+    <labels>
         <fullName>UPLOAD_FILES</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -232,144 +393,18 @@
         <value>Upload Files</value>
     </labels>
     <labels>
-        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Insert Account</shortDescription>
-        <value>Insert Account</value>
-    </labels>
-    <labels>
-        <fullName>NAME_IS_BLANK</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>NAME_IS_BLANK</shortDescription>
-        <value>Name cannot be Blank</value>
-    </labels>
-    <labels>
-        <fullName>PHONE_IS_BLANK</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Phone Is Blank</shortDescription>
-        <value>Phone cannot be blank</value>
-    </labels>
-    <labels>
-        <fullName>Id</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Id</shortDescription>
-        <value>Id</value>
-    </labels>
-    <labels>
-        <fullName>Name</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Name</shortDescription>
-        <value>Name</value>
-    </labels>
-    <labels>
-        <fullName>No_Contacts</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>No Contacts</shortDescription>
-        <value>No Contacts</value>
-    </labels>
-    <labels>
-        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>FORGOT PASSWORD BUTTON</shortDescription>
-        <value>Forgot Your Password?</value>
-    </labels>
-    <labels>
-        <fullName>ARE_YOU_AN_EMPLOYEE_BUTTON</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>ARE YOU AN EMPLOYEE BUTTON</shortDescription>
-        <value>Are You An Employee?</value>
-    </labels>
-    <labels>
-        <fullName>SANDBOX_LOGIN_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>SANDBOX LOGIN URL</shortDescription>
-        <value>https://test.salesforce.com/</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_BUTTON_LABEL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN BUTTON LABEL</shortDescription>
-        <value>Log In</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_FORGOT_PASSWORD_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN FORGOT PASSWORD URL</shortDescription>
-        <value>/s/ForgotPassword</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_PASSWORD_PLACEHOLDER</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN PASSWORD PLACEHOLDER</shortDescription>
-        <value>Password</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_SANDBOX_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN SANDBOX URL</shortDescription>
-        <value>https://test.salesforce.com/</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_USERNAME_PLACEHOLDER</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
-        <value>Username</value>
-    </labels>
-    <labels>
-        <fullName>AVENOIR_GOOGLE_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AVENOIR GOOGLE URL</shortDescription>
-        <value>https://www.avenoir.ai/</value>
-    </labels>
-    <labels>
-        <fullName>AVENOIR_INSTAGRAM_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AVENOIR INSTAGRAM URL</shortDescription>
-        <value>https://www.instagram.com/avenoir.ai/</value>
-    </labels>
-    <labels>
-        <fullName>AVENOIR_LINKEDIN_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AVENOIR LINKEDIN URL</shortDescription>
-        <value>https://www.linkedin.com/company/theavenoir/mycompany/</value>
-    </labels>
-    <labels>
-        <fullName>AVENOIR_TWITTER_URL</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>AVENOIR TWITTER URL</shortDescription>
-        <value>https://twitter.com/TeamAvenoir</value>
-    </labels>
-    <labels>
-        <fullName>LOGIN_HERE</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>LOGIN HERE</shortDescription>
-        <value>Login Here</value>
-    </labels>
-    <labels>
         <fullName>VIEW_ALL</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>VIEW_ALL</shortDescription>
         <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>Maximum stack depth has been reached</value>
     </labels>
     <labels>
         <fullName>TITLE</fullName>
