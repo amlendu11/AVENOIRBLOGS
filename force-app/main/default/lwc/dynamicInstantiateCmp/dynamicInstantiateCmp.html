@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <h1>Dynamic Instantiate Component</h1>
+        <lightning-radio-group label="Select Which Component to Load Dynamically" options={options} value={value}
+            type="radio" onchange={handleChange}></lightning-radio-group>
+        <template if:true={isChildCmp}>
+            <lightning-input type="text" label="Message for child component" onchange={handleMessage}></lightning-input>
+        </template>
+        <div class="container">
+            <lwc:component lwc:is={componentConstructor} message={message}></lwc:component>
+        </div>
+    </lightning-card>
+</template>
