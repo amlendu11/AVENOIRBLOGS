@@ -148,6 +148,13 @@
         <value>success</value>
     </labels>
     <labels>
+        <fullName>Dynamic_Component_Header_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dynamic Component Header Text</shortDescription>
+        <value>Dynamic Instantiate Component</value>
+    </labels>
+    <labels>
         <fullName>EMAIL_REPLY_ADDRESS</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -167,6 +174,13 @@
         <protected>true</protected>
         <shortDescription>ERROR</shortDescription>
         <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>Maximum stack depth has been reached</value>
     </labels>
     <labels>
         <fullName>ExpectedPhoneNumber</fullName>
@@ -398,12 +412,5 @@
         <protected>true</protected>
         <shortDescription>VIEW_ALL</shortDescription>
         <value>View All</value>
-    </labels>
-    <labels>
-        <fullName>Error_Message</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Error Message</shortDescription>
-        <value>Maximum stack depth has been reached</value>
     </labels>
 </CustomLabels>

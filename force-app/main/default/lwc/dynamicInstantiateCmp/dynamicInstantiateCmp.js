@@ -9,13 +9,18 @@ Version History:*
 VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
 1.0        Santosh Kumar      06/03/2024     Initial Development
 ***********************************************************************/
-import { LightningElement } from 'lwc';
+import {LightningElement} from 'lwc';
+import HEADING_TEXT from "@salesforce/label/c.Dynamic_Component_Header_Text";
+import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 
 export default class DynamicInstantiateCmp extends LightningElement {
     componentConstructor;
     getComponent;
     message;
     isChildCmp = false;
+    label = {
+        HEADING_TEXT
+    }
 
     // Purpose : Get label and value for radio buttons
     get options() {
@@ -31,13 +36,24 @@ export default class DynamicInstantiateCmp extends LightningElement {
         if(this.getComponent == 'dynamicChild') {
             this.isChildCmp = true;
         }
-        import("c/"+this.getComponent)
+        import("c/" + this.getComponent)
         .then(({ default: ctor }) => (this.componentConstructor = ctor))
-        .catch((err) => console.log("Error importing component"));
+        .catch((err) => this.showErrorToast());
     }
 
     // Purpose : This method get text value from lightning input and set it to message
     handleMessage(event) {
         this.message = event.target.value;
+    }
+
+    // Purpose : This method used to Error Toost message when Error occur
+    showErrorToast() {
+        const event = new ShowToastEvent({
+            title: 'ERROR',
+            message: 'Error importing component',
+            variant: 'error',
+            mode: 'dismissable'
+        });
+        this.dispatchEvent(event);
     }
 }

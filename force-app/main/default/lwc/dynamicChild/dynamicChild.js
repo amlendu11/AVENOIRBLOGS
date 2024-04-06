@@ -9,7 +9,7 @@ Version History:*
 VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
 1.0        Santosh Kumar      06/03/2024     Initial Development
 ***********************************************************************/
-import { LightningElement, api } from 'lwc';
+import {LightningElement, api} from 'lwc';
 
 export default class DynamicChild extends LightningElement {
     @api message;

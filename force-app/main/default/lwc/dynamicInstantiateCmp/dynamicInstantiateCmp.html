@@ -1,6 +1,6 @@
 <template>
     <lightning-card>
-        <h1>Dynamic Instantiate Component</h1>
+        <h1>{label.HEADING_TEXT}</h1>
         <lightning-radio-group label="Select Which Component to Load Dynamically" options={options} value={value}
             type="radio" onchange={handleChange}></lightning-radio-group>
         <template if:true={isChildCmp}>
