@@ -10,8 +10,7 @@ public with sharing class InsertMultipleRecordController {
    @AuraEnabled
    public static void insertMultipleAccountRecord(String accounts){
       try {
-         List<InsertMultipleAccountWrapper> accountsToInsert = 
-            (List<InsertMultipleAccountWrapper>)JSON.deserialize(
+         List<InsertMultipleAccountWrapper> accountsToInsert = (List<InsertMultipleAccountWrapper>)JSON.deserialize(
               accounts,
               List<InsertMultipleAccountWrapper>.class
          );
