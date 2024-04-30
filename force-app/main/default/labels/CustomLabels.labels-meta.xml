@@ -8,6 +8,48 @@
         <value>Insert Account</value>
     </labels>
     <labels>
+        <fullName>ACCOUNT_NAME_REQUIRED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Name is required for row no : </shortDescription>
+        <value>Account Name is required for row no : </value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Name</shortDescription>
+        <value>Account Name</value>
+    </labels>
+    <labels>
+        <fullName>CREATE_ACCOUNTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Accounts</shortDescription>
+        <value>Create Accounts</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNTS_INSERTED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Accounts inserted successfully</shortDescription>
+        <value>Accounts inserted successfully</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_PHONE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Phone</shortDescription>
+        <value>Account Phone</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Number</shortDescription>
+        <value>Account Number</value>
+    </labels>
+    <labels>
         <fullName>ARE_YOU_AN_EMPLOYEE_BUTTON</fullName>
         <language>en_US</language>
         <protected>true</protected>
