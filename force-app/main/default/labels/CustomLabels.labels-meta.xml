@@ -497,4 +497,67 @@
         <shortDescription>Submit</shortDescription>
         <value>Submit</value>
     </labels>
+    <labels>
+        <fullName>PICKLISTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dependent Multi-Select Picklists</shortDescription>
+        <value>Dependent Multi-Select Picklists</value>
+    </labels>
+    <labels>
+        <fullName>GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>genres</shortDescription>
+        <value>genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Genres</shortDescription>
+        <value>Select Genres</value>
+    </labels>
+    <labels>
+        <fullName>AVAILABLE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available Genres</shortDescription>
+        <value>Available Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more genres</shortDescription>
+        <value>Select one or more genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBGENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>subGenres</shortDescription>
+        <value>subGenres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Sub-Genres</shortDescription>
+        <value>Select Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>AVAILABLE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available Sub-Genres</shortDescription>
+        <value>Available Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more sub-genres</shortDescription>
+        <value>Select one or more sub-genres</value>
+    </labels>
 </CustomLabels>
