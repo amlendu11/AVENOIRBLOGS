@@ -1,6 +1,14 @@
 import {LightningElement, api, track} from 'lwc';
 import LightningAlert from 'lightning/alert';
+import CREATE_CONTACT from '@salesforce/label/c.Create_Contact';
+import CLOSE from '@salesforce/label/c.CLOSE';
+import MESSAGE from '@salesforce/label/c.Record_Created_Successfully';
 export default class ButtonRedirectToFlow extends LightningElement {
+    label = {
+        CREATE_CONTACT,
+        CLOSE,
+        MESSAGE
+    };
     @track isShowModal = false;
     @api recordId;
     @track inputVariable = [];
@@ -21,10 +29,9 @@ export default class ButtonRedirectToFlow extends LightningElement {
     async handleFinish() {
         this.isShowModal = false;
         await LightningAlert.open({
-            message: 'Record created Successfully',
+            message: this.label.MESSAGE,
             theme: 'success',
-            label: 'Create Contact',
+            label: this.label.CREATE_CONTACT,
         })
-
     }
 }
