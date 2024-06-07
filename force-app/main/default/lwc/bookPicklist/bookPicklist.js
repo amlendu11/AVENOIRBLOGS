@@ -48,7 +48,8 @@ export default class BookPicklist extends LightningElement {
                     { label: 'Romance', value: 'Romance' },
                     { label: 'Thriller', value: 'Thriller' }
                 ]);
-            } else if (genre === 'NonFiction') {
+            } 
+            else if (genre === 'NonFiction') {
                 this.subGenreOptions = this.subGenreOptions.concat([
                     { label: 'Biography', value: 'Biography' },
                     { label: 'History', value: 'History' },
