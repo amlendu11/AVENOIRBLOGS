@@ -7,10 +7,6 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class HeadlessAction extends LightningElement {
     @api recordId;
-    @track title;
-    @track message;
-    @track varient;
-
 
     //calling the invoke method
     @api invoke() {
