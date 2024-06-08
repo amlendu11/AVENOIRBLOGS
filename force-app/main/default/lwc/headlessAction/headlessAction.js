@@ -14,8 +14,6 @@ export default class HeadlessAction extends LightningElement {
 
     //calling the invoke method
     @api invoke() {
-        console.log('Inside Invoke');
-        console.log('current record Id '+this.recordId);
         this.getAccountData();  
     }
 
@@ -23,10 +21,7 @@ export default class HeadlessAction extends LightningElement {
     getAccountData(){
         getAccountData({recordId: this.recordId})
         .then((result) => {
-            console.log('Promise returned');
-            console.log(JSON.stringify(result));
             if(result.account.Restricted__c) {
-                console.log('Customer is already Restricted');
                 this.showToast('Info', 'Customer is already restricted', 'Info');
             }
             else {
@@ -34,7 +29,6 @@ export default class HeadlessAction extends LightningElement {
             }
         })
         .catch((error) =>{
-            console.log('error returned' +error);
             this.showToast('Error', 'Error while fetching the account data', 'Error');
         })
     }
@@ -56,11 +50,9 @@ export default class HeadlessAction extends LightningElement {
         const recordInput = { fields };
         updateRecord(recordInput)
         .then(() => {
-            console.log('inside update record promise');
             this.showToast('Success', 'Customer is restricted', 'Success');
         })
         .catch((error) => {
-            console.log('inside update record error');
             this.showToast('Error', 'Error while updating the record', 'Error');
         })
     }
