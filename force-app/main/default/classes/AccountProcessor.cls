@@ -11,6 +11,7 @@
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
    1.0       Nikhil Mehra         08/17/2023    Initial Development
    3.0       Shiv Kumar Chaudhary 11/03/2024    Added processMultipleAccountToInsert
+   4.0       Akash Kumar          09/06/2024    Added getProcessedRecord
 ***********************************************************************/
 public with sharing class AccountProcessor {
     public static List<AccountWrapper> getdomain() {
@@ -40,5 +41,19 @@ public with sharing class AccountProcessor {
             ));
         }
         AccountDomain.insertAccounts(accountsToInsert);
+    }
+    
+    /**
+    * This method aims to get Account Record
+    * @param : String recordId
+    * @return : Account record
+    */
+    public static AccountWrapper getProcessedRecord(String recordId) {
+        AccountWrapper processedAccountrecord;
+        
+        Account acc = AccountDomain.getAccountData(recordId);
+        processedAccountrecord = new AccountWrapper(acc);
+        
+        return processedAccountrecord;
     }
 }
