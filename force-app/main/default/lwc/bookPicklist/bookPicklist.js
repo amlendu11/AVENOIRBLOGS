@@ -1,4 +1,4 @@
-import { LightningElement, track} from 'lwc';
+import {LightningElement, track} from 'lwc';
 import PICKLISTS from '@salesforce/label/c.PICKLISTS';
 import GENRES from '@salesforce/label/c.GENRES';
 import SELECT_GENRES from '@salesforce/label/c.SELECT_GENRES';
