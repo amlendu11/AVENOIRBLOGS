@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Account Basic Information">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="industry"
+                label="Industry"
+                value={industry}
+                placeholder="Select Industry"
+                options={industryOptions}
+                onchange={handleIndustryChange}>
+            </lightning-combobox>
+
+            <lightning-input
+                label="Phone"
+                value={phone}
+                onchange={handlePhoneChange}>
+            </lightning-input>
+
+            <div class="slds-m-top_medium">
+                <lightning-button variant="neutral" label="Cancel" onclick={closeAction}></lightning-button>
+                <lightning-button variant="brand" label="Update Account" onclick={handleUpdateAccount}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
