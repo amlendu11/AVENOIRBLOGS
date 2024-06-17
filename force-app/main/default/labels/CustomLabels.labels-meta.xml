@@ -11,8 +11,8 @@
         <fullName>ACCOUNT_NAME_REQUIRED</fullName>
         <language>en_US</language>
         <protected>true</protected>
-        <shortDescription>Account Name is required for row no : </shortDescription>
-        <value>Account Name is required for row no : </value>
+        <shortDescription>Account Name is required for row no :</shortDescription>
+        <value>Account Name is required for row no :</value>
     </labels>
     <labels>
         <fullName>ACCOUNT_NAME</fullName>
@@ -559,5 +559,26 @@
         <protected>true</protected>
         <shortDescription>Select one or more sub-genres</shortDescription>
         <value>Select one or more sub-genres</value>
+    </labels>
+    <labels>
+        <fullName>Create_Contact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Contact</shortDescription>
+        <value>Create Contact</value>
+    </labels>
+    <labels>
+        <fullName>CLOSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLOSE</shortDescription>
+        <value>CLOSE</value>
+    </labels>
+    <labels>
+        <fullName>Record_Created_Successfully</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Created Successfully</shortDescription>
+        <value>Record Created Successfully</value>
     </labels>
 </CustomLabels>
