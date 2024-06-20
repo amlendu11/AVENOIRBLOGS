@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-horizontal large">
+            <c-sf-lightning-path current-state={currentPath} steps={pathItems}
+                onselectedpath={selectedpath}></c-sf-lightning-path>
+        </div>
+        <!-- Create Account-->
+        <div if:true={isStep1}>
+            <lightning-record-form object-api-name={Account} layout-type="Compact" columns="2"  onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </div>
+        
+        <!-- Create Contact-->
+        <div if:true={isStep2}>
+            <lightning-record-form object-api-name={Contact} layout-type="Compact" columns="2">
+            </lightning-record-form>
+        </div>
+        <!-- Create Opportunity-->
+        <div if:true={isStep3}>
+            <lightning-record-form object-api-name={Opportunity} layout-type="Compact" columns="2" onsuccess={handleSuccessOppo}>
+            </lightning-record-form>
+        </div>
+        <div slot="footer" class="slds-clearfix">
+            <template if:false={isStep3}>
+                <lightning-button class="button slds-m-horizontal_x-small slds-float_right" slot="actions"
+                    variant="brand" label="Next" title="Next" onclick={nextHandler}></lightning-button>
+            </template>
+            <template if:false={isStep1}>
+                <lightning-button class=" button slds-m-horizontal_x-small slds-float_right" slot="actions"
+                    variant="brand" label="Previous" title="Previous" onclick={backHandler}></lightning-button>
+            </template>
+        </div>
+    </lightning-card>
+</template>
