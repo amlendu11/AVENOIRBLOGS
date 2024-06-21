@@ -42,4 +42,585 @@
         <shortDescription>Update_Account_Button</shortDescription>
         <value>Update</value>
     </labels>
+    <labels>
+        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Insert Account</shortDescription>
+        <value>Insert Account</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_NAME_REQUIRED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Name is required for row no :</shortDescription>
+        <value>Account Name is required for row no :</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Name</shortDescription>
+        <value>Account Name</value>
+    </labels>
+    <labels>
+        <fullName>CREATE_ACCOUNTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Accounts</shortDescription>
+        <value>Create Accounts</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNTS_INSERTED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Accounts inserted successfully</shortDescription>
+        <value>Accounts inserted successfully</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_PHONE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Phone</shortDescription>
+        <value>Account Phone</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Number</shortDescription>
+        <value>Account Number</value>
+    </labels>
+    <labels>
+        <fullName>ARE_YOU_AN_EMPLOYEE_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ARE YOU AN EMPLOYEE BUTTON</shortDescription>
+        <value>Are You An Employee?</value>
+    </labels>
+    <labels>
+        <fullName>ATTACH_FILES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ATTACH_FILES</shortDescription>
+        <value>Attach files</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_GOOGLE_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR GOOGLE URL</shortDescription>
+        <value>https://www.avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_INSTAGRAM_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR INSTAGRAM URL</shortDescription>
+        <value>https://www.instagram.com/avenoir.ai/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_LINKEDIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR LINKEDIN URL</shortDescription>
+        <value>https://www.linkedin.com/company/theavenoir/mycompany/</value>
+    </labels>
+    <labels>
+        <fullName>AVENOIR_TWITTER_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AVENOIR TWITTER URL</shortDescription>
+        <value>https://twitter.com/TeamAvenoir</value>
+    </labels>
+    <labels>
+        <fullName>Account_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for  account name column in datatable</shortDescription>
+        <value>Account Name</value>
+    </labels>
+    <labels>
+        <fullName>Amount_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for amount name column in datatable</shortDescription>
+        <value>Amount</value>
+    </labels>
+    <labels>
+        <fullName>BothNamesBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BothNamesBlank</shortDescription>
+        <value>Two blank student names should be considered equal</value>
+    </labels>
+    <labels>
+        <fullName>CC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CC</shortDescription>
+        <value>Cc</value>
+    </labels>
+    <labels>
+        <fullName>CLOSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLOSE</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>Close_Date_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for close date column in datatable</shortDescription>
+        <value>Close Date</value>
+    </labels>
+    <labels>
+        <fullName>Compare_AlphabeticalOrder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Compare_AlphabeticalOrder</shortDescription>
+        <value>Alice should come before Bob alphabetically</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Error_Message_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label for error toast message</shortDescription>
+        <value>errorMessage</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Error_Title_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label for error toast title</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Error_Variant_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label for error toast variant</shortDescription>
+        <value>error</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Success_Message_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label for success toast message</shortDescription>
+        <value>Leads updated</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Success_Message_Label_for_Opportunity</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom label for success toast message</shortDescription>
+        <value>Opportunities updated</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Success_Title_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label for success toast title</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Success_Variant_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom label for success toast variant</shortDescription>
+        <value>success</value>
+    </labels>
+    <labels>
+        <fullName>EMAIL_REPLY_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EMAIL_REPLY_ADDRESS</shortDescription>
+        <value>team.avenoir@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>EMAIL_SENDER_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EMAIL_SENDER_NAME</shortDescription>
+        <value>Avenoir Innovations Pvt Ltd.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ERROR</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedPhoneNumber</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ExpectedPhoneNumber</shortDescription>
+        <value>1234567</value>
+    </labels>
+    <labels>
+        <fullName>ExpectedStudentName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>StudentName</shortDescription>
+        <value>John Doe</value>
+    </labels>
+    <labels>
+        <fullName>FORGOT_PASSWORD_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FORGOT PASSWORD BUTTON</shortDescription>
+        <value>Forgot Your Password?</value>
+    </labels>
+    <labels>
+        <fullName>FirstNameBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FirstNameBlank</shortDescription>
+        <value>A blank student name should be considered less than any non-blank name</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_EMAIL_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>INVALID_EMAIL_MESSAGE</shortDescription>
+        <value>Some of the emails are invalid</value>
+    </labels>
+    <labels>
+        <fullName>Id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Id</shortDescription>
+        <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_BUTTON_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN BUTTON LABEL</shortDescription>
+        <value>Log In</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_FORGOT_PASSWORD_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN FORGOT PASSWORD URL</shortDescription>
+        <value>/s/ForgotPassword</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_HERE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN HERE</shortDescription>
+        <value>Login Here</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_PASSWORD_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN PASSWORD PLACEHOLDER</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_SANDBOX_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN SANDBOX URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>LOGIN_USERNAME_PLACEHOLDER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOGIN USERNAME PLACEHOLDER</shortDescription>
+        <value>Username</value>
+    </labels>
+    <labels>
+        <fullName>NAME_IS_BLANK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NAME_IS_BLANK</shortDescription>
+        <value>Name cannot be Blank</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>No_Contacts</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Contacts</shortDescription>
+        <value>No Contacts</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>label for column in datatable</shortDescription>
+        <value>Opportunity Name</value>
+    </labels>
+    <labels>
+        <fullName>PHONE_IS_BLANK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Phone Is Blank</shortDescription>
+        <value>Phone cannot be blank</value>
+    </labels>
+    <labels>
+        <fullName>RECEIPENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RECEIPENT</shortDescription>
+        <value>Please add a receipent</value>
+    </labels>
+    <labels>
+        <fullName>RESET</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RESET</shortDescription>
+        <value>Reset</value>
+    </labels>
+    <labels>
+        <fullName>SANDBOX_LOGIN_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SANDBOX LOGIN URL</shortDescription>
+        <value>https://test.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>SEND</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SEND</shortDescription>
+        <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>SOURCE_LANGUAGE_CODE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SOURCE_LANGUAGE_CODE</shortDescription>
+        <value>Source Language Code</value>
+    </labels>
+    <labels>
+        <fullName>SUBJECT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SUBJECT</shortDescription>
+        <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>SecondStudentNameBlank</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SecondStudentNameBlank</shortDescription>
+        <value>A non-blank student name should be considered greater than a blank name</value>
+    </labels>
+    <labels>
+        <fullName>TARGET_LANGUAGE_CODE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TARGET_LANGUAGE_CODE</shortDescription>
+        <value>Target Language Code</value>
+    </labels>
+    <labels>
+        <fullName>TO</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TO</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>TRANSLATE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TRANSLATE</shortDescription>
+        <value>Translate</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentName1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentName1</shortDescription>
+        <value>Joe</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentName2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentName2</shortDescription>
+        <value>Satish</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentPhone1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentPhone1</shortDescription>
+        <value>1234567890</value>
+    </labels>
+    <labels>
+        <fullName>TestStudentPhone2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestStudentPhone2</shortDescription>
+        <value>0987654321</value>
+    </labels>
+    <labels>
+        <fullName>UPLOAD_FILES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UPLOAD_FILES</shortDescription>
+        <value>Upload Files</value>
+    </labels>
+    <labels>
+        <fullName>VIEW_ALL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VIEW_ALL</shortDescription>
+        <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>Maximum stack depth has been reached</value>
+    </labels>
+    <labels>
+        <fullName>TITLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title</shortDescription>
+        <value>Feedback Form</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_FEEDBACK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your Feedback</shortDescription>
+        <value>Your Feedback</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>feedback</shortDescription>
+        <value>feedback</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_SUBMISSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>feedback_submission</shortDescription>
+        <value>feedback_submission</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Feedback submitted successfully</shortDescription>
+        <value>Feedback submitted successfully</value>
+    </labels>
+    <labels>
+        <fullName>SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>PICKLISTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dependent Multi-Select Picklists</shortDescription>
+        <value>Dependent Multi-Select Picklists</value>
+    </labels>
+    <labels>
+        <fullName>GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>genres</shortDescription>
+        <value>genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Genres</shortDescription>
+        <value>Select Genres</value>
+    </labels>
+    <labels>
+        <fullName>AVAILABLE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available Genres</shortDescription>
+        <value>Available Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more genres</shortDescription>
+        <value>Select one or more genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBGENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>subGenres</shortDescription>
+        <value>subGenres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Sub-Genres</shortDescription>
+        <value>Select Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>AVAILABLE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available Sub-Genres</shortDescription>
+        <value>Available Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more sub-genres</shortDescription>
+        <value>Select one or more sub-genres</value>
+    </labels>
+    <labels>
+        <fullName>Create_Contact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Contact</shortDescription>
+        <value>Create Contact</value>
+    </labels>
+    <labels>
+        <fullName>CLOSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLOSE</shortDescription>
+        <value>CLOSE</value>
+    </labels>
+    <labels>
+        <fullName>Record_Created_Successfully</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Created Successfully</shortDescription>
+        <value>Record Created Successfully</value>
+    </labels>
 </CustomLabels>
