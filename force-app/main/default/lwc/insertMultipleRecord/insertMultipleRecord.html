@@ -1,0 +1,37 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title={label.CREATE_ACCOUNTS}>
+        <template for:each={accountsToCreate} for:item="record" for:index="index">
+            <div key={record} class="slds-grid slds-gutters_small">
+                <div class="slds-col slds-side_3-of-12">
+                    <lightning-input label={label.ACCOUNT_NAME} name="accountName" data-index={index} onchange={handleChange}
+                        value={record.accountName} required></lightning-input>
+                </div>
+                <div class="slds-col slds-side_3-of-12">
+                    <lightning-input label={label.ACCOUNT_PHONE} name="accountPhone" data-index={index}
+                        onchange={handleChange} value={record.accountPhone}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-side_3-of-12">
+                    <lightning-input label={label.ACCOUNT_NUMBER} name="accountNumber" data-index={index}
+                        onchange={handleChange} value={record.accountNumber}></lightning-input>
+                </div>
+                <div class="slds-col slds-side_3-of-12" style="text-align:center; margin-top: auto; width: 55px;">
+                    <template if:true={record.showAddButton}>
+                        <lightning-icon style="cursor: pointer;" data-index={index}
+                            variant="brand" icon-name="utility:new" onclick={handleAddRow}>
+                        </lightning-icon>
+                    </template>
+                    <template if:true={record.showDeleteButton}>
+                        <lightning-icon data-index={index} icon-name="action:delete" style="cursor: pointer;"
+                            size="x-small" onclick={handleDeleteRow}>
+                        </lightning-icon>
+                    </template>
+                </div>
+            </div>
+        </template>
+        <div style="text-align: center; margin: 7px;">
+            <lightning-button variant="brand" label={saveButtonLabel} onclick={handleSave}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
