@@ -4,6 +4,13 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { CloseActionScreenEvent } from 'lightning/actions';
 import INDUSTRY_FIELD from '@salesforce/schema/Account.Industry';
 import PHONE_FIELD from '@salesforce/schema/Account.Phone';
+import Account_Basic_Information from '@salesforce/label/c.Account_Basic_Information';
+import Cancel_Button from '@salesforce/label/c.Cancel_Button';
+import Update_Account_Button from '@salesforce/label/c.Update_Account_Button';
+import Success_Title from '@salesforce/label/c.Success_Title';
+import Success_Message from '@salesforce/label/c.Success_Message';
+import Error_Title from '@salesforce/label/c.Error_Title';
+
 
 const fields = [INDUSTRY_FIELD, PHONE_FIELD];
 
@@ -12,22 +19,19 @@ export default class ScreenAction extends LightningElement {
     @track industry;
     @track phone;
 
+    label = {
+        accountBasicInformation: Account_Basic_Information,
+        cancelButton: Cancel_Button,
+        updateAccountButton: Update_Account_Button
+    };
+
     @wire(getRecord, { recordId: '$recordId', fields })
     wiredAccount({ error, data }) {
         if (data) {
             this.account = data.fields;
             this.industry = this.account.Industry.value;
-            this.phone = this.account.Phone.value; // Add this line
-        } else if (error) {
-            this.account = undefined;
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: 'Error loading account',
-                    message: error.body.message,
-                    variant: 'error'
-                })
-            );
-        }
+            this.phone = this.account.Phone.value;
+        } 
     }
 
     industryOptions = [
@@ -42,30 +46,18 @@ export default class ScreenAction extends LightningElement {
         const fields = {
             Id: this.recordId,
             [INDUSTRY_FIELD.fieldApiName]: this.industry,
-            [PHONE_FIELD.fieldApiName]: this.phone // Add this line
+            [PHONE_FIELD.fieldApiName]: this.phone
         };
 
         const recordInput = { fields };
 
         updateRecord(recordInput)
             .then(() => {
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: 'Success',
-                        message: 'Account information updated',
-                        variant: 'success'
-                    })
-                );
+                this.showToast(Success_Title, Success_Message,'success');
                 this.closeAction();
             })
             .catch(error => {
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: 'Error updating record',
-                        message: error.body.message,
-                        variant: 'error'
-                    })
-                );
+                this.showToast(Error_Title, error.body.message, 'error');
             });
     }
 
@@ -79,5 +71,15 @@ export default class ScreenAction extends LightningElement {
 
     handlePhoneChange(event) {
         this.phone = event.target.value;
+    }
+
+    showToast(title, message, variant) {
+        this.dispatchEvent(
+            new ShowToastEvent({
+                title: title,
+                message: message,
+                variant: variant
+            })
+        );
     }
 }
