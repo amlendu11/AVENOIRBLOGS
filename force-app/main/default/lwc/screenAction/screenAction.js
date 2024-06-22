@@ -4,12 +4,12 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { CloseActionScreenEvent } from 'lightning/actions';
 import INDUSTRY_FIELD from '@salesforce/schema/Account.Industry';
 import PHONE_FIELD from '@salesforce/schema/Account.Phone';
-import Account_Basic_Information from '@salesforce/label/c.Account_Basic_Information';
-import Cancel_Button from '@salesforce/label/c.Cancel_Button';
-import Update_Account_Button from '@salesforce/label/c.Update_Account_Button';
-import Success_Title from '@salesforce/label/c.Success_Title';
-import Success_Message from '@salesforce/label/c.Success_Message';
-import Error_Title from '@salesforce/label/c.Error_Title';
+import ACCOUNT_BASIC_INFORMATION from '@salesforce/label/c.Account_Basic_Information';
+import CANCEL_BUTTON from '@salesforce/label/c.Cancel_Button';
+import UPDATE_ACCOUNT_BUTTON from '@salesforce/label/c.Update_Account_Button';
+import SUCCESS_TITLE from '@salesforce/label/c.Success_Title';
+import SUCCESS_MESSAGE from '@salesforce/label/c.Success_Message';
+import ERROR_TITLE from '@salesforce/label/c.Error_Title';
 
 
 const fields = [INDUSTRY_FIELD, PHONE_FIELD];
@@ -19,10 +19,18 @@ export default class ScreenAction extends LightningElement {
     @track industry;
     @track phone;
 
+    industryOptions = [
+        { label: 'Agriculture', value: 'Agriculture' },
+        { label: 'Banking', value: 'Banking' },
+        { label: 'Construction', value: 'Construction' },
+        { label: 'Consulting', value: 'Consulting' },
+        { label: 'Education', value: 'Education' }
+    ];
+
     label = {
-        accountBasicInformation: Account_Basic_Information,
-        cancelButton: Cancel_Button,
-        updateAccountButton: Update_Account_Button
+        accountBasicInformation: ACCOUNT_BASIC_INFORMATION,
+        cancelButton: CANCEL_BUTTON,
+        updateAccountButton: UPDATE_ACCOUNT_BUTTON
     };
 
     @wire(getRecord, { recordId: '$recordId', fields })
@@ -31,16 +39,16 @@ export default class ScreenAction extends LightningElement {
             this.account = data.fields;
             this.industry = this.account.Industry.value;
             this.phone = this.account.Phone.value;
-        } 
+        } else if (error) {
+            this.account = undefined;
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: ERROR_TITLE,
+                    message: error.body.message,
+                    variant: 'error'  })
+            );
+        }
     }
-
-    industryOptions = [
-        { label: 'Agriculture', value: 'Agriculture' },
-        { label: 'Banking', value: 'Banking' },
-        { label: 'Construction', value: 'Construction' },
-        { label: 'Consulting', value: 'Consulting' },
-        { label: 'Education', value: 'Education' }
-    ];
 
     handleUpdateAccount() {
         const fields = {
@@ -53,11 +61,11 @@ export default class ScreenAction extends LightningElement {
 
         updateRecord(recordInput)
             .then(() => {
-                this.showToast(Success_Title, Success_Message,'success');
+                this.showToast(SUCCESS_TITLE, SUCCESS_MESSAGE,'success');
                 this.closeAction();
             })
             .catch(error => {
-                this.showToast(Error_Title, error.body.message, 'error');
+                this.showToast(ERROR_TITLE, error.body.message, 'error');
             });
     }
 
