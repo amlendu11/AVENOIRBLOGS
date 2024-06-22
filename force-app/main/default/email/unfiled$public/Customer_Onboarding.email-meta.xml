@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Customer Onboarding</name>
+    <style>none</style>
+    <subject>Welcome to our Company!</subject>
+    <textOnly>Dear {!Contact.FirstName},  Welcome to Avenoir!  We are delighted to have you as a new customer and are excited to help you get started. At [Your Company Name], we strive to provide the best products/services and an outstanding customer experience.  Here&apos;s what you can expect from us:  Quality Products/Services: We are committed to offering the highest quality and ensuring you have a fantastic experience. Exceptional Customer Support: Our dedicated support team is here to assist you with any questions or concerns. Don&apos;t hesitate to reach out to us at [support email] or [phone number]. Exclusive Offers and Updates: Stay tuned for special promotions, new product launches, and valuable tips. Make sure to follow us on [social media platforms] to stay connected.  To help you get started, here are some resources that you might find useful:  [Link to User Guide] [Link to FAQs] [Link to Blog/Community Forum] We&apos;d love to hear your feedback and any suggestions you may have. Your satisfaction is our top priority, and we&apos;re here to ensure you have a wonderful experience with [Your Company Name].  Thank you for choosing us. We look forward to serving you!  Best regards, Team Avenoir</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
