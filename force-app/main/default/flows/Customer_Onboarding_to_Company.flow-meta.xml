@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Product_Information</name>
         <label>Product Information</label>
-        <locationX>176</locationX>
-        <locationY>1308</locationY>
+        <locationX>50</locationX>
+        <locationY>1416</locationY>
         <actionName>Contact.Customer_Onboarding</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -18,8 +18,8 @@
     <actionCalls>
         <name>Reminder_Email</name>
         <label>Reminder Email</label>
-        <locationX>176</locationX>
-        <locationY>684</locationY>
+        <locationX>50</locationX>
+        <locationY>792</locationY>
         <actionName>Contact.Customer_Onboarding</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -36,8 +36,8 @@
     <actionCalls>
         <name>Send_Survey_Email</name>
         <label>Send Survey Email</label>
-        <locationX>264</locationX>
-        <locationY>1008</locationY>
+        <locationX>138</locationX>
+        <locationY>1116</locationY>
         <actionName>Contact.Customer_Onboarding</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -54,8 +54,8 @@
     <actionCalls>
         <name>Welcome_Email</name>
         <label>Welcome Email</label>
-        <locationX>176</locationX>
-        <locationY>252</locationY>
+        <locationX>50</locationX>
+        <locationY>360</locationY>
         <actionName>Contact.Customer_Onboarding</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -70,7 +70,34 @@
         </inputParameters>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Was_Created_Today</name>
+        <label>Was Created Today?</label>
+        <locationX>226</locationX>
+        <locationY>252</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Created_Today</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>today</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Welcome_Email</targetReference>
+            </connector>
+            <label>Created Today</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>today</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
     <interviewLabel>Customer Onboarding to Company {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Customer Onboarding to Company</label>
     <processMetadataValues>
@@ -95,8 +122,8 @@
     <recordCreates>
         <name>Follow_Up_Call</name>
         <label>Follow-Up Call</label>
-        <locationX>176</locationX>
-        <locationY>468</locationY>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
         <connector>
             <targetReference>Follow_Up_5_days</targetReference>
         </connector>
@@ -140,10 +167,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <start>
-        <locationX>50</locationX>
+        <locationX>100</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Welcome_Email</targetReference>
+            <targetReference>Was_Created_Today</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -163,8 +190,8 @@
         <object>Contact</object>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2024-06-17</startDate>
-            <startTime>17:00:00.000Z</startTime>
+            <startDate>2024-06-22</startDate>
+            <startTime>18:00:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
@@ -173,8 +200,8 @@
         <name>Follow_Up_2_days</name>
         <elementSubtype>WaitDuration</elementSubtype>
         <label>Follow-Up (2 days)</label>
-        <locationX>176</locationX>
-        <locationY>360</locationY>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
         <defaultConnectorLabel>Default Path</defaultConnectorLabel>
         <waitEvents>
             <conditionLogic>and</conditionLogic>
@@ -188,8 +215,8 @@
         <name>Follow_Up_5_days</name>
         <elementSubtype>WaitDuration</elementSubtype>
         <label>Follow-Up (5 days)</label>
-        <locationX>176</locationX>
-        <locationY>576</locationY>
+        <locationX>50</locationX>
+        <locationY>684</locationY>
         <defaultConnectorLabel>Default Path</defaultConnectorLabel>
         <waitEvents>
             <conditionLogic>and</conditionLogic>
@@ -203,8 +230,8 @@
         <name>Follow_Up_7_days</name>
         <elementSubtype>WaitDuration</elementSubtype>
         <label>Follow-Up (7 days)</label>
-        <locationX>264</locationX>
-        <locationY>900</locationY>
+        <locationX>138</locationX>
+        <locationY>1008</locationY>
         <defaultConnectorLabel>Default Path</defaultConnectorLabel>
         <waitEvents>
             <conditionLogic>and</conditionLogic>
@@ -218,8 +245,8 @@
         <name>New_Product_Information</name>
         <elementSubtype>WaitDate</elementSubtype>
         <label>New Product Information</label>
-        <locationX>176</locationX>
-        <locationY>1200</locationY>
+        <locationX>50</locationX>
+        <locationY>1308</locationY>
         <defaultConnectorLabel>Default Path</defaultConnectorLabel>
         <waitEvents>
             <conditionLogic>and</conditionLogic>
@@ -232,8 +259,8 @@
     <waits>
         <name>Onboarding_Completion_Check</name>
         <label>Onboarding Completion Check</label>
-        <locationX>176</locationX>
-        <locationY>792</locationY>
+        <locationX>50</locationX>
+        <locationY>900</locationY>
         <defaultConnector>
             <targetReference>Follow_Up_7_days</targetReference>
         </defaultConnector>
