@@ -264,9 +264,9 @@
         <defaultConnector>
             <targetReference>Follow_Up_7_days</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Incomplete Task</defaultConnectorLabel>
+        <defaultConnectorLabel>Onboarding Complete</defaultConnectorLabel>
         <waitEvents>
-            <name>Task_completion_Check</name>
+            <name>Onboarding_Incomplete</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Onboarding_status__c</leftValueReference>
@@ -297,7 +297,7 @@
                     <stringValue>Hours</stringValue>
                 </value>
             </inputParameters>
-            <label>Task completion Check</label>
+            <label>Onboarding Incomplete</label>
         </waitEvents>
     </waits>
 </Flow>
