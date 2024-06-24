@@ -11,25 +11,24 @@ import INFO_MESSAGE from '@salesforce/label/c.Info_Toast_Message_for_headlessAct
 
 export default class HeadlessAction extends LightningElement {
     @api recordId;
-
-    //calling the invoke method
+    
     @api invoke() {
         this.getAccountData();  
     }
 
     getAccountData(){
         getAccountData({recordId: this.recordId})
-        .then((result) => {
-            if(result.account.Restricted__c) {
-                this.showToast(INFO_MESSAGE.split(',')[0], INFO_MESSAGE.split(',')[1], INFO_MESSAGE.split(',')[2]);
-            }
-            else {
-                this.updateAccountRecord();
-            }
-        })
-        .catch((error) =>{
-            this.showToast(ERROR_MESSAGE.split(',')[0], ERROR_MESSAGE.split(',')[1], ERROR_MESSAGE.split(',')[2]);
-        })
+            .then((result) => {
+                if(result.account.Restricted__c) {
+                    this.showToast(INFO_MESSAGE.split(',')[0], INFO_MESSAGE.split(',')[1], INFO_MESSAGE.split(',')[2]);
+                }
+                else {
+                    this.updateAccountRecord();
+                }
+            })
+            .catch((error) =>{
+                this.showToast(ERROR_MESSAGE.split(',')[0], ERROR_MESSAGE.split(',')[1], ERROR_MESSAGE.split(',')[2]);
+            })
     }
 
     showToast(title, message, variant) {
@@ -47,12 +46,12 @@ export default class HeadlessAction extends LightningElement {
         fields[RESTRICTED_FIELD.fieldApiName] = true;
         const recordInput = { fields };
         updateRecord(recordInput)
-        .then(() => {
-            this.showToast(SUCCESS_MESSAGE.split(',')[0], SUCCESS_MESSAGE.split(',')[1], SUCCESS_MESSAGE.split(',')[2]);
-        })
-        .catch((error) => {
-            this.showToast(UPDATION_ERROR_MESSAGE.split(',')[0], UPDATION_ERROR_MESSAGE.split(',')[1], UPDATION_ERROR_MESSAGE.split(',')[2]);
-        })
+            .then(() => {
+                this.showToast(SUCCESS_MESSAGE.split(',')[0], SUCCESS_MESSAGE.split(',')[1], SUCCESS_MESSAGE.split(',')[2]);
+            })
+            .catch((error) => {
+                this.showToast(UPDATION_ERROR_MESSAGE.split(',')[0], UPDATION_ERROR_MESSAGE.split(',')[1], UPDATION_ERROR_MESSAGE.split(',')[2]);
+            })
     }
 
 }

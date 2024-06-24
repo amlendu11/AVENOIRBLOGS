@@ -74,6 +74,5 @@ public class AccountDomain {
             WHERE
                 Id =:recordId
         ];
-    }
-    
+    }   
 }
