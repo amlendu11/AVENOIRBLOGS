@@ -56,9 +56,7 @@ export default class ScreenAction extends LightningElement {
             [INDUSTRY_FIELD.fieldApiName]: this.industry,
             [PHONE_FIELD.fieldApiName]: this.phone
         };
-
         const recordInput = { fields };
-
         updateRecord(recordInput)
             .then(() => {
                 this.showToast(SUCCESS_TITLE, SUCCESS_MESSAGE,'success');
