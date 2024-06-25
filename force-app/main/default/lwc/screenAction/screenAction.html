@@ -11,8 +11,10 @@
             </lightning-combobox>
             <lightning-input label="Phone" value={phone} onchange={handlePhoneChange}></lightning-input>
             <div class="slds-m-top_medium">
-                <lightning-button variant="neutral" label={label.cancelButton} onclick={closeAction}></lightning-button>
-                <lightning-button variant="brand" label={label.updateAccountButton} onclick={handleUpdateAccount}></lightning-button>
+                <div class="slds-button-group">
+                    <lightning-button class="slds-m-right_small" variant="neutral" label={label.cancelButton} onclick={closeAction}></lightning-button>
+                    <lightning-button variant="brand" label={label.updateAccountButton} onclick={handleUpdateAccount}></lightning-button>
+                </div>
             </div>
         </div>
     </lightning-card>
