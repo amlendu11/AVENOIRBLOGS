@@ -379,6 +379,13 @@
         <value>A non-blank student name should be considered greater than a blank name</value>
     </labels>
     <labels>
+        <fullName>SCHEDULE_JOB_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Schedule job name</shortDescription>
+        <value>Delete Schedule</value>
+    </labels>
+    <labels>
         <fullName>TARGET_LANGUAGE_CODE</fullName>
         <language>en_US</language>
         <protected>true</protected>
