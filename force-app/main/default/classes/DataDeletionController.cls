@@ -3,9 +3,9 @@
 * Created by: Anchal Agrawal
 * Ticket Number: AVEBLOG99
 --------------------------------------------------------------------
-*  Description : class to schedule a job for more than 12 months.
+* Description : class to schedule a job for more than 12 months.
 --------------------------------------------------------------------
-* Utility Test Class: NA
+* Utility Test Class: DataDeletionControllerTest
 --------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
@@ -14,18 +14,24 @@
 public with sharing class DataDeletionController {
 
     /**
-    * purpose : schedule a job to delete records.
+    * purpose : Schedule a job to delete records.
     * @param - Integer scheduleInterval
     * @return - NA
     **/
     public static void recordsToDelete(Integer scheduleInterval) {
         List<Account> accounts = AccountDomain.getAccountRecords();
         String expCron = '0 0 0 1 * ? *';
-        Id batchId = System.schedule(System.Label.SCHEDULE_JOB_NAME, expCron, new DataDeletionSchedule(accounts));
+        Id batchId = System.schedule(
+            System.Label.SCHEDULE_JOB_NAME,
+            expCron,
+            new DataDeletionSchedule(accounts)
+        );
         if(batchId != null) {
             ScheduleDelete__c lastSchedule;
             try{
-                lastSchedule = ScheduleDeleteDomain.getScheduleDeleteRecords(System.Label.SCHEDULE_JOB_NAME);
+                lastSchedule = ScheduleDeleteDomain.getScheduleDeleteRecords(
+                    System.Label.SCHEDULE_JOB_NAME
+                );
             }
             catch(Exception e) {
                 e.getMessage();
