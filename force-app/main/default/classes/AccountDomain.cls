@@ -12,6 +12,7 @@
    1.0       Shiv Kumar Chaudhary 19/4/2023   Initial Development
    2.0       Anchal Agrawal       16/02/2024  Added getAccountRecords
    3.0       Shiv Kumar Chaudhary 11/03/2024  Added insertAccounts
+   4.0       Akash Kumar          29/06/2024  Added getAccountData
 ***********************************************************************/
 public class AccountDomain {
 
@@ -55,5 +56,23 @@ public class AccountDomain {
         catch (Exception e) {
             throw e;
         }
+    }
+
+    /**
+    * This method aims to get Account record
+    * @param String
+    * @return Account
+    */
+    public static Account getAccountData(String recordId) {
+        return [
+            SELECT
+                Id,
+                Name,
+                Restricted__c
+            FROM
+                Account
+            WHERE
+                Id =:recordId
+        ];
     }
 }
