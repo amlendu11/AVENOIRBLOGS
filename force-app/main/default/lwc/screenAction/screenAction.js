@@ -1,7 +1,7 @@
-import { LightningElement, api, track, wire } from 'lwc';
-import { getRecord, updateRecord } from 'lightning/uiRecordApi';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { CloseActionScreenEvent } from 'lightning/actions';
+import {LightningElement, api, track, wire} from 'lwc';
+import {getRecord, updateRecord} from 'lightning/uiRecordApi';
+import {ShowToastEvent} from 'lightning/platformShowToastEvent';
+import {CloseActionScreenEvent} from 'lightning/actions';
 import INDUSTRY_FIELD from '@salesforce/schema/Account.Industry';
 import PHONE_FIELD from '@salesforce/schema/Account.Phone';
 import ACCOUNT_BASIC_INFORMATION from '@salesforce/label/c.Account_Basic_Information';
@@ -10,9 +10,11 @@ import UPDATE_ACCOUNT_BUTTON from '@salesforce/label/c.Update_Account_Button';
 import SUCCESS_TITLE from '@salesforce/label/c.Success_Title';
 import SUCCESS_MESSAGE from '@salesforce/label/c.Success_Message';
 import ERROR_TITLE from '@salesforce/label/c.Error_Title';
-
+import INDUSTRY_LABEL from '@salesforce/label/c.Industry_Label';
+import INDUSTRY_PLACEHOLDER from '@salesforce/label/c.Industry_Placeholder';
 
 const fields = [INDUSTRY_FIELD, PHONE_FIELD];
+let recordInput = {};
 
 export default class ScreenAction extends LightningElement {
     @api recordId;
@@ -28,6 +30,8 @@ export default class ScreenAction extends LightningElement {
     ];
 
     label = {
+        industryLabel: INDUSTRY_LABEL,
+        industryPlaceholder: INDUSTRY_PLACEHOLDER,
         accountBasicInformation: ACCOUNT_BASIC_INFORMATION,
         cancelButton: CANCEL_BUTTON,
         updateAccountButton: UPDATE_ACCOUNT_BUTTON
@@ -51,15 +55,16 @@ export default class ScreenAction extends LightningElement {
     }
 
     handleUpdateAccount() {
-        const fields = {
-            Id: this.recordId,
-            [INDUSTRY_FIELD.fieldApiName]: this.industry,
-            [PHONE_FIELD.fieldApiName]: this.phone
+        recordInput = {
+            fields: {
+                Id: this.recordId,
+                [INDUSTRY_FIELD.fieldApiName]: this.industry,
+                [PHONE_FIELD.fieldApiName]: this.phone
+            }
         };
-        const recordInput = { fields };
         updateRecord(recordInput)
             .then(() => {
-                this.showToast(SUCCESS_TITLE, SUCCESS_MESSAGE,'success');
+                this.showToast(SUCCESS_TITLE, SUCCESS_MESSAGE, 'success');
                 this.closeAction();
             })
             .catch(error => {

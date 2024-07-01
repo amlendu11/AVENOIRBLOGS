@@ -3,9 +3,9 @@
         <div class="slds-p-around_medium">
             <lightning-combobox
                 name="industry"
-                label="Industry"
+                label={label.industryLabel}
                 value={industry}
-                placeholder="Select Industry"
+                placeholder={label.industryPlaceholder}
                 options={industryOptions}
                 onchange={handleIndustryChange}>
             </lightning-combobox>
