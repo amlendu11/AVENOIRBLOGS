@@ -45,12 +45,7 @@ export default class ScreenAction extends LightningElement {
             this.phone = this.account.Phone.value;
         } else if (error) {
             this.account = undefined;
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: ERROR_TITLE,
-                    message: error.body.message,
-                    variant: 'error'  })
-            );
+            this.showToast(ERROR_TITLE, error.body.message, 'error');
         }
     }
 
