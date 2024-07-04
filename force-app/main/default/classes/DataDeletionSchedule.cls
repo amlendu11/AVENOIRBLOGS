@@ -27,8 +27,8 @@ public with sharing class DataDeletionSchedule implements Schedulable {
         ScheduleDelete__c lastSchedule;
         try {
             lastSchedule = ScheduleDelete__c.getInstance(System.Label.SCHEDULE_JOB_NAME);
-        } catch(Exception e) {
-            e.getMessage();
+        } catch(Exception nullException) {
+            throw nullException;
         }
         if(lastSchedule.LastRunDate__c == null) {
             AccountDomain.deleteAccounts(accounts);

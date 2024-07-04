@@ -19,8 +19,11 @@ public with sharing class ScheduleDeleteDomain {
     * @return - NA
     **/
     public static void insertScheduleDelete(List<ScheduleDelete__c> lastSchedules) {
-        if(lastSchedules.size() > 0) {
+        try {
             insert lastSchedules;
+        }
+        catch (Exception nullException) {
+            throw nullException;
         }
     }
 
@@ -30,8 +33,11 @@ public with sharing class ScheduleDeleteDomain {
     * @return - NA
     **/
     public static void updateScheduleDelete(List<ScheduleDelete__c> lastSchedules) {
-        if(lastSchedules.size() > 0) {
+        try {
             update lastSchedules;
+        }
+        catch (Exception nullException) {
+            throw nullException;
         }
     }
 }

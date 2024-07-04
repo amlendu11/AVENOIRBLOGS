@@ -31,8 +31,8 @@ public with sharing class DataDeletionController {
             try{
                 lastSchedule = ScheduleDelete__c.getInstance(System.Label.SCHEDULE_JOB_NAME);
             }
-            catch(Exception e) {
-                e.getMessage();
+            catch(Exception nullException) {
+                throw nullException;
             }
             if(lastSchedule != null) {
                 lastSchedule.LastRunDate__c = null;
