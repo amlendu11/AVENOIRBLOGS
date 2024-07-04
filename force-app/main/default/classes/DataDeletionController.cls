@@ -29,9 +29,7 @@ public with sharing class DataDeletionController {
         if(batchId != null) {
             ScheduleDelete__c lastSchedule;
             try{
-                lastSchedule = ScheduleDeleteDomain.getScheduleDeleteRecords(
-                    System.Label.SCHEDULE_JOB_NAME
-                );
+                lastSchedule = ScheduleDelete__c.getInstance(System.Label.SCHEDULE_JOB_NAME);
             }
             catch(Exception e) {
                 e.getMessage();
@@ -39,14 +37,19 @@ public with sharing class DataDeletionController {
             if(lastSchedule != null) {
                 lastSchedule.LastRunDate__c = null;
                 lastSchedule.MonthInterval__c = scheduleInterval;
-                update lastSchedule;
+                ScheduleDeleteDomain.updateScheduleDelete(
+                    new List<ScheduleDelete__c>{lastSchedule}
+                );
             }
             else {
-                lastSchedule = new ScheduleDelete__c();
-                lastSchedule.Name = System.Label.SCHEDULE_JOB_NAME;
-                lastSchedule.LastRunDate__c = null;
-                lastSchedule.MonthInterval__c = scheduleInterval;
-                insert lastSchedule;
+                lastSchedule = new ScheduleDelete__c(
+                    Name = System.Label.SCHEDULE_JOB_NAME,
+                    LastRunDate__c = null,
+                    MonthInterval__c = scheduleInterval
+                );
+                ScheduleDeleteDomain.insertScheduleDelete(
+                    new List<ScheduleDelete__c>{lastSchedule}
+                );
             }
         }
     }

@@ -56,4 +56,15 @@ public class AccountDomain {
             throw e;
         }
     }
+
+    /**
+    * This method aims to delete Account record
+    * @param List<Account>
+    * @return N/A
+    */
+    public static void deleteAccounts(List<Account> accounts) {
+        if(accounts.size() > 0) {
+            Delete accounts;
+        }
+    }
 }

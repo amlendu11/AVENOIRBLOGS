@@ -14,22 +14,24 @@
 public with sharing class ScheduleDeleteDomain {
 
     /**
-    * purpose : to query scheduleDelete__c records.
-    * @param - String name
-    * @return - ScheduleDelete__c
+    * purpose : to insert scheduleDelete__c records.
+    * @param - List<ScheduleDelete__c> lastSchedules
+    * @return - NA
     **/
-   public static ScheduleDelete__c getScheduleDeleteRecords(String name) {
-        return [
-            SELECT
-                Id,
-                Name,
-                LastRunDate__c,
-                MonthInterval__c
-            FROM
-                ScheduleDelete__c
-            WHERE
-                Name = :name
-            LIMIT 1
-        ];
-   }
+    public static void insertScheduleDelete(List<ScheduleDelete__c> lastSchedules) {
+        if(lastSchedules.size() > 0) {
+            insert lastSchedules;
+        }
+    }
+
+    /**
+    * purpose : to update scheduleDelete__c records.
+    * @param - List<ScheduleDelete__c> lastSchedules
+    * @return - NA
+    **/
+    public static void updateScheduleDelete(List<ScheduleDelete__c> lastSchedules) {
+        if(lastSchedules.size() > 0) {
+            update lastSchedules;
+        }
+    }
 }

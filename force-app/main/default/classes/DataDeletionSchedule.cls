@@ -20,26 +20,30 @@ public with sharing class DataDeletionSchedule implements Schedulable {
     /**
     * purpose : execute method of schedulable interface to delete records
     * on time interval.
-    * @param - SchedulableContext sc 
+    * @param - SchedulableContext sc
     * @return - NA
     **/
     public void execute(SchedulableContext sc) {
         ScheduleDelete__c lastSchedule;
         try {
-            lastSchedule = ScheduleDeleteDomain.getScheduleDeleteRecords(System.Label.SCHEDULE_JOB_NAME);
+            lastSchedule = ScheduleDelete__c.getInstance(System.Label.SCHEDULE_JOB_NAME);
         } catch(Exception e) {
             e.getMessage();
         }
         if(lastSchedule.LastRunDate__c == null) {
-            Delete accounts;
+            AccountDomain.deleteAccounts(accounts);
             lastSchedule.LastRunDate__c = Date.today();
-            update lastSchedule;
+            ScheduleDeleteDomain.updateScheduleDelete(
+                new List<ScheduleDelete__c>{lastSchedule}
+            );
         }
         else {
             if(Date.today().monthsBetween(lastSchedule.LastRunDate__c) == lastSchedule.MonthInterval__c) {
-                Delete accounts;
+                AccountDomain.deleteAccounts(accounts);
                 lastSchedule.LastRunDate__c = Date.today();
-                update lastSchedule;
+                ScheduleDeleteDomain.updateScheduleDelete(
+                    new List<ScheduleDelete__c>{lastSchedule}
+                );
             }
         }
     }
