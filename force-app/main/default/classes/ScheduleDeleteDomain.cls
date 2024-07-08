@@ -22,8 +22,8 @@ public with sharing class ScheduleDeleteDomain {
         try {
             insert lastSchedules;
         }
-        catch (Exception nullException) {
-            throw nullException;
+        catch (Exception DMLException) {
+            throw DMLException;
         }
     }
 
@@ -36,8 +36,8 @@ public with sharing class ScheduleDeleteDomain {
         try {
             update lastSchedules;
         }
-        catch (Exception nullException) {
-            throw nullException;
+        catch (Exception DMLException) {
+            throw DMLException;
         }
     }
 }

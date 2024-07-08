@@ -64,8 +64,11 @@ public class AccountDomain {
     * @return N/A
     */
     public static void deleteAccounts(List<Account> accounts) {
-        if(accounts.size() > 0) {
-            Delete accounts;
+        try {
+            delete accounts;
+        }
+        catch (Exception DMLException) {
+            throw DMLException;
         }
     }
 }
