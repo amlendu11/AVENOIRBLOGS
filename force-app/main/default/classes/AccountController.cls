@@ -10,6 +10,7 @@
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
    1.0       Nikhil Mehra       08/17/2023      Initial Development
+   1.1       Diksha Dewangan      22/06/2024    Added getAccounts
 ***********************************************************************/
 public with sharing class AccountController {
    @AuraEnabled(cacheable=True)
@@ -17,4 +18,9 @@ public with sharing class AccountController {
    public static List<AccountWrapper> getAccountList() {
       return AccountProcessor.getdomain();
 	}
+
+    @AuraEnabled(cacheable=true)
+    public static List<AccountWrapper> getAccounts() {
+        return AccountProcessor.getWrappedAccounts();
+    }
 }

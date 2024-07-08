@@ -12,6 +12,8 @@
    1.0       Shiv Kumar Chaudhary 19/4/2023   Initial Development
    2.0       Anchal Agrawal       16/02/2024  Added getAccountRecords
    3.0       Shiv Kumar Chaudhary 11/03/2024  Added insertAccounts
+   3.1       Diksha Dewangan      22/06/2024  Updated getAccountRecords
+                                              query(AVEBLOG-112)
 ***********************************************************************/
 public class AccountDomain {
 
@@ -37,7 +39,11 @@ public class AccountDomain {
         	SELECT
             	Id,
                 Name,
-                Phone
+                Phone,
+				Industry,
+            	Type,
+            	Rating,
+            	Ownership
             FROM
             	Account
        	];
