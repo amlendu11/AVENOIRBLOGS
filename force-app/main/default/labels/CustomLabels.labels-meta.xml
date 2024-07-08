@@ -637,4 +637,39 @@
         <shortDescription>Record Created Successfully</shortDescription>
         <value>Record Created Successfully</value>
     </labels>
+    <labels>
+        <fullName>ACCOUNT_FILTER_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ACCOUNT FILTER HEADING</shortDescription>
+        <value>Account Filter</value>
+    </labels>
+    <labels>
+        <fullName>CLEAR_ALL_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLEAR ALL MESSAGE</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>NO_RESULTS_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NO_RESULTS_MESSAGE</shortDescription>
+        <value>No Result found.</value>
+    </labels>
+    <labels>
+        <fullName>SELECTED_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SELECTED MESSAGE</shortDescription>
+        <value>Selected</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ALL_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SELECT_ALL_MESSAGE</shortDescription>
+        <value>Select All</value>
+    </labels>
 </CustomLabels>

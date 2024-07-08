@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Filter">
+         <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <lightning-layout horizontal-align="spread" class="slds-grid slds-wrap">
+                    <lightning-layout-item size="3" small-device-size="3" class="slds-p-around_x-small">
+                        <c-multi-select-picklist label="Industry" options={industryOptions} onselection={addSelections}></c-multi-select-picklist>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3" small-device-size="3" class="slds-p-around_x-small">
+                        <c-multi-select-picklist label="Type" options={typeOptions} onselection={addSelections}></c-multi-select-picklist>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3" small-device-size="3" class="slds-p-around_x-small">
+                        <c-multi-select-picklist label="Rating" options={ratingOptions} onselection={addSelections}></c-multi-select-picklist>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3" small-device-size="3" class="slds-p-around_x-small">
+                        <c-multi-select-picklist label="Ownership" options={ownershipOptions}  onselection={addSelections}></c-multi-select-picklist>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+        <!-- Show results/ errors-->
+        <lightning-card>
+            <template if:true={searchResults.length}>
+                <lightning-datatable key-field="Id" data={searchResults} columns={columns} hide-checkbox-column></lightning-datatable>
+            </template>
+            <template if:true={showError}>
+                <div class="slds-text-color_error slds-align_absolute-center">{error}</div>
+            </template>
+        </lightning-card>
+    </lightning-card>
+</template>
