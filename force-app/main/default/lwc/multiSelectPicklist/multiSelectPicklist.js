@@ -19,8 +19,8 @@ export default class multiSelectPicklist extends LightningElement {
     selectedObject = false;
     valuesSelected = undefined;
     showDropdown = false;
-    itemcounts = '';
-    showselectall = true;
+    itemCounts = '';
+    showSelectAll = true;
     errors;
     searchKey = '';
     mouse;
@@ -35,7 +35,7 @@ export default class multiSelectPicklist extends LightningElement {
     @api label;
     @api selectedItems = [];
     @api clearall() {
-        this.handleClearall(event);
+        this.handleClearAll(event);
     }
 
     //this function is used to filter the dropdown list based on user input
@@ -93,8 +93,8 @@ export default class multiSelectPicklist extends LightningElement {
             this.selectedItems = this.selectedItems.filter(option => option.Id !== optionId);
             this.allValues.splice(this.allValues.indexOf(optionId), 1);
         }
-        this.itemcounts = this.selectedItems.length > 0 ? this.selectedItems.length + "  " + this.labels.SELECTED_MESSAGE : '';
-        if (this.itemcounts == '') {
+        this.itemCounts = this.selectedItems.length > 0 ? this.selectedItems.length + "  " + this.labels.SELECTED_MESSAGE : '';
+        if (this.itemCounts == '') {
             this.selectedObject = false;
         } else {
             this.selectedObject = true;
@@ -103,28 +103,28 @@ export default class multiSelectPicklist extends LightningElement {
     }
 
     //custom function used to close/open dropdown picklist
-    clickhandler(event) {
+    handleClick(event) {
         this.mouse = false;
         this.showDropdown = true;
         this.clickHandle = true;
-        this.showselectall = true;
+        this.showSelectAll = true;
     }
 
-    mousehandler(event) {
+    handleMouse(event) {
         this.mouse = true;
-        this.dropdownclose();
+        this.dropdownClose();
     }
 
-    blurhandler(event) {
+    handleBlur(event) {
         this.blurred = true;
-        this.dropdownclose();
+        this.dropdownClose();
     }
 
-    focushandler(event) {
+    focusHandler(event) {
         this.focus = true;
     }
 
-    dropdownclose() {
+    dropdownClose() {
         if (this.mouse == true && this.blurred == true && this.focus == true) {
             this.showDropdown = false;
             this.clickHandle = false;
@@ -136,8 +136,8 @@ export default class multiSelectPicklist extends LightningElement {
         const valueRemoved = event.target.name;
         this.selectedItems = this.selectedItems.filter(option => option.Id !== valueRemoved);
         this.allValues.splice(this.allValues.indexOf(valueRemoved), 1);
-        this.itemcounts = this.selectedItems.length > 0 ? `${this.selectedItems.length}` + "  " + this.labels.SELECTED_MESSAGE : '';
-        if (this.itemcounts == '') {
+        this.itemCounts = this.selectedItems.length > 0 ? `${this.selectedItems.length}` + "  " + this.labels.SELECTED_MESSAGE : '';
+        if (this.itemCounts == '') {
             this.selectedObject = false;
         } else {
             this.selectedObject = true;
@@ -146,18 +146,18 @@ export default class multiSelectPicklist extends LightningElement {
     }
 
     //this function is used to deselect/uncheck (✓) all of the items in dropdown picklist
-    handleClearall(event) {
+    handleClearAll(event) {
         event.preventDefault();
         this.showDropdown = false;
         this.selectedItems = [];
         this.allValues = [];
-        this.itemcounts = '';
+        this.itemCounts = '';
         this.selectedObject = false;
         this.passSelections();
     }
 
     //this function is used to select/check (✓) all of the items in dropdown picklist
-    selectall(event) {
+    selectAll(event) {
         event.preventDefault();
         if (this.valuesSelected == undefined) {
             this.valuesSelected = this.picklistinput;
@@ -169,7 +169,7 @@ export default class multiSelectPicklist extends LightningElement {
             this.allValues = [];
         }
         this.selectedItems = this.valuesSelected;
-        this.itemcounts = this.selectedItems.length +  "  " + this.labels.SELECTED_MESSAGE ;
+        this.itemCounts = this.selectedItems.length +  "  " + this.labels.SELECTED_MESSAGE ;
         this.allValues = [];
         this.valuesSelected.map((value) => {
             for (let property in value) {

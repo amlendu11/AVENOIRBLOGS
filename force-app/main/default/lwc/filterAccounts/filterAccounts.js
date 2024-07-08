@@ -39,7 +39,7 @@ export default class AccountFilter extends LightningElement {
         { label: 'Rating', fieldName: 'Rating', type: 'text' },
         { label: 'Ownership', fieldName: 'Ownership', type: 'text' }
     ];
-    filteringfields = ['Industry', 'Type', 'Rating', 'Ownership'];
+    filteringFields = ['Industry', 'Type', 'Rating', 'Ownership'];
     @track searchResults = []; //store the search result
     @track selectedValuesByLabel = {}; //stores the latest selectedValues json
 
@@ -60,7 +60,7 @@ export default class AccountFilter extends LightningElement {
     setPicklistOptions() {
         picklistOptions({
             objectApiName: 'Account',
-            fieldNames: this.filteringfields
+            fieldNames: this.filteringFields
         }).then(result => {
             // Iterate over the keys of the object
             let data = result;
@@ -116,7 +116,7 @@ export default class AccountFilter extends LightningElement {
         try{
             let dataToFilter = this.filteredAccounts;
             let filteredRecords = dataToFilter.filter(record => {
-                return this.filteringfields.every(field => {
+                return this.filteringFields.every(field => {
                     // Convert to lowercase for case-insensitive comparison
                     const fieldValue = record.account && record.account[field]
                         ? record.account[field].toString().toLowerCase()
