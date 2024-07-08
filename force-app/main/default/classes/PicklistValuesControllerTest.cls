@@ -3,7 +3,7 @@
 * Created by: Diksha Dewangan
 * Ticket Number: AVEBLOG112
 --------------------------------------------------------------------
-* Purpose/ Methods: This is test class of AccountController.
+* Purpose/ Methods: This is test class of PicklistValuesController.
 --------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
