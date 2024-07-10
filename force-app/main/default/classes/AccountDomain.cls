@@ -12,6 +12,7 @@
    1.0       Shiv Kumar Chaudhary 19/4/2023   Initial Development
    2.0       Anchal Agrawal       16/02/2024  Added getAccountRecords
    3.0       Shiv Kumar Chaudhary 11/03/2024  Added insertAccounts
+   4.0       Anchal Agrawal       16/06/2024  Added deleteAccounts
 ***********************************************************************/
 public class AccountDomain {
 
@@ -51,9 +52,23 @@ public class AccountDomain {
     public static void insertAccounts(List<Account> accounts) {
         try {
             insert accounts;
-        } 
+        }
         catch (Exception e) {
             throw e;
+        }
+    }
+
+    /**
+    * This method aims to delete Account record
+    * @param List<Account>
+    * @return N/A
+    */
+    public static void deleteAccounts(List<Account> accounts) {
+        try {
+            delete accounts;
+        }
+        catch (Exception DMLException) {
+            throw DMLException;
         }
     }
 }
