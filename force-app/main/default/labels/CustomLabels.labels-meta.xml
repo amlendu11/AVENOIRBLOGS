@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Account_Basic_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account_Basic_Information</shortDescription>
+        <value>Account Basic Information</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel_Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Error_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_Title</shortDescription>
+        <value>Error updating record</value>
+    </labels>
+    <labels>
+        <fullName>Industry_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Label for the industry combobox field</shortDescription>
+        <value>Industry</value>
+    </labels>
+    <labels>
+        <fullName>Industry_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Placeholder for the industry combobox field</shortDescription>
+        <value>Select Industry</value>
+    </labels>
+    <labels>
+        <fullName>Success_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success_Message</shortDescription>
+        <value>Account information updated</value>
+    </labels>
+    <labels>
+        <fullName>Success_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success_Title</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>Update_Account_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Update_Account_Button</shortDescription>
+        <value>Update</value>
+    </labels>
+    <labels>
         <fullName>ACCOUNTS_INSERTED</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -510,6 +566,13 @@
         <protected>true</protected>
         <shortDescription>SecondStudentNameBlank</shortDescription>
         <value>A non-blank student name should be considered greater than a blank name</value>
+    </labels>
+    <labels>
+        <fullName>SCHEDULE_JOB_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Schedule job name</shortDescription>
+        <value>Delete Schedule</value>
     </labels>
     <labels>
         <fullName>Success_Toast_Message_for_HeadlessAction</fullName>
