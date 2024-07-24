@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>ACCOUNTS_INSERTED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Accounts inserted successfully</shortDescription>
+        <value>Accounts inserted successfully</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Insert Account</shortDescription>
+        <value>Insert Account</value>
+</labels>
+    <labels>
         <fullName>Account_Basic_Information</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -21,6 +35,14 @@
         <shortDescription>Error_Title</shortDescription>
         <value>Error updating record</value>
     </labels>
+    <labels>
+
+        <fullName>ACCOUNT_NAME_REQUIRED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Name is required for row no :</shortDescription>
+        <value>Account Name is required for row no :</value>
+      </labels>
     <labels>
         <fullName>Industry_Label</fullName>
         <language>en_US</language>
@@ -57,11 +79,11 @@
         <value>Update</value>
     </labels>
     <labels>
-        <fullName>ACCOUNTS_INSERTED</fullName>
+        <fullName>ACCOUNT_NUMBER</fullName>
         <language>en_US</language>
         <protected>true</protected>
-        <shortDescription>Accounts inserted successfully</shortDescription>
-        <value>Accounts inserted successfully</value>
+        <shortDescription>Account Number</shortDescription>
+        <value>Account Number</value>
     </labels>
     <labels>
         <fullName>ACCOUNT_INSERT_BUTTON</fullName>
@@ -522,8 +544,64 @@
         <fullName>SEND</fullName>
         <language>en_US</language>
         <protected>true</protected>
+        <shortDescription>Select Genres</shortDescription>
+        <value>Select Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more genres</shortDescription>
+        <value>Select one or more genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBGENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>subGenres</shortDescription>
+        <value>subGenres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more sub-genres</shortDescription>
+        <value>Select one or more sub-genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Sub-Genres</shortDescription>
+        <value>Select Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>SEND</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
         <shortDescription>SEND</shortDescription>
         <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>TITLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title</shortDescription>
+        <value>Feedback Form</value>
     </labels>
     <labels>
         <fullName>SOURCE_LANGUAGE_CODE</fullName>
@@ -581,6 +659,48 @@
         <shortDescription>Success Toast Message for HeadlessAction</shortDescription>
         <value>Success,Customer is restricted,Success</value>
     </labels>
+    <labels>
+        <fullName>YOUR_FEEDBACK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your Feedback</shortDescription>
+        <value>Your Feedback</value>
+    </labels>
+    <labels>
+        <fullName>LOAD_SCRIPT_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error while loading script</shortDescription>
+        <value>Error while loading script</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Starts In</shortDescription>
+        <value>Event Starts In</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The event has begun!</shortDescription>
+        <value>The event has begun!</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_SUB_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Don't miss out!</shortDescription>
+        <value>Don't miss out!</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_LINK_TEXT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Avenoir</shortDescription>
+        <value>Avenoir</value>
+</labels>
     <labels>
         <fullName>TARGET_LANGUAGE_CODE</fullName>
         <language>en_US</language>
