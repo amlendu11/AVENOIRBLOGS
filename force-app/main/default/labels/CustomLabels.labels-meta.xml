@@ -13,6 +13,84 @@
         <protected>true</protected>
         <shortDescription>Insert Account</shortDescription>
         <value>Insert Account</value>
+</labels>
+    <labels>
+        <fullName>Account_Basic_Information</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account_Basic_Information</shortDescription>
+        <value>Account Basic Information</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel_Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Error_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_Title</shortDescription>
+        <value>Error updating record</value>
+    </labels>
+    <labels>
+
+        <fullName>ACCOUNT_NAME_REQUIRED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Name is required for row no :</shortDescription>
+        <value>Account Name is required for row no :</value>
+      </labels>
+    <labels>
+        <fullName>Industry_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Label for the industry combobox field</shortDescription>
+        <value>Industry</value>
+    </labels>
+    <labels>
+        <fullName>Industry_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Placeholder for the industry combobox field</shortDescription>
+        <value>Select Industry</value>
+    </labels>
+    <labels>
+        <fullName>Success_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success_Message</shortDescription>
+        <value>Account information updated</value>
+    </labels>
+    <labels>
+        <fullName>Success_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success_Title</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>Update_Account_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Update_Account_Button</shortDescription>
+        <value>Update</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Number</shortDescription>
+        <value>Account Number</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_INSERT_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Insert Account</shortDescription>
+        <value>Insert Account</value>
     </labels>
     <labels>
         <fullName>ACCOUNT_NAME</fullName>
@@ -239,6 +317,13 @@
         <value>Maximum stack depth has been reached</value>
     </labels>
     <labels>
+        <fullName>Error_Toast_Message_for_HeadlessAction</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Toast Message for HeadlessAction</shortDescription>
+        <value>Error,Error while fetching the account data,Error</value>
+    </labels>
+    <labels>
         <fullName>ExpectedPhoneNumber</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -307,6 +392,13 @@
         <protected>true</protected>
         <shortDescription>Id</shortDescription>
         <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>Info_Toast_Message_for_headlessAction</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Info Toast Message for headlessAction</shortDescription>
+        <value>Info,Customer is already restricted,Info</value>
     </labels>
     <labels>
         <fullName>LOGIN_BUTTON_LABEL</fullName>
@@ -452,8 +544,64 @@
         <fullName>SEND</fullName>
         <language>en_US</language>
         <protected>true</protected>
+        <shortDescription>Select Genres</shortDescription>
+        <value>Select Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more genres</shortDescription>
+        <value>Select one or more genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBGENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>subGenres</shortDescription>
+        <value>subGenres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more sub-genres</shortDescription>
+        <value>Select one or more sub-genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Sub-Genres</shortDescription>
+        <value>Select Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>SEND</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
         <shortDescription>SEND</shortDescription>
         <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>TITLE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title</shortDescription>
+        <value>Feedback Form</value>
     </labels>
     <labels>
         <fullName>SOURCE_LANGUAGE_CODE</fullName>
@@ -497,6 +645,62 @@
         <shortDescription>SecondStudentNameBlank</shortDescription>
         <value>A non-blank student name should be considered greater than a blank name</value>
     </labels>
+    <labels>
+        <fullName>SCHEDULE_JOB_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Schedule job name</shortDescription>
+        <value>Delete Schedule</value>
+    </labels>
+    <labels>
+        <fullName>Success_Toast_Message_for_HeadlessAction</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success Toast Message for HeadlessAction</shortDescription>
+        <value>Success,Customer is restricted,Success</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_FEEDBACK</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your Feedback</shortDescription>
+        <value>Your Feedback</value>
+    </labels>
+    <labels>
+        <fullName>LOAD_SCRIPT_ERROR</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error while loading script</shortDescription>
+        <value>Error while loading script</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Starts In</shortDescription>
+        <value>Event Starts In</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The event has begun!</shortDescription>
+        <value>The event has begun!</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_SUB_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Don't miss out!</shortDescription>
+        <value>Don't miss out!</value>
+    </labels>
+    <labels>
+        <fullName>COUNT_DOWN_LINK_TEXT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Avenoir</shortDescription>
+        <value>Avenoir</value>
+</labels>
     <labels>
         <fullName>TARGET_LANGUAGE_CODE</fullName>
         <language>en_US</language>
@@ -561,6 +765,13 @@
         <value>Upload Files</value>
     </labels>
     <labels>
+        <fullName>Updating_Error_Toast_Message_for_HeadlessAction</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Updating Error Toast Message for HeadlessAction</shortDescription>
+        <value>Error,Error while updating the record,Error</value>
+    </labels>
+    <labels>
         <fullName>VIEW_ALL</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -573,40 +784,5 @@
         <protected>true</protected>
         <shortDescription>Your Feedback</shortDescription>
         <value>Your Feedback</value>
-    </labels>
-    <labels>
-        <fullName>LOAD_SCRIPT_ERROR</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Error while loading script</shortDescription>
-        <value>Error while loading script</value>
-    </labels>
-    <labels>
-        <fullName>COUNT_DOWN_HEADING</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Event Starts In</shortDescription>
-        <value>Event Starts In</value>
-    </labels>
-    <labels>
-        <fullName>COUNT_DOWN_MESSAGE</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>The event has begun!</shortDescription>
-        <value>The event has begun!</value>
-    </labels>
-    <labels>
-        <fullName>COUNT_DOWN_SUB_HEADING</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Don't miss out!</shortDescription>
-        <value>Don't miss out!</value>
-    </labels>
-    <labels>
-        <fullName>COUNT_DOWN_LINK_TEXT</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Avenoir</shortDescription>
-        <value>Avenoir</value>
     </labels>
 </CustomLabels>
