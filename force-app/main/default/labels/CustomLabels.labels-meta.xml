@@ -785,4 +785,158 @@
         <shortDescription>Your Feedback</shortDescription>
         <value>Your Feedback</value>
     </labels>
+    <labels>
+        <fullName>FEEDBACK_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>feedback</shortDescription>
+        <value>feedback</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_SUBMISSION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>feedback_submission</shortDescription>
+        <value>feedback_submission</value>
+    </labels>
+    <labels>
+        <fullName>FEEDBACK_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Feedback submitted successfully</shortDescription>
+        <value>Feedback submitted successfully</value>
+    </labels>
+    <labels>
+        <fullName>SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SUBMIT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>PICKLISTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dependent Multi-Select Picklists</shortDescription>
+        <value>Dependent Multi-Select Picklists</value>
+    </labels>
+    <labels>
+        <fullName>GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>genres</shortDescription>
+        <value>genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Genres</shortDescription>
+        <value>Select Genres</value>
+    </labels>
+    <labels>
+        <fullName>AVAILABLE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available Genres</shortDescription>
+        <value>Available Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more genres</shortDescription>
+        <value>Select one or more genres</value>
+    </labels>
+    <labels>
+        <fullName>SUBGENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>subGenres</shortDescription>
+        <value>subGenres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Sub-Genres</shortDescription>
+        <value>Select Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>AVAILABLE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available Sub-Genres</shortDescription>
+        <value>Available Sub-Genres</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ONE_OR_MORE_SUB_GENRES</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select one or more sub-genres</shortDescription>
+        <value>Select one or more sub-genres</value>
+    </labels>
+    <labels>
+        <fullName>Create_Contact</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Contact</shortDescription>
+        <value>Create Contact</value>
+    </labels>
+    <labels>
+        <fullName>CLOSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLOSE</shortDescription>
+        <value>CLOSE</value>
+    </labels>
+    <labels>
+        <fullName>Record_Created_Successfully</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Created Successfully</shortDescription>
+        <value>Record Created Successfully</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_FILTER_HEADING</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ACCOUNT FILTER HEADING</shortDescription>
+        <value>Account Filter</value>
+    </labels>
+    <labels>
+        <fullName>CLEAR_ALL_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLEAR ALL MESSAGE</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>NO_RESULTS_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NO_RESULTS_MESSAGE</shortDescription>
+        <value>No Result found.</value>
+    </labels>
+    <labels>
+        <fullName>SELECTED_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SELECTED MESSAGE</shortDescription>
+        <value>Selected</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_ALL_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SELECT_ALL_MESSAGE</shortDescription>
+        <value>Select All</value>
+    </labels>
 </CustomLabels>
