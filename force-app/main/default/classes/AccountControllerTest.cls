@@ -7,7 +7,8 @@
 --------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
-   1.1       Diksha Dewangan      08/07/2024    Added getAccounts
+*   1.0      Akash Kumar         29/06/2024    Initial Development
+*   1.1      Diksha Dewangan     08/07/2024    Added getAccounts
 ***********************************************************************/
 @isTest
 public with sharing class AccountControllerTest {
@@ -38,5 +39,39 @@ public with sharing class AccountControllerTest {
             result.size(),
             'Expected non-zero number of AccountWrapper records.'
         );
+    }
+
+    /**
+    * purpose : testing getAccountList of AccountController.cls
+    * @param : NA
+    * @return : NA
+    **/
+    @isTest
+    public static void testgetAccountList() {
+        Account account = AccountDomain.insertAccount('Test Account', '123456');
+        Contact contact = new Contact(
+            FirstName = 'First',
+            LastName = 'Contact',
+            AccountId = account.Id
+        );
+        insert contact;
+        test.startTest();
+        AccountController.getAccountList();
+        test.stopTest();
+        Assert.areEqual('Test Account', account.Name);
+    }
+    
+    /**
+    * purpose : testing getAccountRecord of AccountController.cls
+    * @param : NA
+    * @return : NA
+    **/
+    @isTest
+    public static void testgetAccountRecord() {
+        Account account = AccountDomain.insertAccount('Test Account', '123456');
+        test.startTest();
+        AccountController.getAccountRecord(account.Id);
+        test.stopTest();
+        Assert.areEqual('Test Account', account.Name);
     }
 }
