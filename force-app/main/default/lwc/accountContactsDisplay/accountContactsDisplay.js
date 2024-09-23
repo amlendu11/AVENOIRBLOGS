@@ -1,10 +1,10 @@
-import { LightningElement, wire,track } from 'lwc';
+import {LightningElement, wire,track} from 'lwc';
 import getAccounts from '@salesforce/apex/AccountController.getAccountList';
 import Name from '@salesforce/label/c.Name';
 import Id from '@salesforce/label/c.Id';
 import NoContacts from '@salesforce/label/c.No_Contacts';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
-import { NavigationMixin } from 'lightning/navigation';
+import {NavigationMixin} from 'lightning/navigation';
 
 export default class AccountContactsDisplay extends NavigationMixin(LightningElement) {
     accounts;
@@ -41,7 +41,6 @@ export default class AccountContactsDisplay extends NavigationMixin(LightningEle
      // Navigate to View Contact Page
      navigateToViewContactPage(event) {
         let key = event.target.value;
-        console.log('key>>>'+key);
         this[NavigationMixin.Navigate]({
             type: 'standard__recordPage',
             attributes: {
@@ -63,7 +62,6 @@ export default class AccountContactsDisplay extends NavigationMixin(LightningEle
                 let len = name.length;
                 this.accountName = name.substring(0,len-1);
                 let contacts = element["value"];
-                console.log("contact"+contacts);
                 if(contacts.length > 2){
                     for(let i = 0; i < contacts.length ; i++) {
                         this.contactListShown = JSON.parse(contacts);

@@ -1,13 +1,15 @@
 <template>
     <lightning-card>
-        <h1>{label.HEADING_TEXT}</h1>
-        <lightning-radio-group label="Select Which Component to Load Dynamically" options={options} value={value}
-            type="radio" onchange={handleChange}></lightning-radio-group>
-        <template if:true={isChildCmp}>
-            <lightning-input type="text" label="Message for child component" onchange={handleMessage}></lightning-input>
-        </template>
-        <div class="container">
-            <lwc:component lwc:is={componentConstructor} message={message}></lwc:component>
+        <div class="slds-p-around_small">
+            <h1><strong>{label.HEADING_TEXT}</strong></h1>
+            <lightning-radio-group label={label.SELECT_COMPONENT_TO_SHOW} options={options} value={value}
+                type="radio" onchange={handleChange}></lightning-radio-group>
+            <template if:true={isChildCmp}>
+                <lightning-input type="text" label={label.MESSAGE_FOR_CHILD_COMPONENT} onchange={handleMessage}></lightning-input>
+            </template>
+            <div class="container">
+                <lwc:component lwc:is={componentConstructor} message={message}></lwc:component>
+            </div>
         </div>
     </lightning-card>
 </template>
