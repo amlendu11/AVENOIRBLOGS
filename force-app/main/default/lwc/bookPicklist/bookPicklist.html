@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title={label.PICKLISTS}>
+    <div class="slds-p-around_medium">
+      <lightning-dual-listbox name={label.GENRES} label={label.SELECT_GENRES} 
+        source-label={label.AVAILABLE_GENRES} selected-label={label.SELECT_GENRES} 
+        field-level-help={label.SELECT_ONE_OR_MORE_GENRES} options={genreOptions}
+        value={selectedGenres} onchange={handleGenreChange}>
+      </lightning-dual-listbox>
+    </div>
+    <div class="slds-p-around_medium">
+      <lightning-dual-listbox name={label.SUBGENRES} label={label.SELECT_SUB_GENRES}
+        source-label={label.AVAILABLE_SUB_GENRES} selected-label={label.SELECT_SUB_GENRES}
+        field-level-help={label.SELECT_ONE_OR_MORE_SUB_GENRES} options={subGenreOptions} 
+        value={selectedSubGenres} onchange={handleSubGenreChange}>
+      </lightning-dual-listbox>
+    </div>
+  </lightning-card>
+</template>
