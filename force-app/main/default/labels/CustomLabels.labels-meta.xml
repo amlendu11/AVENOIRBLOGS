@@ -289,6 +289,13 @@
         <value>success</value>
     </labels>
     <labels>
+        <fullName>Dynamic_Component_Header_Text</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dynamic Component Header Text</shortDescription>
+        <value>Dynamic Instantiate Component</value>
+    </labels>
+    <labels>
         <fullName>EMAIL_REPLY_ADDRESS</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -777,6 +784,69 @@
         <protected>true</protected>
         <shortDescription>VIEW_ALL</shortDescription>
         <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>SELECT_COMPONENT_TO_SHOW</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SELECT_COMPONENT_TO_SHOW</shortDescription>
+        <value>Select Which Component to Load Dynamically</value>
+    </labels>
+    <labels>
+        <fullName>MESSAGE_FOR_CHILD_COMPONENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MESSAGE_FOR_CHILD_COMPONENT</shortDescription>
+        <value>Message for child component</value>
+    </labels>
+    <labels>
+        <fullName>LOAD_ACCOUNTCONTACT_COMPONENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOAD_ACCOUNTCONTACT_COMPONENT</shortDescription>
+        <value>Load AccountContact Component</value>
+    </labels>
+    <labels>
+        <fullName>LOAD_DYNAMIC_CHILD_COMPONENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOAD_DYNAMIC_CHILD_COMPONENT</shortDescription>
+        <value>Load Dynamic Child Component</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_IMPORTING_COMPONENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error importing component</shortDescription>
+        <value>Error importing component</value>
+    </labels>
+    <labels>
+        <fullName>ACCOUNT_CONTACTS_DISPLAY</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>accountContactsDisplay</shortDescription>
+        <value>accountContactsDisplay</value>
+    </labels>
+    <labels>
+        <fullName>DYNAMIC_CHILD</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>dynamicChild</shortDescription>
+        <value>dynamicChild</value>
+    </labels>
+    <labels>
+        <fullName>MESSAGE_FROM_PARENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message from Parent:</shortDescription>
+        <value>Message from Parent:</value>
+    </labels>
+    <labels>
+        <fullName>CHILD_COMPONENT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Child component</shortDescription>
+        <value>Child component</value>
     </labels>
     <labels>
         <fullName>YOUR_FEEDBACK</fullName>
