@@ -1,3 +1,14 @@
+/************************************************************************
+(c) Copyright 2024 Avenoir Technologies Pvt. Ltd. All rights reserved.*
+Created by: Manish Kumar Gupta
+Ticket Number: AVEBLOG-109
+------------------------------------------------------------------------*
+Blog: Making REST Api callout using LWC component
+------------------------------------------------------------------------*
+Version History:*
+VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
+1.0       Manish Kumar Gupta     02/10/2024   Initial Development
+***********************************************************************/
 import { LightningElement } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import DogImageGeneratorTitle from '@salesforce/label/c.Dog_Image_Generator_Title';
