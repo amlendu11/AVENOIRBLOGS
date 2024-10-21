@@ -1009,4 +1009,11 @@
         <shortDescription>SELECT_ALL_MESSAGE</shortDescription>
         <value>Select All</value>
     </labels>
+    <labels>
+        <fullName>LOCAL_DEV</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LOCAL_DEV</shortDescription>
+        <value>Local Dev</value>
+    </labels>
 </CustomLabels>

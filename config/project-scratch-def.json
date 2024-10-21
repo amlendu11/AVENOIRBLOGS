@@ -1,10 +1,12 @@
 {
   "orgName": "amlendubajpai company",
   "edition": "Developer",
+  "release": "preview",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+      "enableS1DesktopEnabled": true,
+      "enableLightningPreviewPref": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
