@@ -47,7 +47,7 @@
             <assignToReference>createContact.LastName</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop_through_the_contacts.Last Name</elementReference>
+                <elementReference>Loop_through_the_contacts.LastName</elementReference>
             </value>
         </assignmentItems>
         <connector>
