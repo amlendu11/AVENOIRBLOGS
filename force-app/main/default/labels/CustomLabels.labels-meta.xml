@@ -637,4 +637,60 @@
         <shortDescription>Record Created Successfully</shortDescription>
         <value>Record Created Successfully</value>
     </labels>
+    <labels>
+        <fullName>Dog_Api_Url</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dog Api Url</shortDescription>
+        <value>https://dog.ceo/api/breeds/image/random</value>
+    </labels>
+    <labels>
+        <fullName>Dog_Image_Generator_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dog Image Generator Button Label</shortDescription>
+        <value>🐶Generate Random Dog Picture</value>
+    </labels>
+    <labels>
+        <fullName>Dog_Image_Generator_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dog Image Generator Title</shortDescription>
+        <value>Random Dog Picture Generator</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_For_HttpError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message For HttpError</shortDescription>
+        <value>The server responded with an error. Please try again later.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_For_TypeError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message For TypeError</shortDescription>
+        <value>There was a network issue. Please check your internet connection.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_For_UnexpectedError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message For UnexpectedError</shortDescription>
+        <value>An unexpected error occurred. Please try again.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message_Title_Fetch_Api</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Message Title Fetch Api</shortDescription>
+        <value>Error Fetching Dog Image</value>
+    </labels>
+    <labels>
+        <fullName>HTTP_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Http Label</shortDescription>
+        <value>HTTP</value>
+    </labels>
 </CustomLabels>

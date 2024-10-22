@@ -9,7 +9,7 @@ Version History:*
 VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
 1.0       Manish Kumar Gupta     02/10/2024   Initial Development
 ***********************************************************************/
-import { LightningElement } from 'lwc';
+import {LightningElement} from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import DogImageGeneratorTitle from '@salesforce/label/c.Dog_Image_Generator_Title';
 import DogImageGeneratorButtonLabel from '@salesforce/label/c.Dog_Image_Generator_Button_Label';
