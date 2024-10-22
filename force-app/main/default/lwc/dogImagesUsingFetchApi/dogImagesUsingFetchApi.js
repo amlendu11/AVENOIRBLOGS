@@ -11,34 +11,34 @@ VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
 ***********************************************************************/
 import {LightningElement} from 'lwc';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
-import DogImageGeneratorTitle from '@salesforce/label/c.Dog_Image_Generator_Title';
-import DogImageGeneratorButtonLabel from '@salesforce/label/c.Dog_Image_Generator_Button_Label';
-import DogApiUrl from '@salesforce/label/c.Dog_Api_Url';
-import ErrorMessageForTypeError from '@salesforce/label/c.Error_Message_For_TypeError';
-import ErrorMessageForHttpError from '@salesforce/label/c.Error_Message_For_HttpError';
-import ErrorMessageForUnexpectedError from '@salesforce/label/c.Error_Message_For_UnexpectedError';
-import HTTPLabel from '@salesforce/label/c.HTTP_Label';
-import ErrorMessageTitleFetchApi from '@salesforce/label/c.Error_Message_Title_Fetch_Api';
+import DOG_IMAGE_GENERATOR_TITLE from '@salesforce/label/c.DOG_IMAGE_GENERATOR_TITLE';
+import DOG_IMAGE_GENERATOR_BUTTON_LABEL from '@salesforce/label/c.DOG_IMAGE_GENERATOR_BUTTON_LABEL';
+import DOG_API_URL from '@salesforce/label/c.DOG_API_URL';
+import ERROR_MESSAGE_FOR_TYPE_ERROR from '@salesforce/label/c.ERROR_MESSAGE_FOR_TYPE_ERROR';
+import ERROR_MESSAGE_FOR_HTTP_ERROR from '@salesforce/label/c.ERROR_MESSAGE_FOR_HTTP_ERROR';
+import ERROR_MESSAGE_FOR_UNEXPECTED_ERROR from '@salesforce/label/c.ERROR_MESSAGE_FOR_UNEXPECTED_ERROR';
+import HTTP_LABEL from '@salesforce/label/c.HTTP_LABEL';
+import ERROR_MESSAGE_TITLE_FETCH_API from '@salesforce/label/c.ERROR_MESSAGE_TITLE_FETCH_API';
 
 export default class DogImagesUsingFetchApi extends LightningElement {
     imageReady = false;
     pictureUrl = '';
     loadingSpinner = false;
     labels = {
-        DogImageGeneratorTitle,
-        DogImageGeneratorButtonLabel,
-        ErrorMessageForTypeError,
-        HTTPLabel,
-        DogApiUrl,
-        ErrorMessageForHttpError,
-        ErrorMessageForUnexpectedError,
-        ErrorMessageTitleFetchApi
+        DOG_IMAGE_GENERATOR_TITLE,
+        DOG_IMAGE_GENERATOR_BUTTON_LABEL,
+        ERROR_MESSAGE_FOR_TYPE_ERROR,
+        HTTP_LABEL,
+        DOG_API_URL,
+        ERROR_MESSAGE_FOR_HTTP_ERROR,
+        ERROR_MESSAGE_FOR_UNEXPECTED_ERROR,
+        ERROR_MESSAGE_TITLE_FETCH_API
     }
 
     handleClick() {
         this.imageReady = false;
         this.loadingSpinner = true;
-        fetch(this.labels.DogApiUrl, { method: 'GET' })
+        fetch(this.labels.DOG_API_URL, {method: 'GET'})
             .then(response => response.json())
             .then(data => {
                 this.pictureUrl = data.message;
@@ -47,7 +47,7 @@ export default class DogImagesUsingFetchApi extends LightningElement {
             })
             .catch(error => {
                 const event = new ShowToastEvent({
-                    title: this.labels.ErrorMessageTitleFetchApi,
+                    title: this.labels.ERROR_MESSAGE_TITLE_FETCH_API,
                     message: this.getErrorMessage(error),
                     variant: 'error',
                 });
@@ -58,11 +58,11 @@ export default class DogImagesUsingFetchApi extends LightningElement {
 
     getErrorMessage(error) {
         if (error instanceof TypeError) {
-            return this.labels.ErrorMessageForTypeError;
-        } else if (error.message.includes(this.labels.HTTPLabel)) {
-            return this.labels.ErrorMessageForHttpError;
+            return this.labels.ERROR_MESSAGE_FOR_TYPE_ERROR;
+        } else if (error.message.includes(this.labels.HTTP_LABEL)) {
+            return this.labels.ERROR_MESSAGE_FOR_HTTP_ERROR;
         } else {
-            return this.labels.ErrorMessageForUnexpectedError;
+            return this.labels.ERROR_MESSAGE_FOR_UNEXPECTED_ERROR;
         }
     }
 }
