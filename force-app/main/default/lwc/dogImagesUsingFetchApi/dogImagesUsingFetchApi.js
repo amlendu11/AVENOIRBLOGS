@@ -57,12 +57,14 @@ export default class DogImagesUsingFetchApi extends LightningElement {
     }
 
     getErrorMessage(error) {
+        let errorMessage = '';
         if (error instanceof TypeError) {
-            return this.labels.ERROR_MESSAGE_FOR_TYPE_ERROR;
+            errorMessage = this.labels.ERROR_MESSAGE_FOR_TYPE_ERROR;
         } else if (error.message.includes(this.labels.HTTP_LABEL)) {
-            return this.labels.ERROR_MESSAGE_FOR_HTTP_ERROR;
+            errorMessage = this.labels.ERROR_MESSAGE_FOR_HTTP_ERROR;
         } else {
-            return this.labels.ERROR_MESSAGE_FOR_UNEXPECTED_ERROR;
+            errorMessage = this.labels.ERROR_MESSAGE_FOR_UNEXPECTED_ERROR;
         }
+        return errorMessage;
     }
 }
