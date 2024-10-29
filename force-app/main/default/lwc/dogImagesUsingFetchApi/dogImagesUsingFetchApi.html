@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title={labels.DOG_IMAGE_GENERATOR_TITLE} icon-name="custom:custom63">
+        <lightning-layout class="dog-layout">
+            <lightning-button 
+                label={labels.DOG_IMAGE_GENERATOR_BUTTON_LABEL} 
+                onclick={handleClick} 
+                class="generate-button">
+            </lightning-button>
+            <div class="slds-p-around_small">
+                <template if:true={loadingSpinner}>
+                    <lightning-spinner alternative-text="Loading" variant="brand" size="large"></lightning-spinner>
+                </template>
+                <template if:true={imageReady}>
+                    <div class="dog-image-container">
+                        <img src={pictureUrl} alt="Random Dog" class="dog-image"/>
+                    </div>
+                </template>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>
