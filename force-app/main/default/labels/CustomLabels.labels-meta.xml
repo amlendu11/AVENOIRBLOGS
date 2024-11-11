@@ -1065,4 +1065,11 @@
         <shortDescription>SELECT_ALL_MESSAGE</shortDescription>
         <value>Select All</value>
     </labels>
+    <labels>
+        <fullName>ACCOUNT_SYNC_COMPLETED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ACCOUNT_SYNC_COMPLETED</shortDescription>
+        <value>Account Sync Completed</value>
+    </labels>
 </CustomLabels>
