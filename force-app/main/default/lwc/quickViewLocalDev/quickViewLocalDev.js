@@ -11,10 +11,13 @@ Blog: Real-Time Preview for Lightning Web Components
 ***********************************************************************/
 import {LightningElement} from 'lwc';
 import title from '@salesforce/label/c.LOCAL_DEV';
+import message from '@salesforce/label/c.Quick_View_in_Local_Dev';
+import footer from '@salesforce/label/c.Card_Footer123565475675';
 
 export default class QuickViewLocalDev extends LightningElement {
     label = {
         title,
+        message,
+        footer
     }
-    message = 'Quick view in Local dev';
 }

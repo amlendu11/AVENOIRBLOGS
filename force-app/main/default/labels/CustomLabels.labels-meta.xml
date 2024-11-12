@@ -1016,4 +1016,18 @@
         <shortDescription>LOCAL_DEV</shortDescription>
         <value>Local Dev</value>
     </labels>
+    <labels>
+        <fullName>Quick_View_in_Local_Dev</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Quick_View_in_Local_Dev</shortDescription>
+        <value>Quick view in Local dev</value>
+    </labels>
+    <labels>
+        <fullName>Card_Footer123565475675</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Card_Footer123565475675</shortDescription>
+        <value>Card Footer123565475675</value>
+    </labels>
 </CustomLabels>
