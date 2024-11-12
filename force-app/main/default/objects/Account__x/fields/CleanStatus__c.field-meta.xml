@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CleanStatus__c</fullName>
+    <externalDeveloperName>CleanStatus</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Clean Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Matched</fullName>
+                <default>false</default>
+                <label>In Sync</label>
+            </value>
+            <value>
+                <fullName>Different</fullName>
+                <default>false</default>
+                <label>Different</label>
+            </value>
+            <value>
+                <fullName>Acknowledged</fullName>
+                <default>false</default>
+                <label>Reviewed</label>
+            </value>
+            <value>
+                <fullName>NotFound</fullName>
+                <default>false</default>
+                <label>Not Found</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Not Compared</label>
+            </value>
+            <value>
+                <fullName>SelectMatch</fullName>
+                <default>false</default>
+                <label>Select Match</label>
+            </value>
+            <value>
+                <fullName>Skipped</fullName>
+                <default>false</default>
+                <label>Skipped</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
