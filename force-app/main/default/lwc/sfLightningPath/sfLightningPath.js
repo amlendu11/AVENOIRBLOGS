@@ -16,15 +16,13 @@ export default class SfLightningPath extends LightningElement {
     @api steps;
     @api currentStepIndex;
     pathElements = pathElements;
-    
-    pathHandler(event)
-    {
+
+    pathHandler(event) {
         if(this.pathElements.indexOf(this.currentState)>this.pathElements.indexOf(event.currentTarget.value)) {
             this.currentState = event.currentTarget.value;
             this.dispatchEvent(new CustomEvent('selectedpath', {
-                detail: this.currentState
+                detail : this.currentState
             }));
-        }
-        
+        }    
     }
 }
