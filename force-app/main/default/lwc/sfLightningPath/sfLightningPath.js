@@ -9,8 +9,8 @@
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
    1.0       Nikhil Mehra       08/10/2023      Initial Development
 ***********************************************************************/
-import { LightningElement,api} from 'lwc';
-import { pathItems, pathElements } from 'c/paths';
+import {LightningElement, api} from 'lwc';
+import {pathItems, pathElements} from 'c/paths';
 export default class SfLightningPath extends LightningElement {
     @api currentState = '';
     @api steps;
