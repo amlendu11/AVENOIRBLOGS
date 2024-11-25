@@ -8,6 +8,7 @@
 * Version History:
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
    1.0       Nikhil Mehra       08/10/2023      Initial Development
+   2.0       Shiv k Chaudhary   25/11/2024      Fixed Indentation issue
 ***********************************************************************/
 import {LightningElement, api} from 'lwc';
 import {pathItems, pathElements} from 'c/paths';
