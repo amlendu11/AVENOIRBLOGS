@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Display Details">
+    <template if:true={contactData}>
+        <ul>
+            <li>{contactData.fields.Name.value}</li>
+            <li>{contactData.fields.Phone.value}</li>
+            <li>{contactData.fields.Email.value}</li>
+        </ul>
+    </template>
+</lightning-card>
+    <lightning-card title="Edit">
+        <lightning-record-edit-form record-id={recordId} object-api-name="Contact" onsuccess={handleSuccess} onerror={handleError} onsubmit={handleSubmit}>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Email"></lightning-input-field>
+            <lightning-input-field field-name="Phone"></lightning-input-field>
+            <lightning-button variant="brand" type="submit" name="update" label="Update">
+            </lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

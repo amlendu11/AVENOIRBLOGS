@@ -9,13 +9,17 @@
 * VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
    1.0       Nikhil Mehra       08/10/2023      Initial Development
 ***********************************************************************/
-import { LightningElement, api } from 'lwc';
-import { pathItems, pathElements } from 'c/paths';
+import {LightningElement, api} from 'lwc';
+import {pathItems, pathElements} from 'c/paths';
 import accountAPIName from '@salesforce/schema/Account';
 import contactAPIName from '@salesforce/schema/Contact';
 import opportunityAPIName from '@salesforce/schema/Opportunity';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { NavigationMixin } from 'lightning/navigation';
+import {ShowToastEvent} from 'lightning/platformShowToastEvent';
+import {NavigationMixin} from 'lightning/navigation';
+import REGISTRATION_COMPLETED from "@salesforce/label/c.REGISTRATION_COMPLETED";
+import REGISTRATION_COMPLETED_MESSAGE from "@salesforce/label/c.REGISTRATION_COMPLETED_MESSAGE";
+import NEXT from "@salesforce/label/c.NEXT";
+import PREVIOUS from "@salesforce/label/c.PREVIOUS";
 
 export default class SfParent extends NavigationMixin(LightningElement) {
 
@@ -27,6 +31,13 @@ export default class SfParent extends NavigationMixin(LightningElement) {
     Contact = contactAPIName;
     Opportunity = opportunityAPIName; 
     accountId;
+
+    label = {
+        NEXT : NEXT,
+        PREVIOUS : PREVIOUS,
+        REGISTRATION_COMPLETED : REGISTRATION_COMPLETED,
+        REGISTRATION_COMPLETED_MESSAGE : REGISTRATION_COMPLETED_MESSAGE
+    }
 
     get isStep1(){
         return this.step === 1
@@ -59,8 +70,8 @@ export default class SfParent extends NavigationMixin(LightningElement) {
 
     handleSuccessOppo(){
         const evt = new ShowToastEvent({
-            title: 'Registration Completed',
-            message: 'Thank you for filling form, you will redirect to Account Page',
+            title: REGISTRATION_COMPLETED,
+            message: REGISTRATION_COMPLETED_MESSAGE,
             variant: 'success',
         });
         this.dispatchEvent(evt);

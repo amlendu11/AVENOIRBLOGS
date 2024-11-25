@@ -1,0 +1,22 @@
+<template>
+    <article class="slds-card slds-card_boundary headerBottomBorder forceRelatedListCardDesktop">
+    <lightning-card class="slds-grid slds-page-header forceRelatedListCardHeader" title="Campaign History" key={camp}>
+            <template lwc:if={isChildApiFound}>
+                <template for:each={displayinSamePage} for:item="currentObject">
+                    <table key={currentObject.Id}>
+                        <tbody>
+                            <tr key={currentObject.Id}>
+                                <td class="tile_view">
+                                   <c-child-link-comp currentchildobject={currentObject} objapi="campaignmember" fieldlabel={labelNames} showtile={showtile}></c-child-link-comp>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </template>
+            </template>
+            <footer class="slds-card__footer">
+                <button onclick={navigateToCampaignComponent}>{label.VIEW_ALL}</button>
+            </footer>
+        </lightning-card>
+    </article>
+</template>

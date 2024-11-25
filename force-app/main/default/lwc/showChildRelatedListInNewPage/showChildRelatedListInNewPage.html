@@ -1,0 +1,37 @@
+<template>
+	<lightning-card title="Campaign History" key={isChildApiFound}>
+		<div class="header">
+            <p>
+		        <button class="refresh-button" onclick={handleRefresh}>
+                    <i class="glyphicon glyphicon-refresh fa fa-refresh"></i>
+                </button>
+            </p>
+		</div>
+		<template lwc:if={isChildApiFound}>
+            <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <template for:each={labels} for:item="label">
+                            <th scope="col" key={label.key}>
+                                <b>{label.key}</b>
+                            </th>
+                        </template>
+                    </tr>
+                </thead>
+            </table>
+			<template for:each={relatedlists} for:item="childObj">
+				<table key={childObj.Id}>
+					<tbody>
+						<tr key={childObj.Id}>
+							<template lwc:if={isCampaign}>
+								<td>
+									<c-child-link-comp currentchildobject={childObj} showtile={showTile}></c-child-link-comp>
+								</td>
+							</template>
+						</tr>
+					</tbody>
+				</table>
+			</template>
+		</template>
+	</lightning-card>
+</template>

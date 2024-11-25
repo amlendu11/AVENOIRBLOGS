@@ -1,0 +1,11 @@
+<template>
+    <lightning-card icon-name="standard:account">
+        <template if:true={scriptLoaded}>
+            <template if:true={showTimer}>
+                <countdown-timer date={time} heading={label.COUNT_DOWN_HEADING} subheading={label.COUNT_DOWN_SUB_HEADING}
+                    message={label.COUNT_DOWN_MESSAGE} link={label.AVENOIR_GOOGLE_URL} linktext={label.COUNT_DOWN_LINK_TEXT}
+                    lwc:external></countdown-timer>
+            </template>
+        </template>
+    </lightning-card>
+</template>

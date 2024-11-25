@@ -1,0 +1,35 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" controller="LightningLoginFormController" access="Global">
+
+    <aura:attribute name="isUsernamePasswordEnabled" type="Boolean" access="private"/>
+    <aura:handler name="init" value="{!this}" action="{!c.initialize}"/>
+
+    <div class="custom-login-container">
+        <div class="main">
+            <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
+                <div id="sfdc_username_container" class="sfdc">
+                    <span class="user-icon">
+                        <lightning:icon iconName="utility:user" size="x-small"/>
+                    </span>
+                    <div class="username-password-wrapper">
+                        <ui:inputText aura:id="username" placeholder="{!$Label.c.LOGIN_USERNAME_PLACEHOLDER}" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc" labelClass="assistiveText" />
+                    </div>
+                </div>
+                <div id="sfdc_password_container" class="sfdc">
+                    <span class="user-icon">
+                        <lightning:icon iconName="utility:lock" size="x-small"/>
+                    </span>
+                    <div class="username-password-wrapper">
+                        <ui:inputSecret aura:id="password" placeholder="{!$Label.c.LOGIN_PASSWORD_PLACEHOLDER}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" labelClass="assistiveText" />
+                    </div>
+                </div>
+                <div class="sfdc-login-container">
+                    <ui:button aura:id="submitButton" label="{!$Label.c.LOGIN_BUTTON_LABEL}" press="{!c.handleLogin}" class="sfdc_button"/>
+                </div>
+                <div id="sfdc_forgot" class="sfdc-forgot-container">
+                    <span class="left-link"><a href="{!$Label.c.LOGIN_FORGOT_PASSWORD_URL}">{!$Label.c.FORGOT_PASSWORD_BUTTON}</a></span>
+                    <span class="right-link"><a href="{!$Label.c.LOGIN_SANDBOX_URL}">{!$Label.c.ARE_YOU_AN_EMPLOYEE_BUTTON}</a></span>
+                </div>
+            </aura:renderIf>
+        </div>
+    </div>
+</aura:component>

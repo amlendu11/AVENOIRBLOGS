@@ -1,0 +1,109 @@
+.THIS #sfdc_username_container{
+    padding-top: 2px;
+    padding-bottom: 8px;
+    background-color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.THIS #sfdc_password_container{
+    padding-top: 2px;
+    padding-bottom: 8px;
+    background-color: white;
+    border: 0px solid white !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.THIS  button.sfdc_button {
+    width: 130%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: -40px !important;
+    color: #fff;
+    background-color: #2CBC6F !important;
+    border-color: #357ebd;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.42857143;
+    border-radius: 2px;
+}
+
+.THIS  button:hover {
+    background-color: #28d177 !important;
+    border-color: #285e8e;
+    cursor: pointer;
+}
+
+.THIS  input {
+    margin-bottom: 1px !important;
+    margin-left: 1px !important;
+    border: 0px solid transparent;
+    border-color: white !important;
+    width: 130% !important;
+    font-size: 18px;
+}
+
+.THIS span a {
+    color: white;
+    text-decoration: none;
+}
+
+.THIS span a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.THIS div.sfdc {
+    width: 130% !important;
+    max-width: 500px !important;
+    margin-bottom: 5px !important;
+    margin-left: -40px !important;
+    margin: 0 auto;
+}
+
+.THIS #sfdc_forgot {
+    width: 130% !important;
+    margin-left: -40px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.THIS #sfdc_forgot .left-link {
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.THIS #sfdc_forgot .right-link {
+    flex: 1 !important;
+    text-align: right !important;
+}
+
+.THIS .user-icon {
+    padding: 5px !important;
+    margin-right: 1px !important;
+}
+
+.THIS .username-password-wrapper {
+    margin-top: 4px;
+}
+
+.THIS .main {
+    padding-top: 90px !important;
+}

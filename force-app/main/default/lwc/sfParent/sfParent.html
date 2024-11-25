@@ -23,11 +23,11 @@
         <div slot="footer" class="slds-clearfix">
             <template if:false={isStep3}>
                 <lightning-button class="button slds-m-horizontal_x-small slds-float_right" slot="actions"
-                    variant="brand" label="Next" title="Next" onclick={nextHandler}></lightning-button>
+                    variant="brand" label={label.NEXT} title={label.NEXT} onclick={nextHandler}></lightning-button>
             </template>
             <template if:false={isStep1}>
                 <lightning-button class=" button slds-m-horizontal_x-small slds-float_right" slot="actions"
-                    variant="brand" label="Previous" title="Previous" onclick={backHandler}></lightning-button>
+                    variant="brand" label={label.PREVIOUS} title={label.PREVIOUS} onclick={backHandler}></lightning-button>
             </template>
         </div>
     </lightning-card>

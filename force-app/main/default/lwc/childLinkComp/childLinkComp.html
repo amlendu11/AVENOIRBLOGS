@@ -1,0 +1,54 @@
+<template>
+    <!-- This component is made to handle the display of each record passed by the component -->
+    <article class="slds-tile slds-tile_board">
+        <div>
+            <!-- If the component is being displayed on the parent page we will show it as a tile by using flag showTile -->
+            <template if:true={showtile}>
+                <div class="demo-only">
+                    <ul class="slds-has-dividers_around-space">
+                        <li class="slds-item list">
+                            <article class="slds-tile slds-tile_board">
+                                <div class="slds-tile__detail">
+                                    <table>
+                                        <thead>
+                                                <tr>
+                                                    <!-- Show the link of each record in their respective name to redirect to the respective record page-->
+                                                    <td>
+                                                        <a href={url} target="_blank">{currentchildobject.Name}</a>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                        <tbody>
+                                            <!-- Iterate through the key-value pair to get of the object to display the records -->
+                                            <template for:each={objectProperties} for:item="property">
+                                                <tr key={property.key}>
+                                                    <td key={property.key}>
+                                                        {property.key} : {property.value}
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </template>
+            <!-- If showTile is false(implies the component is being shown in the new page), we will be using the tabular format to show the record in list view -->
+            <template if:false={showtile}>
+                <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout">
+                    <tbody>
+                        <tr class="slds-line-height_res" key={currentchildobject.key}>
+                            <template for:each={objectProperties} for:item="property">
+                                <td class="" scope="col" key={property.key}>
+                                    {property.value}
+                                </td>
+                            </template>
+                        </tr>
+                    </tbody>
+                </table>
+            </template>
+        </div>
+    </article>
+</template>
