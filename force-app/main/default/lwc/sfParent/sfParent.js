@@ -70,9 +70,9 @@ export default class SfParent extends NavigationMixin(LightningElement) {
 
     handleSuccessOppo(){
         const evt = new ShowToastEvent({
-            title: REGISTRATION_COMPLETED,
-            message: REGISTRATION_COMPLETED_MESSAGE,
-            variant: 'success',
+            title : REGISTRATION_COMPLETED,
+            message : REGISTRATION_COMPLETED_MESSAGE,
+            variant : 'success',
         });
         this.dispatchEvent(evt);
         this.navigateToViewAccountPage(this.accountId);
@@ -80,11 +80,11 @@ export default class SfParent extends NavigationMixin(LightningElement) {
 
     navigateToViewAccountPage(recordId) {
         this[NavigationMixin.Navigate]({
-            type: 'standard__recordPage',
-            attributes: {
+            type : 'standard__recordPage',
+            attributes : {
                 recordId: recordId,
-                objectApiName: 'Account',
-                actionName: 'view'
+                objectApiName : 'Account',
+                actionName : 'view'
             },
         });
     }
