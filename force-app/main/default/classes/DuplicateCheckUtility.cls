@@ -1,4 +1,17 @@
-public class Duplicate_Check_Utility {
+/********************************************************************
+* (c) Copyright 2023 Avenoir Technologies Pvt. Ltd. All rights reserved.
+* Created by: Anchal Agrawal
+* Ticket Number: AVEBLOG99
+--------------------------------------------------------------------
+*  Description : Duplicate record check.
+--------------------------------------------------------------------
+* Utility Test Class: DuplicateCheckUtilityTest
+--------------------------------------------------------------------
+* Version History:
+* VERSION    DEVELOPER NAME        DATE         DETAIL FEATURES
+   1.0       Diksha Dewangan       12/12/2024   Initial Development
+***********************************************************************/
+public class DuplicateCheckUtility {
 
     @InvocableMethod(
         label = 'Duplicate Check'
