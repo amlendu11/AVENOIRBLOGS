@@ -20,7 +20,10 @@ public class Duplicate_Check_Utility {
             objectsToCheck
         );
         for (Datacloud.FindDuplicatesResult findDuplicateResultObj : results) {
-            for (Datacloud.DuplicateResult duplicateResultObj : findDuplicateResultObj.getDuplicateResults()) {
+            for (
+                Datacloud.DuplicateResult duplicateResultObj :
+                    findDuplicateResultObj.getDuplicateResults()
+            ) {
                 for (Datacloud.MatchResult matchResultObj : duplicateResultObj.getMatchResults()) {
                     for (Datacloud.MatchRecord matchRecord : matchResultObj.getMatchRecords()) {
                         return true;
