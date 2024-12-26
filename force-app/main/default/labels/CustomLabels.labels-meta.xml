@@ -1086,4 +1086,53 @@
         <shortDescription>Card_Footer123565475675</shortDescription>
         <value>Card Footer123565475675</value>
     </labels>
+    <labels>
+        <fullName>CONTACT_ICON</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CONTACT_ICON</shortDescription>
+        <value>standard:contact</value>
+    </labels>
+    <labels>
+        <fullName>APPLICATION_NAME</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APPLICATION_NAME</shortDescription>
+        <value>Application Name</value>
+    </labels>
+    <labels>
+        <fullName>APPLICATION_FORM</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APPLICATION_FORM</shortDescription>
+        <value>Application Form</value>
+    </labels>
+    <labels>
+        <fullName>APPLICATION_SELECTION</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APPLICATION_SELECTION</shortDescription>
+        <value>Selected</value>
+    </labels>
+    <labels>
+        <fullName>CREATE_APPLICATION_BUTTON_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CREATE_APPLICATION_BUTTON_LABEL</shortDescription>
+        <value>Create Application</value>
+    </labels>
+    <labels>
+        <fullName>APPLICATION_NAME_FIELD</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APPLICATION_NAME_FIELD</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>APPLICATION_SELECTION_FIELD</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APPLICATION_SELECTION_FIELD</shortDescription>
+        <value>Selected__c</value>
+    </labels>
 </CustomLabels>
