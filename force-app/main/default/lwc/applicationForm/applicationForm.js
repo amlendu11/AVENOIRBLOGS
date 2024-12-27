@@ -18,6 +18,7 @@ import APPLICATION_NAME from '@salesforce/label/c.APPLICATION_NAME';
 import APPLICATION_FORM from '@salesforce/label/c.APPLICATION_FORM';
 import APPLICATION_SELECTION from '@salesforce/label/c.APPLICATION_SELECTION';
 import BUTTON_LABEL from '@salesforce/label/c.CREATE_APPLICATION_BUTTON_LABEL';
+import SUCCESS_TOAST_MESSAGE from '@salesforce/label/c.APPLICATION_CREATION_TOAST_MESSAGE';
 
 export default class ApplicationForm extends LightningElement {
 
@@ -28,7 +29,8 @@ export default class ApplicationForm extends LightningElement {
         APPLICATION_NAME,
         APPLICATION_FORM,
         APPLICATION_SELECTION,
-        BUTTON_LABEL
+        BUTTON_LABEL,
+        SUCCESS_TOAST_MESSAGE
     }
 
     selectionChange(event) {
@@ -42,7 +44,7 @@ export default class ApplicationForm extends LightningElement {
     handleSubmit() {
         CalloutExample({ objectApiName: APPLICATION.objectApiName, name: this.name, isSelected: this.isChecked })
         .then(result => {
-            this.showToast('Success', this.name + ' Application Created Successfully!', 'success');
+            this.showToast('Success', this.name + this.labels.SUCCESS_TOAST_MESSAGE, 'success');
         })
         .catch(error => {
             this.showToast('Error', error.body.message, 'error');

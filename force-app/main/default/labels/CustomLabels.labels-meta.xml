@@ -1135,4 +1135,11 @@
         <shortDescription>APPLICATION_SELECTION_FIELD</shortDescription>
         <value>Selected__c</value>
     </labels>
+    <labels>
+        <fullName>APPLICATION_CREATION_TOAST_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>APPLICATION_CREATION_TOAST_MESSAGE</shortDescription>
+        <value>  Application Created Successfully!</value>
+    </labels>
 </CustomLabels>
