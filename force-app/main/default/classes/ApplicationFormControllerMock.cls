@@ -11,6 +11,7 @@
 * VERSION    DEVELOPER NAME         DATE            DETAIL FEATURES
    1.0       Manish Kumar Gupta     08/01/2025      Initial Development
 ***********************************************************************/
+@IsTest
 public class ApplicationFormControllerMock implements HttpCalloutMock {
     private Integer statusCode;
     private String responseBody;
