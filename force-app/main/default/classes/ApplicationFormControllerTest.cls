@@ -15,7 +15,14 @@
 public class ApplicationFormControllerTest {
     @TestSetup
     static void setupTestData() {
-        Profile customerCommunityPlusProfile = [SELECT Id FROM Profile WHERE Name = 'Customer Community Plus User'];
+        Profile customerCommunityPlusProfile = [
+            SELECT 
+                Id 
+            FROM 
+                Profile
+            WHERE 
+                Name = 'Customer Community Plus User'
+        ];
         Account testAccount = new Account(Name = 'Test Account');
         insert testAccount;
         Contact testUserContact = new Contact(LastName = 'Test Contact', AccountId = testAccount.Id);
@@ -46,9 +53,17 @@ public class ApplicationFormControllerTest {
         Test.startTest();
         HttpCalloutMock mock = new ApplicationFormControllerMock(201, '{"success":true,"errors":[]}');
         Test.setMock(HttpCalloutMock.class, mock);
-        String response = ApplicationFormContoller.calloutExample('Application__c', (String) applicationData.get('Name'), (Boolean) applicationData.get('Selected__c'));
+        String response = ApplicationFormContoller.calloutExample(
+            'Application__c',
+            (String) applicationData.get('Name'),
+            (Boolean) applicationData.get('Selected__c')
+        );
         Test.stopTest();
-        System.assertEquals('{"success":true,"errors":[]}', response, 'Callout response success message must be true');
+        System.assertEquals(
+            '{"success":true,"errors":[]}',
+            response,
+            'Callout response success message must be true'
+        );
     }
 
     @IsTest
@@ -61,10 +76,18 @@ public class ApplicationFormControllerTest {
         HttpCalloutMock mock = new ApplicationFormControllerMock(400, '{"message":"Bad Request"}');
         Test.setMock(HttpCalloutMock.class, mock);
         try {
-            String response = ApplicationFormContoller.calloutExample('Application__c', (String) applicationData.get('Name'), (Boolean) applicationData.get('Is_Selected__c'));
+            String response = ApplicationFormContoller.calloutExample(
+                'Application__c',
+                (String) applicationData.get('Name'),
+                (Boolean) applicationData.get('Is_Selected__c')
+            );
             System.assert(false, 'Exception was expected but not thrown.');
         } catch (CalloutException ex) {
-            System.assertEquals('400 - {"message":"Bad Request"}', ex.getMessage(), 'Exception message should match.');
+            System.assertEquals(
+                '400 - {"message":"Bad Request"}',
+                ex.getMessage(),
+                'Exception message should match.'
+            );
         }
         Test.stopTest();
     }
