@@ -1,5 +1,5 @@
 /********************************************************************
-* (c) Copyright 2024 Avenoir Technologies Pvt. Ltd. All rights reserved.
+* (c) Copyright 2025 Avenoir Technologies Pvt. Ltd. All rights reserved.
 * Created by: Manish Kumar Gupta
 * Ticket Number:AVEBLOG-108
 --------------------------------------------------------------------
@@ -9,7 +9,8 @@
 --------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME         DATE            DETAIL FEATURES
-   1.0       Manish Kumar Gupta     08/17/2023      Initial Development
+   1.0       Manish Kumar Gupta     24/12/2024      Initial Development
+   1.1       Manish Kumar Gupta     08/01/2025      CC: 100% | Added Test Class and Code Coverage, remove calloutExample parameter from String to Boolean
 ***********************************************************************/
 public with sharing class ApplicationFormContoller {
 
@@ -34,15 +35,14 @@ public with sharing class ApplicationFormContoller {
         Http http = new Http();
         HttpResponse res = http.send(req);
         if (res.getStatusCode() == 201) {
-            Map<String, Object> responseBody = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-            return (String) responseBody.get('id');
+            return (String) res.getBody();
         } else {
             throw new CalloutException(res.getStatusCode() + ' - ' + res.getBody());
         }
     }
 
     @AuraEnabled
-    public static String calloutExample(String objectApiName, String name, String isSelected) {
+    public static String calloutExample(String objectApiName, String name, Boolean isSelected) {
         Map<String, Object> recordFields = new Map<String, Object>{
             System.Label.APPLICATION_NAME_FIELD => name,
             System.Label.APPLICATION_SELECTION_FIELD => isSelected
