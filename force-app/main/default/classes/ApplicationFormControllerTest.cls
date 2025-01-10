@@ -42,10 +42,32 @@ public class ApplicationFormControllerTest {
         );
         insert testUser;
         Test.stopTest();
+        System.runAs(testUser) {
+            PermissionSet ps = [
+                SELECT
+                    Id 
+                FROM
+                    PermissionSet 
+                WHERE
+                    Name = 'Experience_Cloud_Community_Plus_User'
+            ];
+            insert new PermissionSetAssignment(
+                AssigneeId = testUser.Id,
+                PermissionSetId = ps.Id
+            );
+        }
     }
 
     @IsTest
     static void testCreateApplicationSuccess() {
+        User testUser = [
+            Select
+                Id
+            From
+                User
+            Where
+                UserName = 'testuser885533@example.com'
+        ];
         Map<String, Object> applicationData = new Map<String, Object>{
             'Name' => 'Test Application',
             'Selected__c' => true
@@ -53,11 +75,14 @@ public class ApplicationFormControllerTest {
         Test.startTest();
         HttpCalloutMock mock = new ApplicationFormControllerMock(201, '{"success":true,"errors":[]}');
         Test.setMock(HttpCalloutMock.class, mock);
-        String response = ApplicationFormContoller.calloutExample(
-            'Application__c',
-            (String) applicationData.get('Name'),
-            (Boolean) applicationData.get('Selected__c')
-        );
+        String response = '';
+        System.runAs(new User(Id = testUser.Id)) {
+            response = ApplicationFormContoller.calloutExample(
+                'Application__c',
+                (String) applicationData.get('Name'),
+                (Boolean) applicationData.get('Selected__c')
+            );
+        }
         Test.stopTest();
         System.assertEquals(
             '{"success":true,"errors":[]}',
@@ -68,6 +93,14 @@ public class ApplicationFormControllerTest {
 
     @IsTest
     static void testCreateApplicationFailure() {
+        User testUser = [
+            Select
+                Id
+            From
+                User
+            Where
+                UserName = 'testuser885533@example.com'
+        ];
         Map<String, Object> applicationData = new Map<String, Object>{
             'Name' => 'Test Application',
             'Is_Selected__c' => false
@@ -75,13 +108,16 @@ public class ApplicationFormControllerTest {
         Test.startTest();
         HttpCalloutMock mock = new ApplicationFormControllerMock(400, '{"message":"Bad Request"}');
         Test.setMock(HttpCalloutMock.class, mock);
+        String response = '';
         try {
-            String response = ApplicationFormContoller.calloutExample(
-                'Application__c',
-                (String) applicationData.get('Name'),
-                (Boolean) applicationData.get('Is_Selected__c')
-            );
-            System.assert(false, 'Exception was expected but not thrown.');
+            System.runAs(new User(Id = testUser.Id)) {
+                response = ApplicationFormContoller.calloutExample(
+                    'Application__c',
+                    (String) applicationData.get('Name'),
+                    (Boolean) applicationData.get('Is_Selected__c')
+                );
+                System.assert(false, 'Exception was expected but not thrown.');
+            }
         } catch (CalloutException ex) {
             System.assertEquals(
                 '400 - {"message":"Bad Request"}',
