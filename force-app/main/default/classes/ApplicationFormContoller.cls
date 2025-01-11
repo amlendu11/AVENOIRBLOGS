@@ -7,6 +7,9 @@
 --------------------------------------------------------------------
 * Purpose/ Methods: Controller class of ApplicationForm LWC component.
 --------------------------------------------------------------------
+* Pre-Deployment Steps: Enable Digital Experience, Enable Allow using External Profiles for Self Registration,
+    and a Role must be assigned to the current User of your org.
+--------------------------------------------------------------------
 * Version History:
 * VERSION    DEVELOPER NAME         DATE            DETAIL FEATURES
    1.0       Manish Kumar Gupta     24/12/2024      Initial Development
