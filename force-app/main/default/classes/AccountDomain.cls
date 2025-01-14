@@ -16,6 +16,8 @@
                                               query(AVEBLOG-112)
    4.0       Anchal Agrawal       16/06/2024  Added deleteAccounts
    5.0       Akash Kumar          29/06/2024  Added getAccountData
+   6.0       Sourav Dash          14/01/2025  Added getAllAccountRecords
+                                              & insertAllAccounts
 ***********************************************************************/
 public class AccountDomain {
 
@@ -95,5 +97,32 @@ public class AccountDomain {
             WHERE
                 Id =:recordId
         ];
+    }
+
+    /**
+     * Retrieve Account records
+     * @return List<Account>
+     */
+    public static List<Account> getAllAccountRecords() {
+        return [
+            SELECT
+                Id,
+                Name
+            FROM
+                Account
+        ];
+    }
+
+    /**
+     * Insert multiple Account records
+     * @param accounts - List of Account objects to insert
+     */
+    public static void insertAllAccounts(List<Account> accounts) {
+        try {
+            insert accounts;
+        }
+        catch (Exception e) {
+            throw e;
+        }
     }
 }

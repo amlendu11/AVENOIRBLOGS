@@ -25,12 +25,7 @@ public class QueryChunkingQueuableTest {
         // Use QueryChunkingQueuableTestHelper to execute the queueable job
         QueryChunkingQueuableTestHelper.executeQueueable(queueableJob, 50);
         // Validate the total number of Account records processed
-        Integer accountCount = [
-            SELECT
-                Count()
-            FROM
-                Account
-        ];
+        Integer accountCount = AccountDomain.getAccountRecords().size();
         System.assertEquals(1000, accountCount, 'The number of Account records should match the test data.');
     }
 }

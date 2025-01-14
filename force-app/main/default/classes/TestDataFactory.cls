@@ -16,6 +16,6 @@ public with sharing class TestDataFactory {
         for (Integer i = 0; i < numberOfAccounts; i++) {
             accounts.add(new Account(Name = 'Test Account ' + i));
         }
-        insert accounts;
+        AccountDomain.insertAllAccounts(accounts);
     }
 }
