@@ -1,0 +1,42 @@
+<!-- /********************************************************************
+* (c) Copyright 2024 Avenoir Technologies Pvt. Ltd. All rights reserved.
+* Created by: Manish Kumar Gupta
+* Ticket Number:AVEBLOG-108
+--------------------------------------------------------------------
+* Blog: Create a record using rest API(for Customer Community Plus users) using session id as a token.
+--------------------------------------------------------------------
+* Purpose/ Methods: This html file used to Create Application record using user inputs.
+--------------------------------------------------------------------
+Pre-Deployment Steps: Enable Digital Experience, Enable Allow using External Profiles for Self Registration,
+    and a Role must be assigned to the current User of your org.
+--------------------------------------------------------------------
+* Version History:
+* VERSION    DEVELOPER NAME         DATE            DETAIL FEATURES
+   1.0       Manish Kumar Gupta     24/12/2024      Initial Development
+***********************************************************************/ -->
+<template>
+    <lightning-card>
+        <div slot="title">
+            <h3>
+                <lightning-icon icon-name={labels.CONTACT_ICON} size="small"></lightning-icon> {labels.APPLICATION_FORM}
+            </h3>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element data-input">
+                    <lightning-input label={labels.APPLICATION_NAME} value={name} onchange={nameChange}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium ">
+                <div class="slds-form-element checkbox-input">
+                    <lightning-input type="checkbox" label={labels.APPLICATION_SELECTION} checked={isChecked} onchange={selectionChange}>
+                    </lightning-input>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <lightning-button type="submit" label={labels.BUTTON_LABEL} onclick={handleSubmit}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
