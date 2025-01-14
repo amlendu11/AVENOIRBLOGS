@@ -1087,6 +1087,34 @@
         <value>Card Footer123565475675</value>
     </labels>
     <labels>
+        <fullName>REGISTRATION_COMPLETED</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Registration Completed</shortDescription>
+        <value>Registration Completed</value>
+    </labels>
+    <labels>
+        <fullName>REGISTRATION_COMPLETED_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Thank you for filling form, you will redirect to Account Page</shortDescription>
+        <value>Thank you for filling form, you will redirect to Account Page</value>
+    </labels>
+    <labels>
+        <fullName>NEXT</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>PREVIOUS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous</shortDescription>
+        <value>Previous</value>
+     </labels>
+    <labels>
         <fullName>CONTACT_ICON</fullName>
         <language>en_US</language>
         <protected>true</protected>
