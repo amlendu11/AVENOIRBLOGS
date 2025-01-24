@@ -1,7 +1,7 @@
 /********************************************************************
 * (c) Copyright 2023 Avenoir Technologies Pvt. Ltd. All rights reserved.
-* Created by: Anchal Agrawal
-* Ticket Number: AVEBLOG1136
+* Created by: Diksha Dewangan
+* Ticket Number: AVEBLOG-136
 --------------------------------------------------------------------
 *  Description : Duplicate record check.
 --------------------------------------------------------------------
@@ -17,7 +17,7 @@ public class DuplicateCheckUtilityTest {
     @isTest
     static void checkDuplicatesForSObjectEntryWithNoDuplicates() {
         List<SObject> testRecords = new List<SObject>();
-        Account account = new Account(Name = 'Test Account');
+        Account account = AccountDomain.insertAccount('Test Account', null);
         testRecords.add(account);
         Test.startTest();
         List<Boolean> results = DuplicateCheckUtility.checkDuplicatesForSObjectEntry(testRecords);
@@ -38,7 +38,7 @@ public class DuplicateCheckUtilityTest {
             BillingStreet = '123 Dup St',
             BillingCity = 'DuplicateCity'
         );
-        insert account1;
+        AccountDomain.insertAccounts(new List<Account> {account1});
         Test.startTest();
         List<Boolean> results = DuplicateCheckUtility.checkDuplicatesForSObjectEntry(
             new List<SObject> { account2 }

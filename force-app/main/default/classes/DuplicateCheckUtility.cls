@@ -1,7 +1,7 @@
 /********************************************************************
 * (c) Copyright 2023 Avenoir Technologies Pvt. Ltd. All rights reserved.
-* Created by: Anchal Agrawal
-* Ticket Number: AVEBLOG99
+* Created by: Diksha Dewangan
+* Ticket Number: AVEBLOG-136
 --------------------------------------------------------------------
 *  Description : Duplicate record check.
 --------------------------------------------------------------------
@@ -13,6 +13,11 @@
 ***********************************************************************/
 public class DuplicateCheckUtility {
 
+    /**
+    * This method aims to check duplicates for SObject Entry
+    * @param List<SObject> objectsToCheck
+    * @return List<Boolean> duplicateEntryFound
+    */
     @InvocableMethod(
         label = 'Duplicate Check'
         description = 'Returns the List<Boolean> respectively'
@@ -26,6 +31,11 @@ public class DuplicateCheckUtility {
         return new List<Boolean>{ isDuplicateThere };
     }
 
+    /**
+    * This method aims to check duplicates for SObject Record
+    * @param List<SObject> objectsToCheck
+    * @return Boolean isDuplicateThere
+    */
     public static Boolean checkDuplicatesForRecord(
         List<SObject> objectsToCheck
     ) {
