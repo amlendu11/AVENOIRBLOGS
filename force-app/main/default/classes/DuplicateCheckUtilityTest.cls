@@ -3,7 +3,7 @@
 * Created by: Diksha Dewangan
 * Ticket Number: AVEBLOG-136
 --------------------------------------------------------------------
-*  Description : Duplicate record check.
+* Description : Duplicate record check.
 --------------------------------------------------------------------
 * Utility Test Class: NA
 --------------------------------------------------------------------

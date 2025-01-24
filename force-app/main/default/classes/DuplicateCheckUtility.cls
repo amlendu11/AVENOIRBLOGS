@@ -3,7 +3,7 @@
 * Created by: Diksha Dewangan
 * Ticket Number: AVEBLOG-136
 --------------------------------------------------------------------
-*  Description : Duplicate record check.
+* Description : Duplicate record check.
 --------------------------------------------------------------------
 * Utility Test Class: DuplicateCheckUtilityTest
 --------------------------------------------------------------------
@@ -19,7 +19,7 @@ public class DuplicateCheckUtility {
     * @return List<Boolean> duplicateEntryFound
     */
     @InvocableMethod(
-        label = 'Duplicate Check'
+        label = System.Label.DUPLICATE_CHECK_MESSAGE
         description = 'Returns the List<Boolean> respectively'
     )
     public static List<Boolean> checkDuplicatesForSObjectEntry(
