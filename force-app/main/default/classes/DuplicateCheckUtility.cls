@@ -19,7 +19,7 @@ public class DuplicateCheckUtility {
     * @return List<Boolean> duplicateEntryFound
     */
     @InvocableMethod(
-        label = System.Label.DUPLICATE_CHECK_MESSAGE
+        label = 'Duplicate Check'
         description = 'Returns the List<Boolean> respectively'
     )
     public static List<Boolean> checkDuplicatesForSObjectEntry(
