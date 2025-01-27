@@ -1,8 +1,6 @@
 public class ErrorHandlingDemo {
-    public static void simulateLimitError() {
-        // Exceeding SOQL query limit to trigger a governor limit exception
-        for (Integer i = 0; i < 50001; i++) {
-            List<Account> accs = [SELECT Id FROM Account LIMIT 1];
-        }
+    public static void simulateLimitError(List<Account> newAccounts) {
+       // Simulating an unhandled exception
+        Integer result = 1 / 0;  // This will trigger a divide by zero exception
     }
 }
