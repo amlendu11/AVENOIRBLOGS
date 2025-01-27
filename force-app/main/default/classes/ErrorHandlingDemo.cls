@@ -13,13 +13,13 @@
 ***********************************************************************/
 public class ErrorHandlingDemo {
 
-/**
-   * This method aims for simulate unhandled exception
-   * @param List<Account>
-   * @return NA
-   */
-    public static void simulateLimitError(List<Account> newAccounts) {
-        Account accounts = new Account();
-        insert accounts;
-    }
+    /**
+    * This method aims for simulate unhandled exception
+    * @param List<Account>
+    * @return NA
+    */
+   public static void simulateLimitError(List<Account> newAccounts) {
+       Account accounts = new Account();
+       insert accounts;
+   }
 }
