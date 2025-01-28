@@ -39,6 +39,7 @@ public class DuplicateCheckUtility {
     public static Boolean checkDuplicatesForRecord(
         List<SObject> objectsToCheck
     ) {
+        Boolean result = false;
         Datacloud.FindDuplicatesResult[] results = Datacloud.FindDuplicates.findDuplicates(
             objectsToCheck
         );
@@ -49,11 +50,11 @@ public class DuplicateCheckUtility {
             ) {
                 for (Datacloud.MatchResult matchResultObj : duplicateResultObj.getMatchResults()) {
                     for (Datacloud.MatchRecord matchRecord : matchResultObj.getMatchRecords()) {
-                        return true;
+                        result = true;
                     }
                 }
             }
         }
-        return false;
+        return result;
     }
 }
