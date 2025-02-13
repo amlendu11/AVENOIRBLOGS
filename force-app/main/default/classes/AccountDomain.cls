@@ -96,10 +96,10 @@ public class AccountDomain {
                 Account
             WHERE
                 Id =:recordId 
-        ]
-      }
+        ];
+    }
         
-     /**
+    /**
     * This method aims for simulate unhandled exception
     * @param List<Accont>
     * @return NA
@@ -108,7 +108,6 @@ public class AccountDomain {
         Account accounts = new Account();
         insert accounts;
     }
-}
 
 
     /**
