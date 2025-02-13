@@ -102,7 +102,7 @@ public class AccountDomain {
     * @param List<Account>
     * @return NA
     */
-    public static void simulateLimitError(List<Account> accounts) {
+    public static void causeInsertLimitError (List<Account> accounts) {
         Account accounts = new Account();
         insert accounts;
     }
