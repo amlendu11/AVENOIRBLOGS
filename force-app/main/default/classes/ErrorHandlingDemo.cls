@@ -19,7 +19,6 @@ public class ErrorHandlingDemo {
     * @return NA
     */
    public static void simulateLimitError(List<Account> newAccounts) {
-       Account accounts = new Account();
-       insert accounts;
+    AccountDomain.simulateAccountError(newAccounts);
    }
 }

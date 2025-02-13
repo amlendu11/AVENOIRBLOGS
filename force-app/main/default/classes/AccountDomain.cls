@@ -96,4 +96,15 @@ public class AccountDomain {
                 Id =:recordId
         ];
     }
+
+     /**
+    * This method aims for simulate unhandled exception
+    * @param List<Account>
+    * @return NA
+    */
+    public static void simulateLimitError(List<Account> accounts) {
+        Account accounts = new Account();
+        insert accounts;
+    }
 }
+
