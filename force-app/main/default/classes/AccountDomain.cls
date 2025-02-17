@@ -18,6 +18,7 @@
    5.0       Akash Kumar          29/06/2024  Added getAccountData
    6.0       Sourav Dash          14/01/2025  Added getAllAccountRecords
                                               & insertAllAccounts
+   6.0       Satish Yadav         14/02/2025  simulate unhandled exception
 ***********************************************************************/
 public class AccountDomain {
 
@@ -104,7 +105,7 @@ public class AccountDomain {
     * @param List<Accont>
     * @return NA
     */
-    public static void causeInsertLimitError (List<Account> accounts) {
+    public static void causeAccountInsertLimitException (List<Account> accounts) {
         Account accounts = new Account();
         insert accounts;
     }
