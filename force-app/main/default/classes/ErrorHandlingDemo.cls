@@ -18,7 +18,7 @@ public class ErrorHandlingDemo {
     * @param List<Account>
     * @return NA
     */
-   public static void simulateLimitError(List<Account> newAccounts) {
-    AccountDomain.causeAccountInsertLimitException (newAccounts);
-   }
+    public static void simulateLimitError(List<Account> newAccounts) {
+        AccountDomain.causeAccountInsertLimitException (newAccounts);
+    }
 }
