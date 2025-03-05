@@ -106,8 +106,8 @@ public class AccountDomain {
     * @return NA
     */
     public static void causeAccountInsertLimitException (List<Account> accounts) {
-        Account accounts = new Account();
-        insert accounts;
+        Account acc = new Account();
+        insert acc;
     }
 
 
