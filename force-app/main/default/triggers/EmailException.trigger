@@ -13,5 +13,8 @@
 ***********************************************************************/
 
 trigger EmailException on Account (before insert) {
-    ErrorHandlingDemo.simulateAccountInsertLimitError(Trigger.new);
+      if (!ErrorHandlingDemo.isAlreadyExecuted) {
+        ErrorHandlingDemo.isAlreadyExecuted = true;
+        ErrorHandlingDemo.simulateAccountInsertLimitError(Trigger.new);
+    }
 }
