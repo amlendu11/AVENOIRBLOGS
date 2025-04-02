@@ -9,7 +9,7 @@ export default class WhitespaceDemo extends LightningElement {
     console.log('Class-based selector (working):', workingSelector);
 
     if (workingSelector?.classList.contains('highlight')) {
-      console.log('Class "highlight" is present ✅');
+      console.log('Class "highlight" is present');
     }
   }
 }
