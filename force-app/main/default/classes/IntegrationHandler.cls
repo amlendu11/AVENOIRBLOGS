@@ -2,7 +2,7 @@ public class IntegrationHandler {
     public static Map<String, Object> callPostmanAPI() {
         Http http = new Http();
         HttpRequest req = new HttpRequest();
-        String endpoint = 'callout:Postman_API';
+        String endpoint = System.Label.POSTMAN_API_LABEL;
         req.setEndpoint(endpoint);
         req.setHeader('Username', '{!$Credential.Username}');
 		req.setHeader('Password', '{!$Credential.Password}');
