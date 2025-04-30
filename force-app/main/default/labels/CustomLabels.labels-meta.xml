@@ -1170,4 +1170,11 @@
         <shortDescription>APPLICATION_CREATION_TOAST_MESSAGE</shortDescription>
         <value>  Application Created Successfully!</value>
     </labels>
+    <labels>
+        <fullName>POSTMAN_API_LABEL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>POSTMAN_API_LABEL</shortDescription>
+        <value>callout:Postman_API</value>
+    </labels>
 </CustomLabels>
